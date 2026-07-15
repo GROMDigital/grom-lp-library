@@ -1,0 +1,42 @@
+<section class="lp-cta-split">
+  <style>
+    .lp-cta-split,.lp-cta-split *{box-sizing:border-box}
+    .lp-cta-split{background:var(--surface);padding:var(--space-section) var(--gutter)}
+    .lp-cta-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,44px);align-items:center}
+    /* statement column */
+    .lp-cta-split .statement .kicker{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .8em}
+    .lp-cta-split .statement h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0 0 .5em;max-width:18ch}
+    .lp-cta-split .statement p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:46ch}
+    /* action card */
+    .lp-cta-split .action{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(26px,4vw,38px)}
+    .lp-cta-split .action .price-line{font-family:var(--font-body);font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--deposit-accent);margin:0 0 .6em}
+    .lp-cta-split .action h3{font-family:var(--font-display);font-size:1.4rem;line-height:1.15;color:var(--ink);margin:0 0 .5em}
+    .lp-cta-split .action p{font-family:var(--font-body);font-size:.95rem;line-height:var(--lh-body);color:var(--muted);margin:0 0 1.4em}
+    .lp-cta-split .action .cta{display:inline-flex;align-items:center;justify-content:center;gap:.5em;width:100%;font-family:var(--font-body);font-size:1.02rem;font-weight:700;color:var(--accent-ink);background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));border:none;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);padding:.95em 1.4em;cursor:pointer;text-decoration:none}
+    .lp-cta-split .action .reassure{display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:.82rem;color:var(--muted);margin:1em 0 0}
+    .lp-cta-split .action .reassure svg{flex:none;opacity:.7}
+    @media (min-width:840px){
+      .lp-cta-split .in{grid-template-columns:1.1fr .9fr}
+    }
+  </style>
+  <div class="in">
+    <div class="statement reveal">
+      <p class="kicker">{{cta_kicker}}</p>
+      <h2>{{cta_headline}}</h2>
+      <p>{{cta_statement}}</p>
+    </div>
+    <div class="action reveal">
+      <p class="price-line">{{cta_offer_line}}</p>
+      <h3>{{cta_card_heading}}</h3>
+      <p>{{cta_card_body}}</p>
+      <a class="cta" href="#book" data-cta>
+        {{cta_button}}
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="reassure">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        {{cta_reassurance}}
+      </p>
+    </div>
+  </div>
+</section>

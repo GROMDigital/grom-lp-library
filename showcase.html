@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LP library showcase (internal)</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --bg:#f4f3f0;
+    --surface:#ffffff;
+    --ink:#141414;
+    --muted:#5c5c5c;
+    --border:#dedad2;
+    --accent:#141414;
+    --maxw:1240px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;max-width:100%;overflow-x:hidden;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,32px);}
+  a{color:inherit;}
+
+  header.page-head{
+    border-bottom:1px solid var(--border);
+    background:var(--surface);
+    padding:28px 0;
+  }
+  header.page-head .eyebrow{
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0 0 8px;
+  }
+  header.page-head h1{
+    font-size:clamp(22px,3.2vw,30px);
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  header.page-head p{
+    margin:0;
+    color:var(--muted);
+    font-size:14.5px;
+    max-width:64ch;
+  }
+
+  main{padding:clamp(32px,5vw,56px) 0 clamp(56px,8vw,88px);}
+
+  section.starter{
+    padding-top:clamp(36px,5vw,56px);
+    padding-bottom:clamp(36px,5vw,56px);
+  }
+  section.starter + section.starter{border-top:1px solid var(--border);}
+
+  .starter-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px 24px;
+    margin-bottom:16px;
+  }
+  .starter-head .title-block h2{
+    font-size:clamp(19px,2.4vw,24px);
+    margin:0 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .starter-head .title-block p{
+    margin:0;
+    color:var(--muted);
+    font-size:13.5px;
+  }
+  .starter-head .slug{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;
+    color:var(--muted);
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:4px;
+    padding:3px 8px;
+  }
+  .open-full{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+    white-space:nowrap;
+  }
+  .open-full:hover{opacity:0.7;}
+
+  /* laptop-width device frame: fixed viewport width, centred, with a simple browser chrome */
+  .laptop-frame{
+    width:100%;
+    max-width:1120px;
+    margin:0 auto;
+    border:1px solid var(--border);
+    border-radius:10px 10px 4px 4px;
+    background:var(--surface);
+    overflow:hidden;
+    box-shadow:0 1px 2px rgba(0,0,0,0.04);
+  }
+  .laptop-chrome{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:9px 12px;
+    border-bottom:1px solid var(--border);
+    background:#ececec;
+  }
+  .laptop-chrome .dots{display:flex;gap:6px;flex:0 0 auto;}
+  .laptop-chrome .dots i{
+    width:9px;height:9px;border-radius:50%;
+    background:#d3d0c8;display:block;
+  }
+  .laptop-chrome .addr{
+    flex:1 1 auto;
+    min-width:0;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11.5px;
+    color:var(--muted);
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:4px 12px;
+    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .laptop-viewport{
+    width:100%;
+    height:780px;
+    background:var(--bg);
+  }
+  .laptop-viewport iframe{
+    display:block;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+
+  @media (max-width:640px){
+    .laptop-viewport{height:560px;}
+    .starter-head{flex-direction:column;align-items:flex-start;}
+  }
+
+  footer.page-foot{
+    border-top:1px solid var(--border);
+    padding:20px 0 40px;
+  }
+  footer.page-foot p{
+    margin:0;
+    color:var(--muted);
+    font-size:12.5px;
+  }
+</style>
+</head>
+<body>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Internal only, not a client asset</p>
+    <h1>LP library showcase</h1>
+    <p>The library is 22 reusable block archetypes (<code>blocks/*--*.html</code>) across 11 section types, 4 themes, and one shared motion layer, not a fixed set of finished pages. These four starters are sample compositions built from that system, each pairing one theme with one deliberate set of section archetypes, so this page is a visual sanity check of four possible outcomes, not a gallery of every combination. Each frame lazy-loads the starter's own <code>index.html</code> at laptop width. Use "open full" to view a starter on its own, at real size. See <code>CATALOG.md</code> for every archetype and <code>BUILD-GUIDE.md</code> for how to compose a new page from them.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="starter" id="direct-response">
+      <div class="starter-head">
+        <div class="title-block">
+          <h2>Direct response</h2>
+          <p>Bold, warm, price-led. The Glow Room, mobile facials, Bondi Beach.</p>
+        </div>
+        <span class="slug">starters/direct-response</span>
+        <a class="open-full" href="starters/direct-response/index.html" target="_blank" rel="noopener">Open full &#8599;</a>
+      </div>
+      <div class="laptop-frame">
+        <div class="laptop-chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="addr">starters/direct-response/index.html</span>
+        </div>
+        <div class="laptop-viewport">
+          <iframe src="starters/direct-response/index.html" loading="lazy" title="Direct response starter preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter" id="clinical-trust">
+      <div class="starter-head">
+        <div class="title-block">
+          <h2>Clinical trust</h2>
+          <p>Calm, credential-led. Northside Cosmetic, injectable and skin clinic, Chatswood NSW.</p>
+        </div>
+        <span class="slug">starters/clinical-trust</span>
+        <a class="open-full" href="starters/clinical-trust/index.html" target="_blank" rel="noopener">Open full &#8599;</a>
+      </div>
+      <div class="laptop-frame">
+        <div class="laptop-chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="addr">starters/clinical-trust/index.html</span>
+        </div>
+        <div class="laptop-viewport">
+          <iframe src="starters/clinical-trust/index.html" loading="lazy" title="Clinical trust starter preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter" id="premium-editorial">
+      <div class="starter-head">
+        <div class="title-block">
+          <h2>Premium editorial</h2>
+          <p>Considered, design-led. Maison Dermal, aesthetic studio, South Yarra VIC.</p>
+        </div>
+        <span class="slug">starters/premium-editorial</span>
+        <a class="open-full" href="starters/premium-editorial/index.html" target="_blank" rel="noopener">Open full &#8599;</a>
+      </div>
+      <div class="laptop-frame">
+        <div class="laptop-chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="addr">starters/premium-editorial/index.html</span>
+        </div>
+        <div class="laptop-viewport">
+          <iframe src="starters/premium-editorial/index.html" loading="lazy" title="Premium editorial starter preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter" id="clinical-botanical">
+      <div class="starter-head">
+        <div class="title-block">
+          <h2>Clinical botanical</h2>
+          <p>Porcelain and deep-green, deposit-led. Verdance Skin Studio, advanced facials, Charlton SE London.</p>
+        </div>
+        <span class="slug">starters/clinical-botanical</span>
+        <a class="open-full" href="starters/clinical-botanical/index.html" target="_blank" rel="noopener">Open full &#8599;</a>
+      </div>
+      <div class="laptop-frame">
+        <div class="laptop-chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="addr">starters/clinical-botanical/index.html</span>
+        </div>
+        <div class="laptop-viewport">
+          <iframe src="starters/clinical-botanical/index.html" loading="lazy" title="Clinical botanical starter preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter" id="demo-a">
+      <div class="starter-head">
+        <div class="title-block">
+          <h2>Demo A: composed from archetypes</h2>
+          <p>Built by picking a NON-default archetype mix (split hero, editorial portrait plate, vertical timeline, featured pull-quote, split CTA) on the premium-editorial theme. Same library, different structure.</p>
+        </div>
+        <span class="slug">starters/demo-a</span>
+        <a class="open-full" href="starters/demo-a/index.html" target="_blank" rel="noopener">Open full &#8599;</a>
+      </div>
+      <div class="laptop-frame">
+        <div class="laptop-chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="addr">starters/demo-a/index.html</span>
+        </div>
+        <div class="laptop-viewport">
+          <iframe src="starters/demo-a/index.html" loading="lazy" title="Demo A archetype composition preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="starter" id="demo-b">
+      <div class="starter-head">
+        <div class="title-block">
+          <h2>Demo B: a different archetype mix</h2>
+          <p>A different composition again (full-bleed hero, deposit offer, horizontal ghost-number process, 2x2 stat grid, review marquee, dark band CTA, accordion FAQ) on the direct-response theme. Proof the library produces genuinely different layouts, not recolors.</p>
+        </div>
+        <span class="slug">starters/demo-b</span>
+        <a class="open-full" href="starters/demo-b/index.html" target="_blank" rel="noopener">Open full &#8599;</a>
+      </div>
+      <div class="laptop-frame">
+        <div class="laptop-chrome" aria-hidden="true">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="addr">starters/demo-b/index.html</span>
+        </div>
+        <div class="laptop-viewport">
+          <iframe src="starters/demo-b/index.html" loading="lazy" title="Demo B archetype composition preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="page-foot">
+  <div class="wrap">
+    <p>LP component library, internal QA render. Not shipped to clients.</p>
+  </div>
+</footer>
+
+</body>
+</html>

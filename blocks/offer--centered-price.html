@@ -1,0 +1,61 @@
+<section class="lp-offer-centered">
+  <style>
+    /* OFFER ARCHETYPE: centered price lockup. One narrow centered card with a
+       large price hero (optional count-up), includes, note and full-width CTA.
+       Differs from offer--split-card (2-col with media) and offer--deposit
+       (deposit-forward horizontal panel). */
+    .lp-offer-centered{background:var(--bg);padding:var(--space-section) var(--gutter);text-align:center}
+    .lp-offer-centered .in{max-width:var(--maxw);margin:0 auto}
+    .lp-offer-centered .head{max-width:44ch;margin:0 auto clamp(24px,4vw,40px)}
+    .lp-offer-centered .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .6em}
+    .lp-offer-centered h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0;overflow-wrap:anywhere}
+    .lp-offer-centered h2 em{font-style:italic;color:var(--accent)}
+    .lp-offer-centered .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);max-width:480px;margin:0 auto;padding:clamp(28px,5vw,44px);text-align:center}
+    .lp-offer-centered .price-lockup{display:flex;flex-direction:column;align-items:center;gap:.3em;margin:0 0 1.4em;padding-bottom:1.4em;border-bottom:1px solid var(--border)}
+    .lp-offer-centered .price-now{font-family:var(--font-display);font-weight:700;font-size:clamp(3rem,9vw,4.4rem);color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;max-width:100%;overflow-wrap:anywhere}
+    .lp-offer-centered .price-sub{display:flex;align-items:baseline;gap:.6em}
+    .lp-offer-centered .price-was{font-family:var(--font-body);font-size:1rem;color:var(--muted);text-decoration:line-through;font-weight:600}
+    .lp-offer-centered .price-per{font-family:var(--font-body);font-size:.85rem;color:var(--muted);font-weight:600}
+    .lp-offer-centered ul{list-style:none;margin:0 0 1.3em;padding:0;display:grid;gap:.8em;text-align:left}
+    .lp-offer-centered li{display:flex;gap:.65em;font-family:var(--font-body);font-size:var(--fs-body);line-height:1.45;color:var(--ink)}
+    .lp-offer-centered li svg{flex:none;margin-top:.2em;color:var(--accent)}
+    .lp-offer-centered .note{font-family:var(--font-body);font-size:.88rem;line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;padding-top:1.1em;border-top:1px solid var(--border)}
+    .lp-offer-centered .btn-primary{display:flex;align-items:center;justify-content:center;gap:.6em;width:100%;box-sizing:border-box;background:linear-gradient(90deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:1rem;padding:1em 1.4em;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none}
+    .lp-offer-centered .btn-primary svg{flex:none}
+    .lp-offer-centered .cta-micro{display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:.82rem;color:var(--muted);margin:.9em 0 0}
+    .lp-offer-centered .cta-micro svg{flex:none;opacity:.6}
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">{{offer_kicker}}</p>
+      <h2>{{offer_headline}} <em>{{offer_headline_emphasis}}</em></h2>
+    </div>
+    <div class="card reveal">
+      <div class="price-lockup">
+        <!-- optional count-up: {{offer_price_num}} = plain number (eg 160),
+             {{currency}} = symbol prefix (eg the pound sign). Visible text is
+             the fallback; JS overwrites only when the number is filled in. -->
+        <span class="price-now" data-count-to="{{offer_price_num}}" data-count-prefix="{{currency}}">{{offer_price}}</span>
+        <span class="price-sub">
+          <span class="price-was">{{offer_was_price}}</span>
+          <span class="price-per">{{offer_price_per}}</span>
+        </span>
+      </div>
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_1}}</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_2}}</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_3}}</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_4}}</li>
+      </ul>
+      <p class="note">{{offer_note}}</p>
+      <a class="btn-primary" href="#book">
+        {{primary_cta_label}}
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="cta-micro">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        {{cta_micro}}
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<footer class="lp-footer-mc">
+  <style>
+    .lp-footer-mc,.lp-footer-mc *{box-sizing:border-box}
+    .lp-footer-mc{background:var(--band-dark-bg);color:var(--band-dark-ink);padding:clamp(40px,6vw,64px) var(--gutter)}
+    .lp-footer-mc .in{max-width:var(--maxw);margin:0 auto}
+    .lp-footer-mc .foot-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
+    /* brand column */
+    .lp-footer-mc .brand .name{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--band-dark-ink);margin:0 0 .5em}
+    .lp-footer-mc .brand .blurb{font-family:var(--font-body);font-size:.9rem;line-height:var(--lh-body);color:color-mix(in srgb,var(--band-dark-ink) 72%,transparent);margin:0;max-width:36ch}
+    /* link columns */
+    .lp-footer-mc .col h4{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:color-mix(in srgb,var(--band-dark-ink) 60%,transparent);margin:0 0 1em}
+    .lp-footer-mc .col p,.lp-footer-mc .col a{display:block;font-family:var(--font-body);font-size:.9rem;line-height:1.5;color:color-mix(in srgb,var(--band-dark-ink) 80%,transparent);margin:0 0 .5em;text-decoration:none}
+    .lp-footer-mc .col a:hover{color:var(--band-dark-ink);text-decoration:underline}
+    /* fine print */
+    .lp-footer-mc .foot-fine{border-top:1px solid color-mix(in srgb,var(--band-dark-ink) 16%,transparent);margin-top:clamp(28px,4vw,40px);padding-top:1.4em;font-family:var(--font-body);font-size:.78rem;line-height:1.6;color:color-mix(in srgb,var(--band-dark-ink) 55%,transparent);max-width:78ch}
+    .lp-footer-mc .foot-fine a{color:color-mix(in srgb,var(--band-dark-ink) 70%,transparent);text-decoration:underline}
+    @media (min-width:640px){
+      .lp-footer-mc .foot-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (min-width:900px){
+      .lp-footer-mc .foot-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+    }
+  </style>
+  <div class="in">
+    <div class="foot-grid">
+      <div class="brand">
+        <p class="name">{{clinic_name}}</p>
+        <p class="blurb">{{footer_blurb}}</p>
+      </div>
+      <div class="col">
+        <h4>{{footer_visit_label}}</h4>
+        <p>{{footer_address}}</p>
+        <a href="{{footer_map_href}}">{{footer_directions}}</a>
+      </div>
+      <div class="col">
+        <h4>{{footer_contact_label}}</h4>
+        <a href="tel:{{footer_phone}}">{{footer_phone}}</a>
+        <a href="mailto:{{footer_email}}">{{footer_email}}</a>
+      </div>
+      <div class="col">
+        <h4>{{footer_hours_label}}</h4>
+        <p>{{footer_hours}}</p>
+      </div>
+    </div>
+    <p class="foot-fine">
+      &copy; {{footer_year}} {{clinic_name}}. {{footer_rights}} <a href="{{footer_legal_href}}">{{footer_legal_label}}</a>
+      <br>{{footer_disclaimer}}
+    </p>
+  </div>
+</footer>

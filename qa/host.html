@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="contract"></style><style id="theme"></style>
+<style>body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--bg)}</style>
+</head><body><main id="mount"></main>
+<script>
+(async () => {
+  const p = new URLSearchParams(location.search);
+  const base = "../";
+  const get = (u) => fetch(base + u).then(r => r.text());
+  document.getElementById("contract").textContent = await get("themes/_contract.css");
+  if (p.get("theme")) document.getElementById("theme").textContent = await get("themes/" + p.get("theme"));
+  if (p.get("block")) document.getElementById("mount").innerHTML = await get(p.get("block"));
+  document.body.dataset.ready = "1";
+})();
+</script></body></html>

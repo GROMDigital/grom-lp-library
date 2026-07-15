@@ -1,0 +1,53 @@
+<section class="lp-process-timeline">
+  <style>
+    .lp-process-timeline{background:var(--surface);padding:var(--space-section) var(--gutter)}
+    .lp-process-timeline .in{max-width:var(--maxw);margin:0 auto}
+    .lp-process-timeline .head{max-width:36ch;margin:0 0 clamp(30px,4vw,52px)}
+    .lp-process-timeline .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 .9em}
+    .lp-process-timeline h2{font-family:var(--font-display);font-size:var(--fs-h2);line-height:1.12;color:var(--ink);margin:0}
+    .lp-process-timeline .track{position:relative;list-style:none;margin:0;padding:0;max-width:660px}
+    .lp-process-timeline .track::before{content:"";position:absolute;top:.9em;bottom:.9em;left:calc(clamp(38px,5vw,46px) / 2 - 1px);width:2px;background:var(--border);z-index:0}
+    .lp-process-timeline .node{position:relative;display:grid;grid-template-columns:clamp(38px,5vw,46px) 1fr;gap:clamp(16px,3vw,28px);padding-bottom:clamp(30px,4vw,46px)}
+    .lp-process-timeline .node:last-child{padding-bottom:0}
+    .lp-process-timeline .marker{position:relative;z-index:1;width:clamp(38px,5vw,46px);height:clamp(38px,5vw,46px);border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1rem;box-shadow:0 0 0 6px var(--surface)}
+    .lp-process-timeline .body{min-width:0;padding-top:.15em}
+    .lp-process-timeline h3{font-family:var(--font-display);font-size:clamp(1.1rem,1.8vw,1.35rem);line-height:1.2;color:var(--ink);margin:0 0 .45em}
+    .lp-process-timeline p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:48ch}
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">{{process_kicker}}</p>
+      <h2>{{process_headline}}</h2>
+    </div>
+    <ol class="track reveal-stagger">
+      <li class="node">
+        <span class="marker" aria-hidden="true">1</span>
+        <div class="body">
+          <h3>{{step_1_title}}</h3>
+          <p>{{step_1_body}}</p>
+        </div>
+      </li>
+      <li class="node">
+        <span class="marker" aria-hidden="true">2</span>
+        <div class="body">
+          <h3>{{step_2_title}}</h3>
+          <p>{{step_2_body}}</p>
+        </div>
+      </li>
+      <li class="node">
+        <span class="marker" aria-hidden="true">3</span>
+        <div class="body">
+          <h3>{{step_3_title}}</h3>
+          <p>{{step_3_body}}</p>
+        </div>
+      </li>
+      <li class="node">
+        <span class="marker" aria-hidden="true">4</span>
+        <div class="body">
+          <h3>{{step_4_title}}</h3>
+          <p>{{step_4_body}}</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>

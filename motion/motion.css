@@ -1,0 +1,182 @@
+/* ==========================================================================
+   GROM LP LIBRARY - shared motion layer (motion.css)
+   Pairs 1:1 with motion.js. See motion/README.md for the full hook contract.
+
+   PROGRESSIVE ENHANCEMENT CONTRACT (read this before editing):
+   Every hidden-initial rule below is scoped under `html.js-motion`, a class
+   that ONLY motion.js adds, and only once it has actually run. That means:
+     - No JS on the page (or a broken/blocked script) => `html.js-motion`
+       never appears => none of the opacity:0 / transform rules below ever
+       apply => every section renders fully visible, exactly as authored.
+     - JS runs, motion allowed => `html.js-motion` is present, elements
+       start hidden and are revealed via the `.is-visible` class that
+       motion.js adds (IntersectionObserver, or immediately as a fallback).
+     - `prefers-reduced-motion: reduce` => the media query block at the
+       bottom of this file force-overrides every hidden/animated state back
+       to fully visible + static, with !important, independent of whether
+       `.is-visible` ever gets added. This is a CSS-level guarantee, not
+       just a JS courtesy.
+   Never add a bare (unscoped) `opacity:0` rule to this file. If it is not
+   scoped under `html.js-motion`, it defeats progressive enhancement.
+   ========================================================================== */
+
+:root{
+  --motion-ease: cubic-bezier(.22,.68,0,1);
+  --motion-spring: cubic-bezier(.34,1.4,.5,1);
+  --motion-dur: .8s;
+  --motion-stagger-step: .08s;
+}
+
+/* --------------------------------------------------------------------------
+   1. REVEAL / STAGGER
+   .reveal            -> single element, fades/lifts in on scroll.
+   .reveal-stagger     -> parent; each direct child fades/lifts in with an
+                          incremental delay once the parent is revealed.
+   -------------------------------------------------------------------------- */
+html.js-motion .reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity var(--motion-dur) var(--motion-ease), transform var(--motion-dur) var(--motion-ease);
+}
+html.js-motion .reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+
+html.js-motion .reveal-stagger > *{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity var(--motion-dur) var(--motion-ease), transform var(--motion-dur) var(--motion-ease);
+}
+html.js-motion .reveal-stagger.is-visible > *{
+  opacity:1;
+  transform:none;
+}
+html.js-motion .reveal-stagger.is-visible > *:nth-child(1){ transition-delay: calc(var(--motion-stagger-step) * 0); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(2){ transition-delay: calc(var(--motion-stagger-step) * 1); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(3){ transition-delay: calc(var(--motion-stagger-step) * 2); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(4){ transition-delay: calc(var(--motion-stagger-step) * 3); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(5){ transition-delay: calc(var(--motion-stagger-step) * 4); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(6){ transition-delay: calc(var(--motion-stagger-step) * 5); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(7){ transition-delay: calc(var(--motion-stagger-step) * 6); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(8){ transition-delay: calc(var(--motion-stagger-step) * 7); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(9){ transition-delay: calc(var(--motion-stagger-step) * 8); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(10){ transition-delay: calc(var(--motion-stagger-step) * 9); }
+
+/* --------------------------------------------------------------------------
+   2. MARQUEE
+   .marquee        -> outer clipping frame.
+   .marquee-track   -> one row of content; motion.js clones it once so the
+                       loop is seamless. Without JS, items wrap onto
+                       multiple lines instead of being clipped, so nothing
+                       is ever lost.
+   -------------------------------------------------------------------------- */
+.marquee{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  width:100%;
+}
+html.js-motion .marquee{
+  flex-wrap:nowrap;
+  overflow:hidden;
+}
+.marquee-track{
+  display:flex;
+  flex:none;
+  align-items:center;
+  gap:20px;
+}
+html.js-motion .marquee-track{
+  animation: lp-marquee 30s linear infinite;
+  will-change:transform;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track{
+  animation-play-state:paused;
+}
+/* the cloned (duplicate) track motion.js appends is aria-hidden; only show
+   it once js-motion is actually animating the loop */
+.marquee-track[aria-hidden="true"]{
+  display:none;
+}
+html.js-motion .marquee-track[aria-hidden="true"]{
+  display:flex;
+}
+@keyframes lp-marquee{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-100%); }
+}
+
+/* --------------------------------------------------------------------------
+   3. SCROLL PROGRESS BAR
+   motion.js injects `#lp-progress` itself; no markup is required from the
+   archetype author. Themed via the shared --accent tokens with safe
+   fallbacks so it works even without the theme contract loaded (selftest).
+   -------------------------------------------------------------------------- */
+.lp-progress-bar{
+  position:fixed;
+  top:0; left:0;
+  height:3px;
+  width:0%;
+  background:var(--accent, #2E6248);
+  z-index:9999;
+  pointer-events:none;
+  transition:width .12s linear;
+}
+
+/* --------------------------------------------------------------------------
+   4. STICKY CTA
+   #sticky -> fixed bar, hidden until the user scrolls past the hero
+   (`#hero`), then slides in. Without JS it keeps whatever static
+   position/visibility the archetype's own CSS gives it.
+   -------------------------------------------------------------------------- */
+html.js-motion #sticky{
+  transform:translateY(115%);
+  transition:transform .5s var(--motion-spring);
+  will-change:transform;
+}
+html.js-motion #sticky.is-visible{
+  transform:none;
+}
+
+/* --------------------------------------------------------------------------
+   5. FAQ ACCORDION
+   <details class="faq-item"> - motion.js animates the native open/close
+   height with the Web Animations API when available. This rule only
+   prevents content spilling out mid-animation; it does not hide anything
+   (native <details> already handles show/hide with zero CSS or JS).
+   -------------------------------------------------------------------------- */
+.faq-item{
+  overflow:hidden;
+}
+
+/* --------------------------------------------------------------------------
+   6. REDUCED MOTION - forces full visibility + kills animation, with
+   !important, independent of whatever class state JS did or didn't reach.
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  html.js-motion .reveal,
+  html.js-motion .reveal-stagger > *{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+  html.js-motion .marquee{
+    flex-wrap:wrap !important;
+    overflow:visible !important;
+  }
+  html.js-motion .marquee-track{
+    animation:none !important;
+  }
+  html.js-motion .marquee-track[aria-hidden="true"]{
+    display:none !important;
+  }
+  html.js-motion #sticky{
+    transform:none !important;
+    transition:none !important;
+  }
+  .lp-progress-bar{
+    transition:none !important;
+  }
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion layer selftest</title>
+<link rel="stylesheet" href="motion.css">
+<style>
+  :root{ --accent:#2E6248; --accent-ink:#fff; }
+  body{ margin:0; font-family:system-ui,sans-serif; color:#141414; background:#fff; }
+  section{ padding:80px 24px; max-width:720px; margin:0 auto; }
+  .spacer{ height:120vh; display:flex; align-items:center; justify-content:center; color:#999; }
+  .card{ background:#faf9f7; border:1px solid #e6e4e0; border-radius:12px; padding:24px; margin-bottom:16px; }
+  .count{ font-size:2.5rem; font-weight:700; }
+  .count .unit{ font-size:1.2rem; color:#b8893b; }
+  .marquee{ border-top:1px solid #e6e4e0; border-bottom:1px solid #e6e4e0; padding:16px 0; }
+  .marquee-track{ gap:24px; }
+  .marquee-track span{ white-space:nowrap; font-weight:600; }
+  #sticky{ position:fixed; left:0; right:0; bottom:0; background:#141414; color:#fff; padding:14px 20px; text-align:center; }
+  details.faq-item summary{ cursor:pointer; padding:12px 0; font-weight:600; }
+  details.faq-item > div{ padding:0 0 16px; color:#565656; }
+  [data-parallax]{ background:#eee; height:200px; display:flex; align-items:center; justify-content:center; }
+</style>
+</head>
+<body>
+
+<header id="hero" style="padding:60px 24px;text-align:center;">
+  <h1>Motion layer selftest</h1>
+  <a href="#book" data-cta style="display:inline-block;padding:14px 24px;background:#2E6248;color:#fff;border-radius:999px;text-decoration:none;">Magnetic CTA</a>
+</header>
+
+<section class="reveal card">This is a plain .reveal element. It should be visible on load (no-JS state) and fade/lift in on scroll when JS runs.</section>
+
+<div class="reveal-stagger" style="display:flex;flex-direction:column;gap:12px;">
+  <div class="card">Stagger child 1</div>
+  <div class="card">Stagger child 2</div>
+  <div class="card">Stagger child 3</div>
+</div>
+
+<section class="card">
+  <p>Count-up with a preserved trailing unit span:</p>
+  <span class="count" data-count-to="1234" data-count-prefix="£">1,234<span class="unit">+</span></span>
+</section>
+
+<section class="card">
+  <p>Count-up with decimals:</p>
+  <span class="count" data-count-to="98.6" data-count-decimals="1" data-count-suffix="%">98.6%</span>
+</section>
+
+<div class="spacer">scroll down</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Insured &amp; qualified</span><span>&bull;</span>
+    <span>4.9 across 260 reviews</span><span>&bull;</span>
+    <span>By reservation only</span><span>&bull;</span>
+  </div>
+</div>
+
+<section style="padding:40px 24px;">
+  <div data-parallax="0.15">Parallax element</div>
+</section>
+
+<section class="card">
+  <div id="lp-booking-widget">
+    <button class="time-chip">9:00am</button>
+    <button class="time-chip">10:30am</button>
+    <button class="time-chip muted">12:00pm</button>
+  </div>
+</section>
+
+<section>
+  <details class="faq-item">
+    <summary>Is this a real question?</summary>
+    <div>Yes, this is the FAQ accordion content, smoothed by the Web Animations API when supported.</div>
+  </details>
+  <details class="faq-item">
+    <summary>Another question</summary>
+    <div>More answer content here to test a taller panel height.</div>
+  </details>
+</section>
+
+<div class="spacer">scroll further</div>
+
+<div id="sticky">Sticky CTA - should appear after scrolling past #hero</div>
+
+<script src="motion.js"></script>
+</body>
+</html>

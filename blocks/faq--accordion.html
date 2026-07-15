@@ -1,0 +1,42 @@
+<section class="lp-faq-acc">
+  <style>
+    .lp-faq-acc,.lp-faq-acc *{box-sizing:border-box}
+    .lp-faq-acc{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-faq-acc .in{max-width:min(760px,var(--maxw));margin:0 auto}
+    .lp-faq-acc h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.15;text-align:center;margin:0 0 1.4em}
+    .lp-faq-acc .faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);margin:0 0 .8em;overflow:hidden}
+    .lp-faq-acc summary{display:flex;align-items:center;justify-content:space-between;gap:1em;list-style:none;cursor:pointer;font-family:var(--font-body);font-size:1.05rem;font-weight:600;color:var(--ink);padding:1.1em 1.3em}
+    .lp-faq-acc summary::-webkit-details-marker{display:none}
+    .lp-faq-acc summary .plus{flex:none;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:var(--r-pill);background:var(--surface);border:1px solid var(--border);color:var(--accent);transition:transform .3s,background .3s,color .3s}
+    .lp-faq-acc .faq-item[open] summary .plus{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+    .lp-faq-acc .faq-a{padding:0 1.3em 1.2em}
+    .lp-faq-acc .faq-a p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:62ch}
+    @media (max-width:768px){
+      .lp-faq-acc summary{font-size:1rem;padding:1em 1.1em}
+      .lp-faq-acc .faq-a{padding:0 1.1em 1.1em}
+    }
+  </style>
+  <div class="in">
+    <h2>{{faq_headline}}</h2>
+    <details class="faq-item">
+      <summary>{{faq_1_q}}<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>{{faq_1_a}}</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>{{faq_2_q}}<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>{{faq_2_a}}</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>{{faq_3_q}}<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>{{faq_3_a}}</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>{{faq_4_q}}<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>{{faq_4_a}}</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>{{faq_5_q}}<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>{{faq_5_a}}</p></div>
+    </details>
+  </div>
+</section>

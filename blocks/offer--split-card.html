@@ -1,0 +1,77 @@
+<section class="lp-offer-split">
+  <style>
+    /* OFFER ARCHETYPE: split card + media panel. The priced offer card sits
+       beside a tall media panel with a floating tag. Two-column, stacks under
+       768px. Differs from offer--centered-price (single centered card) and
+       offer--deposit (deposit-forward horizontal panel). */
+    .lp-offer-split{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-offer-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:calc(var(--gutter) * 1.3);align-items:center}
+    .lp-offer-split .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .lp-offer-split .card-top{padding:clamp(24px,4vw,34px) clamp(22px,4vw,30px) 0}
+    .lp-offer-split .badge{display:inline-block;font-family:var(--font-body);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--border);border-radius:var(--r-pill);padding:.4em .9em;margin:0 0 1em}
+    .lp-offer-split .offer-name{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.1;margin:0 0 .5em}
+    .lp-offer-split .price-row{display:flex;align-items:baseline;gap:.6em;flex-wrap:wrap;margin:0 0 .2em}
+    .lp-offer-split .price-now{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h1);color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+    .lp-offer-split .price-was{font-family:var(--font-body);font-size:1rem;color:var(--muted);text-decoration:line-through;font-weight:600}
+    .lp-offer-split .price-per{font-family:var(--font-body);font-size:.85rem;color:var(--muted);font-weight:600;margin:0}
+    .lp-offer-split .card-body{padding:clamp(22px,4vw,30px)}
+    .lp-offer-split ul{list-style:none;margin:0 0 1.3em;padding:0;display:grid;gap:.8em}
+    .lp-offer-split li{display:flex;gap:.65em;font-family:var(--font-body);font-size:var(--fs-body);line-height:1.45;color:var(--ink)}
+    .lp-offer-split li svg{flex:none;margin-top:.2em;color:var(--accent)}
+    .lp-offer-split .note{font-family:var(--font-body);font-size:.88rem;line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;padding-top:1em;border-top:1px solid var(--border)}
+    .lp-offer-split .btn-primary{display:flex;align-items:center;justify-content:center;gap:.6em;width:100%;box-sizing:border-box;background:linear-gradient(90deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:1rem;padding:1em 1.4em;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none}
+    .lp-offer-split .btn-primary svg{flex:none}
+    .lp-offer-split .media{position:relative}
+    .lp-offer-split .scene{position:relative;aspect-ratio:4/4.4;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);color:var(--accent);background:
+      radial-gradient(110% 80% at 78% 14%, color-mix(in srgb, var(--glow-1) 88%, transparent) 0%, transparent 55%),
+      radial-gradient(90% 80% at 10% 92%, color-mix(in srgb, var(--glow-2) 82%, transparent) 0%, transparent 55%),
+      var(--surface)}
+    .lp-offer-split .scene svg{position:absolute;inset:0;width:100%;height:100%}
+    .lp-offer-split .tag-float{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:.5em;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);padding:.55em 1em;font-family:var(--font-body);font-size:.8rem;font-weight:600;color:var(--ink);box-shadow:var(--shadow)}
+    .lp-offer-split .tag-float .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+    @media (max-width:768px){
+      .lp-offer-split .in{grid-template-columns:1fr;gap:2.2em}
+      .lp-offer-split .media{order:-1}
+    }
+  </style>
+  <div class="in">
+    <div class="card reveal">
+      <div class="card-top">
+        <span class="badge">{{offer_badge}}</span>
+        <h2 class="offer-name">{{offer_headline}}</h2>
+        <div class="price-row">
+          <span class="price-now">{{offer_price}}</span>
+          <span class="price-was">{{offer_was_price}}</span>
+        </div>
+        <p class="price-per">{{offer_price_per}}</p>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_1}}</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_2}}</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_3}}</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_4}}</li>
+        </ul>
+        <p class="note">{{offer_note}}</p>
+        <a class="btn-primary" href="#book">
+          {{primary_cta_label}}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="media reveal">
+      <!-- media placeholder: swap the .scene for a real <img> when building -->
+      <div class="scene" data-parallax="0.1" aria-hidden="true">
+        <svg viewBox="0 0 400 440" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="currentColor" stroke-opacity=".26" stroke-width="1.6" stroke-linecap="round">
+            <path d="M120 120 C 160 96, 214 96, 250 128"/>
+            <path d="M150 300 C 200 340, 250 336, 292 300"/>
+            <path d="M80 210 C 140 180, 260 180, 320 214"/>
+          </g>
+          <g fill="currentColor" fill-opacity=".12"><circle cx="300" cy="120" r="34"/><circle cx="110" cy="330" r="24"/></g>
+        </svg>
+      </div>
+      <span class="tag-float"><span class="dot" aria-hidden="true"></span>{{media_tag}}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<section class="lp-faq-two">
+  <style>
+    .lp-faq-two,.lp-faq-two *{box-sizing:border-box}
+    .lp-faq-two{background:var(--surface);padding:var(--space-section) var(--gutter)}
+    .lp-faq-two .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px)}
+    /* intro column */
+    .lp-faq-two .intro .kicker{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .8em}
+    .lp-faq-two .intro h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.15;margin:0 0 .5em}
+    .lp-faq-two .intro p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0 0 1.4em;max-width:40ch}
+    .lp-faq-two .intro .help{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-size:.9rem;font-weight:600;color:var(--accent);text-decoration:none}
+    .lp-faq-two .intro .help svg{flex:none}
+    /* Q/A column */
+    .lp-faq-two .qa{display:flex;flex-direction:column;gap:.7em}
+    .lp-faq-two .faq-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .lp-faq-two summary{display:flex;align-items:center;justify-content:space-between;gap:1em;list-style:none;cursor:pointer;font-family:var(--font-body);font-size:1.02rem;font-weight:600;color:var(--ink);padding:1.05em 1.2em}
+    .lp-faq-two summary::-webkit-details-marker{display:none}
+    .lp-faq-two summary .chev{flex:none;color:var(--accent);transition:transform .3s}
+    .lp-faq-two .faq-item[open] summary .chev{transform:rotate(180deg)}
+    .lp-faq-two .faq-a{padding:0 1.2em 1.15em}
+    .lp-faq-two .faq-a p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:60ch}
+    @media (min-width:900px){
+      .lp-faq-two .in{grid-template-columns:.82fr 1.18fr;align-items:start}
+      .lp-faq-two .intro{position:sticky;top:24px}
+    }
+  </style>
+  <div class="in">
+    <div class="intro reveal">
+      <p class="kicker">{{faq_kicker}}</p>
+      <h2>{{faq_headline}}</h2>
+      <p>{{faq_intro}}</p>
+      <a class="help" href="#book">
+        {{faq_help_cta}}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="qa reveal">
+      <details class="faq-item">
+        <summary>{{faq_1_q}}<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq-a"><p>{{faq_1_a}}</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>{{faq_2_q}}<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq-a"><p>{{faq_2_a}}</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>{{faq_3_q}}<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq-a"><p>{{faq_3_a}}</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>{{faq_4_q}}<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq-a"><p>{{faq_4_a}}</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>{{faq_5_q}}<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="faq-a"><p>{{faq_5_a}}</p></div>
+      </details>
+    </div>
+  </div>
+</section>

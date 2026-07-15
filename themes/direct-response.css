@@ -1,0 +1,36 @@
+/* direct-response: bold, warm, price-led (SK lineage) */
+:root {
+  /* palette */
+  --bg: #fffdf9;
+  --surface: #fbf3e7;
+  --ink: #1a1208;
+  --muted: #5c5040;
+  --border: #ece0cd;
+  --accent: #c8892f;
+  --accent-ink: #ffffff;
+  --band-dark-bg: #1a1208;
+  --band-dark-ink: #fdf6ea;
+  /* type */
+  --font-display: "Georgia", serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --fs-h1: clamp(2.2rem, 6vw, 3.5rem);
+  --fs-h2: clamp(1.6rem, 3.4vw, 2.4rem);
+  --fs-body: 1.0625rem;
+  --lh-body: 1.6;
+  /* layout */
+  --maxw: 1080px;
+  --space-section: clamp(48px, 8vw, 88px);
+  --gutter: clamp(20px, 5vw, 36px);
+  --radius: 14px;
+  --btn-radius: 999px;
+  --shadow: 0 1px 0 var(--border);
+  /* decorative (warm amber / terracotta richness) */
+  --cta-grad-a: #e0a53a;
+  --cta-grad-b: #b8742a;
+  --shadow-cta: 0 14px 30px -10px rgba(200,137,47,.42), 0 4px 10px -2px rgba(200,137,47,.28);
+  --glow-1: #f6e6cf;
+  --glow-2: #ecd0b8;
+  --ghost-color: rgba(26,18,8,.07);
+  --deposit-accent: #9a6a22;
+  --r-pill: 999px;
+}

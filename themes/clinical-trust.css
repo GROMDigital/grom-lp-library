@@ -1,0 +1,36 @@
+/* clinical-trust: cool, sage, credibility-led (grotesque sans, tighter radii, hairlines) */
+:root {
+  /* palette */
+  --bg: #f7faf9;
+  --surface: #eef4f1;
+  --ink: #12201c;
+  --muted: #4d635b;
+  --border: #d7e3de;
+  --accent: #3f7767;
+  --accent-ink: #ffffff;
+  --band-dark-bg: #16221f;
+  --band-dark-ink: #eef6f2;
+  /* type */
+  --font-display: "Helvetica Neue", Arial, sans-serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --fs-h1: clamp(1.9rem, 4.6vw, 2.9rem);
+  --fs-h2: clamp(1.35rem, 2.6vw, 1.9rem);
+  --fs-body: 1rem;
+  --lh-body: 1.55;
+  /* layout */
+  --maxw: 1040px;
+  --space-section: clamp(40px, 6vw, 72px);
+  --gutter: clamp(18px, 4vw, 32px);
+  --radius: 6px;
+  --btn-radius: 6px;
+  --shadow: 0 1px 0 var(--border);
+  /* decorative (cool sage / clinical richness) */
+  --cta-grad-a: #4d8a78;
+  --cta-grad-b: #35685a;
+  --shadow-cta: 0 12px 26px -12px rgba(63,119,103,.36), 0 3px 8px -2px rgba(63,119,103,.22);
+  --glow-1: #e3efe9;
+  --glow-2: #d7e6df;
+  --ghost-color: rgba(18,32,28,.06);
+  --deposit-accent: #2f5b4e;
+  --r-pill: 999px;
+}

@@ -1,0 +1,36 @@
+/* premium-editorial: clay/charcoal, higher-ticket, editorial (serif display, generous rhythm, prominent dark band) */
+:root {
+  /* palette */
+  --bg: #faf6f2;
+  --surface: #f1e7dc;
+  --ink: #241f1a;
+  --muted: #6b6055;
+  --border: #e2d5c5;
+  --accent: #b3603f;
+  --accent-ink: #fbf1e9;
+  --band-dark-bg: #241f1a;
+  --band-dark-ink: #f4e9dc;
+  /* type */
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-body: Georgia, "Times New Roman", serif;
+  --fs-h1: clamp(2.4rem, 5.6vw, 4rem);
+  --fs-h2: clamp(1.7rem, 3vw, 2.5rem);
+  --fs-body: 1.125rem;
+  --lh-body: 1.7;
+  /* layout */
+  --maxw: 1160px;
+  --space-section: clamp(64px, 10vw, 128px);
+  --gutter: clamp(24px, 6vw, 48px);
+  --radius: 2px;
+  --btn-radius: 2px;
+  --shadow: none;
+  /* decorative (clay / editorial restraint: subtle gradient, no CTA shadow) */
+  --cta-grad-a: #c27049;
+  --cta-grad-b: #9c4e30;
+  --shadow-cta: none;
+  --glow-1: #ece0d3;
+  --glow-2: #e0cdbb;
+  --ghost-color: rgba(36,31,26,.06);
+  --deposit-accent: #8c4327;
+  --r-pill: 999px;
+}

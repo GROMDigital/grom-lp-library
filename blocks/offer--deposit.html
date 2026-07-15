@@ -1,0 +1,68 @@
+<section class="lp-offer-deposit2">
+  <style>
+    /* OFFER ARCHETYPE: deposit-forward horizontal panel. A two-pane card, a
+       tinted deposit/price pane on the left (price, struck was-price, and the
+       hero deposit line) beside an includes + CTA pane on the right. The
+       "deposit comes off the price" message is the hero. Differs from
+       offer--split-card (media panel) and offer--centered-price (single
+       centered lockup). Stacks under 768px. */
+    .lp-offer-deposit2{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-offer-deposit2 .in{max-width:var(--maxw);margin:0 auto}
+    .lp-offer-deposit2 .head{max-width:44ch;margin:0 0 clamp(22px,4vw,36px)}
+    .lp-offer-deposit2 .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--deposit-accent);margin:0 0 .6em}
+    .lp-offer-deposit2 h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0;overflow-wrap:anywhere}
+    .lp-offer-deposit2 h2 em{font-style:italic;color:var(--deposit-accent)}
+    .lp-offer-deposit2 .card{display:grid;grid-template-columns:.92fr 1.08fr;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .lp-offer-deposit2 .pane-price{padding:clamp(26px,4vw,38px) clamp(24px,4vw,32px);background:color-mix(in srgb, var(--deposit-accent) 10%, var(--surface));border-right:1px solid var(--border)}
+    .lp-offer-deposit2 .price-row{display:flex;align-items:baseline;gap:.6em;flex-wrap:wrap;margin:0 0 .2em}
+    .lp-offer-deposit2 .price-now{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h1);color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;max-width:100%;overflow-wrap:anywhere}
+    .lp-offer-deposit2 .price-was{font-family:var(--font-body);font-size:1rem;color:var(--muted);text-decoration:line-through;font-weight:600}
+    .lp-offer-deposit2 .price-per{font-family:var(--font-body);font-size:.85rem;color:var(--muted);font-weight:600;margin:0 0 1.3em}
+    .lp-offer-deposit2 .deposit-line{display:flex;align-items:flex-start;gap:.6em;background:var(--bg);border:1px solid color-mix(in srgb, var(--deposit-accent) 40%, var(--border));border-radius:var(--radius);padding:1em 1.1em;font-family:var(--font-body);font-size:.95rem;line-height:1.4;font-weight:600;color:var(--ink)}
+    .lp-offer-deposit2 .deposit-line svg{flex:none;margin-top:.15em;color:var(--deposit-accent)}
+    .lp-offer-deposit2 .deposit-line strong{color:var(--deposit-accent);font-weight:800}
+    .lp-offer-deposit2 .pane-body{padding:clamp(26px,4vw,38px) clamp(24px,4vw,32px);display:flex;flex-direction:column}
+    .lp-offer-deposit2 ul{list-style:none;margin:0 0 1.3em;padding:0;display:grid;gap:.8em}
+    .lp-offer-deposit2 li{display:flex;gap:.65em;font-family:var(--font-body);font-size:var(--fs-body);line-height:1.45;color:var(--ink)}
+    .lp-offer-deposit2 li svg{flex:none;margin-top:.2em;color:var(--deposit-accent)}
+    .lp-offer-deposit2 .note{font-family:var(--font-body);font-size:.88rem;line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;padding-top:1em;border-top:1px solid var(--border)}
+    .lp-offer-deposit2 .btn-primary{display:flex;align-items:center;justify-content:center;gap:.6em;width:100%;box-sizing:border-box;margin-top:auto;background:linear-gradient(90deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:1rem;padding:1em 1.4em;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none}
+    .lp-offer-deposit2 .btn-primary svg{flex:none}
+    @media (max-width:768px){
+      .lp-offer-deposit2 .card{grid-template-columns:1fr}
+      .lp-offer-deposit2 .pane-price{border-right:none;border-bottom:1px solid var(--border)}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">{{offer_kicker}}</p>
+      <h2>{{offer_headline}} <em>{{offer_headline_emphasis}}</em></h2>
+    </div>
+    <div class="card reveal">
+      <div class="pane-price">
+        <div class="price-row">
+          <span class="price-now">{{offer_price}}</span>
+          <span class="price-was">{{offer_was_price}}</span>
+        </div>
+        <p class="price-per">{{offer_price_per}}</p>
+        <div class="deposit-line">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M17 6.5c0-2-2.2-3-5-3s-5 1-5 3 2.2 3 5 3 5 1 5 3-2.2 3-5 3-5-1-5-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>{{deposit_line}}</span>
+        </div>
+      </div>
+      <div class="pane-body">
+        <ul>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_1}}</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_2}}</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_3}}</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{offer_includes_4}}</li>
+        </ul>
+        <p class="note">{{offer_note}}</p>
+        <a class="btn-primary" href="#book">
+          {{primary_cta_label}}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+<section class="lp-reviews-marquee">
+  <style>
+    .lp-reviews-marquee{background:var(--surface);padding:var(--space-section) 0}
+    .lp-reviews-marquee .head{max-width:var(--maxw);margin:0 auto clamp(24px,3.4vw,40px);padding:0 var(--gutter);text-align:center}
+    .lp-reviews-marquee h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0 0 .35em}
+    .lp-reviews-marquee .rating{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--muted)}
+    .lp-reviews-marquee .rating .stars{color:var(--accent);letter-spacing:.14em}
+    .lp-reviews-marquee .rail{position:relative;padding:.4em var(--gutter);-webkit-mask-image:linear-gradient(90deg,transparent,black 7%,black 93%,transparent);mask-image:linear-gradient(90deg,transparent,black 7%,black 93%,transparent)}
+    .lp-reviews-marquee .marquee-track{gap:var(--gutter);padding-block:.4em;flex-wrap:wrap;justify-content:center}
+    html.js-motion .lp-reviews-marquee .marquee-track{flex-wrap:nowrap;justify-content:flex-start}
+    @media (prefers-reduced-motion:reduce){
+      html.js-motion .lp-reviews-marquee .marquee-track{flex-wrap:wrap;justify-content:center}
+    }
+    .lp-reviews-marquee .chip{box-sizing:border-box;flex:none;width:min(78vw,320px);background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,2.4vw,24px);text-align:left;white-space:normal}
+    .lp-reviews-marquee .chip .stars{display:block;color:var(--accent);font-size:.95rem;letter-spacing:.15em;margin:0 0 .55em}
+    .lp-reviews-marquee .chip .q{font-family:var(--font-body);font-size:.98rem;line-height:1.5;color:var(--ink);margin:0 0 .9em}
+    .lp-reviews-marquee .chip .n{display:flex;align-items:center;gap:.6em;font-family:var(--font-body);font-size:.85rem;font-weight:700;color:var(--muted);margin:0}
+    .lp-reviews-marquee .chip .dot{width:30px;height:30px;border-radius:50%;background:var(--surface);border:1px solid var(--border);flex:none}
+    @media (max-width:768px){
+      .lp-reviews-marquee .rail{-webkit-mask-image:none;mask-image:none}
+    }
+  </style>
+  <div class="head reveal">
+    <h2>{{reviews_headline}}</h2>
+    <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> {{review_rating}}</p>
+  </div>
+  <div class="rail">
+    <div class="marquee">
+      <div class="marquee-track">
+        <figure class="chip">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="q">{{review_1_quote}}</blockquote>
+          <figcaption class="n"><span class="dot" aria-hidden="true"></span>{{review_1_name}}</figcaption>
+        </figure>
+        <figure class="chip">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="q">{{review_2_quote}}</blockquote>
+          <figcaption class="n"><span class="dot" aria-hidden="true"></span>{{review_2_name}}</figcaption>
+        </figure>
+        <figure class="chip">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="q">{{review_3_quote}}</blockquote>
+          <figcaption class="n"><span class="dot" aria-hidden="true"></span>{{review_3_name}}</figcaption>
+        </figure>
+        <figure class="chip">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="q">{{review_4_quote}}</blockquote>
+          <figcaption class="n"><span class="dot" aria-hidden="true"></span>{{review_4_name}}</figcaption>
+        </figure>
+        <figure class="chip">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="q">{{review_5_quote}}</blockquote>
+          <figcaption class="n"><span class="dot" aria-hidden="true"></span>{{review_5_name}}</figcaption>
+        </figure>
+        <figure class="chip">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="q">{{review_6_quote}}</blockquote>
+          <figcaption class="n"><span class="dot" aria-hidden="true"></span>{{review_6_name}}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

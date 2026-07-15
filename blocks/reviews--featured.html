@@ -1,0 +1,61 @@
+<section class="lp-reviews-featured">
+  <style>
+    .lp-reviews-featured{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-reviews-featured .in{max-width:var(--maxw);margin:0 auto}
+    .lp-reviews-featured .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6em 1.2em;margin:0 0 clamp(24px,3.4vw,40px)}
+    .lp-reviews-featured h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0}
+    .lp-reviews-featured .rating{font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--muted)}
+    .lp-reviews-featured .rating .stars{color:var(--accent);letter-spacing:.14em;margin-right:.4em}
+    .lp-reviews-featured .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--gutter)}
+    .lp-reviews-featured .feature{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
+    .lp-reviews-featured .feature .mark{position:absolute;top:.1em;left:.3em;font-family:var(--font-display);font-size:9rem;line-height:.7;color:var(--accent);opacity:.12;pointer-events:none}
+    .lp-reviews-featured .feature .stars{position:relative;color:var(--accent);font-size:1.1rem;letter-spacing:.16em;margin:0 0 .6em}
+    .lp-reviews-featured .feature blockquote{position:relative;margin:0 0 1.1em}
+    .lp-reviews-featured .feature .q{font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.24;color:var(--ink);margin:0}
+    .lp-reviews-featured .who{position:relative;display:flex;align-items:center;gap:.75em}
+    .lp-reviews-featured .avatar{width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--border);flex:none}
+    .lp-reviews-featured .name{font-family:var(--font-body);font-size:.98rem;font-weight:700;color:var(--ink);margin:0;line-height:1.25}
+    .lp-reviews-featured .meta{font-family:var(--font-body);font-size:.82rem;color:var(--muted);margin:0}
+    .lp-reviews-featured .support{display:grid;grid-template-rows:1fr 1fr;gap:var(--gutter)}
+    .lp-reviews-featured .mini{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(20px,2.6vw,26px);display:flex;flex-direction:column}
+    .lp-reviews-featured .mini .stars{color:var(--accent);font-size:.95rem;letter-spacing:.15em;margin:0 0 .6em;display:block}
+    .lp-reviews-featured .mini .mq{font-family:var(--font-body);font-size:var(--fs-body);line-height:1.5;color:var(--ink);margin:0 0 .9em}
+    .lp-reviews-featured .mini .mn{font-family:var(--font-body);font-size:.86rem;font-weight:700;color:var(--muted);margin:auto 0 0}
+    @media (max-width:768px){
+      .lp-reviews-featured .grid{grid-template-columns:1fr}
+      .lp-reviews-featured .support{grid-template-rows:auto}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <h2>{{reviews_headline}}</h2>
+      <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>{{review_rating}}</p>
+    </div>
+    <div class="grid reveal-stagger">
+      <figure class="feature">
+        <span class="mark" aria-hidden="true">&ldquo;</span>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote><p class="q">{{featured_quote}}</p></blockquote>
+        <figcaption class="who">
+          <span class="avatar" aria-hidden="true"></span>
+          <span>
+            <p class="name">{{featured_name}}</p>
+            <p class="meta">{{featured_meta}}</p>
+          </span>
+        </figcaption>
+      </figure>
+      <div class="support">
+        <figure class="mini">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="mq">{{support_1_quote}}</blockquote>
+          <figcaption class="mn">{{support_1_name}}</figcaption>
+        </figure>
+        <figure class="mini">
+          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <blockquote class="mq">{{support_2_quote}}</blockquote>
+          <figcaption class="mn">{{support_2_name}}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
