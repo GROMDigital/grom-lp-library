@@ -1,0 +1,248 @@
+<section class="lp-hero-book" id="hero">
+  <style>
+    /* HERO ARCHETYPE: calendar-at-top. A full value-prop stack on the LEFT
+       (eyebrow pill, headline with an italic accent word carrying an animated
+       underline, subhead, one deposit chip, primary CTA + secure microcopy,
+       trust row, and a treatment photo with a floating price card) beside the
+       live booking widget on the RIGHT, both in the first fold. This is the
+       ONLY booking section on the page: exactly one #lp-booking-widget. The
+       left-column CTA scrolls back to the fold (#hero); the widget itself is
+       the booking. Two-column at >=1024px (1fr minmax(420px,.85fr)); stacks to
+       one column below that, the price photo hiding on mobile so the calendar
+       leads. Contract tokens only. */
+    .lp-hero-book,.lp-hero-book *{box-sizing:border-box}
+    .lp-hero-book{position:relative;background:var(--bg);padding:14px var(--gutter) 0;overflow:hidden}
+    .lp-hero-book .glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0;will-change:transform}
+    .lp-hero-book .glow.g1{width:340px;height:340px;background:var(--glow-1);top:-140px;right:-120px;opacity:.9}
+    .lp-hero-book .glow.g2{width:260px;height:260px;background:var(--glow-2);bottom:-40px;left:-100px;opacity:.7}
+    @keyframes lp-heroDriftA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-26px,20px) scale(1.09)}}
+    @keyframes lp-heroDriftB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(22px,-18px) scale(1.06)}}
+    .lp-hero-book .glow.g1{animation:lp-heroDriftA 16s ease-in-out infinite}
+    .lp-hero-book .glow.g2{animation:lp-heroDriftB 19s ease-in-out infinite}
+
+    .lp-hero-book .in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px)}
+
+    /* copy column */
+    .lp-hero-book .copy{text-align:left;min-width:0}
+    .lp-hero-book .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);background:var(--glow-1);padding:7px 14px 7px 12px;border-radius:var(--r-pill);margin:0 0 22px}
+    .lp-hero-book .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-pulseDot 2.4s ease-in-out infinite}
+    @keyframes lp-pulseDot{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 10%,transparent)}}
+
+    .lp-hero-book h1{font-family:var(--font-display);font-weight:600;font-optical-sizing:auto;font-size:var(--fs-h1);line-height:1.03;letter-spacing:-.015em;margin:0 0 20px;color:var(--ink);max-width:14ch}
+    .lp-hero-book h1 .em{position:relative;font-style:italic;color:var(--accent-deep);background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-position:0 100%;background-size:0 .07em;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size .7s var(--ease);transition-delay:1s}
+    .lp-hero-book .copy.reveal-stagger.is-visible h1 .em,
+    .lp-hero-book .copy.is-visible h1 .em{background-size:100% .07em}
+
+    .lp-hero-book .subhead{font-family:var(--font-body);font-size:var(--fs-lead);color:var(--muted);max-width:38ch;margin:0 0 26px;font-weight:400;line-height:1.5}
+
+    .lp-hero-book .chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--ghost-color);padding:9px 16px;border-radius:var(--r-pill);font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--muted);box-shadow:var(--shadow-sm);margin:0 0 26px}
+    .lp-hero-book .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--deposit-accent);flex:none}
+    .lp-hero-book .chip strong{color:var(--accent-deep);font-weight:700}
+
+    .lp-hero-book .cta-block{margin:0 0 22px}
+    .lp-hero-book .btn-primary{appearance:none;border:none;cursor:pointer;position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:16px;letter-spacing:.01em;padding:17px 30px;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);min-height:56px;text-decoration:none;width:100%;max-width:420px;transition:box-shadow .28s var(--ease),filter .25s var(--ease)}
+    .lp-hero-book .btn-primary::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,color-mix(in srgb,var(--accent-ink) 40%,transparent),transparent);transform:skewX(-20deg);transition:left .75s ease;pointer-events:none}
+    .lp-hero-book .btn-primary:hover::after{left:120%}
+    .lp-hero-book .btn-primary svg{flex:none;transition:transform .25s var(--ease)}
+    .lp-hero-book .btn-primary:hover svg{transform:translateX(3px)}
+    .lp-hero-book .cta-micro{display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:13px;color:var(--muted);margin-top:12px;font-weight:500}
+    .lp-hero-book .cta-micro svg{flex:none;opacity:.6}
+
+    .lp-hero-book .trust-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:30px;padding-top:24px;border-top:1px solid var(--ghost-color)}
+    .lp-hero-book .trust-item{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--muted)}
+    .lp-hero-book .trust-item svg{flex:none;color:var(--accent)}
+    .lp-hero-book .stars{color:var(--accent);letter-spacing:1px;font-size:13px}
+
+    /* treatment photo with floating price card (desktop only, balances the tall widget) */
+    .lp-hero-book .hero-copy-photo{display:none}
+    .lp-hero-book .price-float{position:absolute;left:18px;bottom:0;background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:16px 20px;display:flex;align-items:baseline;gap:10px;z-index:3;animation:lp-floatY 5s ease-in-out infinite}
+    @keyframes lp-floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+    .lp-hero-book .price-float .now{font-family:var(--font-display);font-weight:600;font-size:30px;color:var(--accent-deep);line-height:1;font-variant-numeric:tabular-nums}
+    .lp-hero-book .price-float .was{font-family:var(--font-body);font-size:13.5px;color:var(--muted);text-decoration:line-through;font-weight:600}
+    .lp-hero-book .price-float .label{display:block;font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+
+    /* booking card (right column) */
+    .lp-hero-book .book-card{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column}
+    .lp-hero-book .booking-title{font-family:var(--font-display);font-weight:600;font-size:clamp(1.35rem,1.1rem + 1.1vw,1.7rem);color:var(--accent-deep);margin:0 0 6px}
+    .lp-hero-book .booking-sub{font-family:var(--font-body);color:var(--muted);margin:0 auto;max-width:42ch;font-size:.92rem;line-height:1.5}
+    .lp-hero-book .booking-sub strong{color:var(--accent-deep);font-weight:700}
+    .lp-hero-book .book-card::before{content:"";position:absolute;z-index:0;left:50%;top:7%;transform:translateX(-50%);width:min(94%,560px);height:84%;border-radius:var(--radius);background:radial-gradient(58% 58% at 50% 26%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 72%);filter:blur(46px);opacity:.72;pointer-events:none}
+    .lp-hero-book .booking-frame{position:relative;z-index:1;background:linear-gradient(176deg,var(--surface),color-mix(in srgb,var(--surface) 88%,var(--bg)));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.6);padding:24px 24px 22px;overflow:hidden;text-align:left;max-width:600px;margin-inline:auto}
+    .lp-hero-book .booking-intro{text-align:center;padding:0 0 18px;margin:0 0 18px;border-bottom:1px solid var(--ghost-color)}
+    .lp-hero-book #lp-booking-widget{min-height:200px}
+    /* header: live badge + month nav */
+    .lp-hero-book #lp-booking-widget .wx-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
+    .lp-hero-book #lp-booking-widget .wx-live{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .lp-hero-book #lp-booking-widget .wx-live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-pulseDot 2.4s ease-in-out infinite}
+    .lp-hero-book #lp-booking-widget .wx-monthnav{display:inline-flex;align-items:center;gap:4px}
+    .lp-hero-book #lp-booking-widget .wx-month{font-family:var(--font-body);font-weight:700;font-size:13.5px;letter-spacing:.01em;color:var(--accent-deep);min-width:88px;text-align:center}
+    .lp-hero-book #lp-booking-widget .wx-chev{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;padding:0;border:1px solid var(--ghost-color);border-radius:50%;background:var(--surface);color:var(--muted);cursor:pointer;transition:border-color .2s,color .2s}
+    .lp-hero-book #lp-booking-widget .wx-chev:hover{border-color:var(--accent);color:var(--accent)}
+    .lp-hero-book #lp-booking-widget .wx-chev svg{width:13px;height:13px}
+    /* month grid */
+    .lp-hero-book #lp-booking-widget .wx-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin:0 0 3px}
+    .lp-hero-book #lp-booking-widget .wx-weekdays span{text-align:center;font-family:var(--font-body);font-size:9px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);opacity:.55}
+    .lp-hero-book #lp-booking-widget .wx-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+    .lp-hero-book #lp-booking-widget .wx-day{height:48px;display:flex;align-items:center;justify-content:center;position:relative;font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--ink);background:transparent;border:1px solid transparent;border-radius:var(--r-sm);cursor:pointer;transition:background .18s,color .18s,border-color .18s;padding:0}
+    .lp-hero-book #lp-booking-widget .wx-day.wx-blank{visibility:hidden;cursor:default}
+    .lp-hero-book #lp-booking-widget .wx-day.avail::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:3.5px;height:3.5px;border-radius:50%;background:var(--accent);opacity:.5}
+    .lp-hero-book #lp-booking-widget .wx-day:hover:not(.muted):not(.sel){background:var(--glow-1);color:var(--accent-deep)}
+    .lp-hero-book #lp-booking-widget .wx-day.sel{background:var(--accent);color:var(--accent-ink);font-weight:700;box-shadow:0 4px 12px -4px color-mix(in srgb,var(--accent) 55%,transparent)}
+    .lp-hero-book #lp-booking-widget .wx-day.sel::after{background:var(--accent-ink);opacity:.85}
+    .lp-hero-book #lp-booking-widget .wx-day.muted{color:var(--muted);opacity:.3;cursor:not-allowed}
+    /* time slots for the selected day */
+    .lp-hero-book #lp-booking-widget .wx-times{margin-top:18px;padding-top:15px;border-top:1px solid var(--ghost-color)}
+    .lp-hero-book #lp-booking-widget .wx-times-head{font-family:var(--font-body);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+    .lp-hero-book #lp-booking-widget .wx-times-head strong{color:var(--accent-deep)}
+    .lp-hero-book #lp-booking-widget .time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0}
+    .lp-hero-book #lp-booking-widget .time-chip{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:.65em .5em;cursor:pointer;text-align:center;line-height:1.1;transition:border-color .18s,color .18s,background .18s,box-shadow .18s}
+    .lp-hero-book #lp-booking-widget .time-chip:hover:not(.muted):not(.sel){border-color:var(--accent);color:var(--accent);box-shadow:0 2px 10px -6px color-mix(in srgb,var(--accent) 55%,transparent)}
+    .lp-hero-book #lp-booking-widget .time-chip.sel{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+    .lp-hero-book #lp-booking-widget .time-chip.muted{color:var(--muted);opacity:.4;cursor:not-allowed;text-decoration:line-through}
+    /* confirm CTA */
+    .lp-hero-book #lp-booking-widget .wx-foot{margin-top:16px}
+    .lp-hero-book #lp-booking-widget .wx-confirm{appearance:none;border:none;cursor:pointer;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:15px;letter-spacing:.01em;padding:13px 22px;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none;min-height:50px;transition:box-shadow .28s var(--ease),filter .25s var(--ease)}
+    .lp-hero-book #lp-booking-widget .wx-confirm svg{flex:none;transition:transform .25s var(--ease)}
+    .lp-hero-book #lp-booking-widget .wx-confirm:hover{filter:brightness(1.03)}
+    .lp-hero-book #lp-booking-widget .wx-confirm:hover svg{transform:translateX(3px)}
+
+    /* desktop: two-column fold, copy stretches so the photo fills beside the tall widget */
+    @media (min-width:1024px){
+      .lp-hero-book{padding:20px var(--gutter) 0}
+      .lp-hero-book .in{grid-template-columns:1fr 1.06fr;gap:52px;align-items:start;padding-top:32px;padding-bottom:80px}
+      .lp-hero-book .copy{display:flex;flex-direction:column}
+      .lp-hero-book .copy .eyebrow,.lp-hero-book .copy h1,.lp-hero-book .copy .subhead,.lp-hero-book .copy .chip,.lp-hero-book .copy .cta-block,.lp-hero-book .copy .trust-row{max-width:520px}
+      .lp-hero-book h1{max-width:12ch}
+      .lp-hero-book .cta-block .btn-primary{width:auto}
+      .lp-hero-book .book-card{align-self:start}
+      .lp-hero-book .booking-frame{padding:26px 26px 24px;width:444px;max-width:100%;align-self:center}
+      .lp-hero-book .hero-copy-photo{display:block;position:relative;margin-top:34px;width:100%;flex:1 1 0;min-height:230px;overflow:hidden;border-radius:var(--r-lg)}
+      .lp-hero-book .hero-copy-photo img{width:100%;height:100%;display:block;object-fit:cover}
+      .lp-hero-book .hero-copy-photo .price-float{left:16px;bottom:16px}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .lp-hero-book .glow,.lp-hero-book .eyebrow::before,.lp-hero-book .price-float,.lp-hero-book #lp-booking-widget .wx-live-dot{animation:none !important}
+      .lp-hero-book h1 .em{background-size:100% .07em;transition:none}
+    }
+  </style>
+
+  <div class="glow g1" aria-hidden="true"></div>
+  <div class="glow g2" aria-hidden="true"></div>
+
+  <div class="in">
+    <div class="copy reveal-stagger">
+      <span class="eyebrow">{{hero_eyebrow}}</span>
+
+      <h1>{{hero_title}} <span class="em">{{hero_title_em}}</span></h1>
+
+      <p class="subhead">{{hero_subhead}}</p>
+
+      <div class="chip">
+        <span class="dot" aria-hidden="true"></span>
+        <span><strong>{{deposit_chip_strong}}</strong> {{deposit_chip_rest}}</span>
+      </div>
+
+      <div class="cta-block">
+        <a class="btn-primary" href="#hero" data-cta>
+          {{hero_cta}}
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="cta-micro">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+          {{hero_cta_micro}}
+        </p>
+      </div>
+
+      <div class="trust-row">
+        <span class="trust-item"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> {{trust_rating}}</span>
+        <span class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          {{trust_item_2}}
+        </span>
+        <span class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.6-7-11a7 7 0 0 1 14 0c0 6.4-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
+          {{trust_item_3}}
+        </span>
+      </div>
+    </div>
+
+    <!-- The live booking embed replaces the skeleton inside #lp-booking-widget.
+         KEEP the mount id and .time-chip class exactly: motion.js selection and
+         the live embed both key off them. This is the ONLY booking mount. -->
+    <div class="book-card reveal">
+      <div class="booking-frame">
+        <div class="booking-intro">
+          <h3 class="booking-title">{{booking_title}}</h3>
+          <p class="booking-sub">{{booking_sub}}</p>
+        </div>
+        <div id="lp-booking-widget">
+          <div class="wx-head">
+            <span class="wx-live"><span class="wx-live-dot" aria-hidden="true"></span> {{booking_live_label}}</span>
+            <span class="wx-monthnav">
+              <button type="button" class="wx-chev" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="wx-month">{{booking_month}}</span>
+              <button type="button" class="wx-chev" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </span>
+          </div>
+          <div class="wx-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+          <div class="wx-days" role="group" aria-label="Choose a date">
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <button type="button" class="wx-day muted" disabled>1</button>
+            <button type="button" class="wx-day muted" disabled>2</button>
+            <button type="button" class="wx-day muted" disabled>3</button>
+            <button type="button" class="wx-day muted" disabled>4</button>
+            <button type="button" class="wx-day muted" disabled>5</button>
+            <button type="button" class="wx-day muted" disabled>6</button>
+            <button type="button" class="wx-day muted" disabled>7</button>
+            <button type="button" class="wx-day muted" disabled>8</button>
+            <button type="button" class="wx-day muted" disabled>9</button>
+            <button type="button" class="wx-day muted" disabled>10</button>
+            <button type="button" class="wx-day muted" disabled>11</button>
+            <button type="button" class="wx-day muted" disabled>12</button>
+            <button type="button" class="wx-day muted" disabled>13</button>
+            <button type="button" class="wx-day muted" disabled>14</button>
+            <button type="button" class="wx-day muted" disabled>15</button>
+            <button type="button" class="wx-day sel" aria-current="date">16</button>
+            <button type="button" class="wx-day avail">17</button>
+            <button type="button" class="wx-day avail">18</button>
+            <button type="button" class="wx-day muted" disabled>19</button>
+            <button type="button" class="wx-day avail">20</button>
+            <button type="button" class="wx-day avail">21</button>
+            <button type="button" class="wx-day muted" disabled>22</button>
+            <button type="button" class="wx-day avail">23</button>
+            <button type="button" class="wx-day avail">24</button>
+            <button type="button" class="wx-day avail">25</button>
+            <button type="button" class="wx-day muted" disabled>26</button>
+            <button type="button" class="wx-day avail">27</button>
+            <button type="button" class="wx-day avail">28</button>
+            <button type="button" class="wx-day avail">29</button>
+            <button type="button" class="wx-day muted" disabled>30</button>
+            <button type="button" class="wx-day avail">31</button>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+          </div>
+          <div class="wx-times">
+            <p class="wx-times-head">Times for <strong>{{booking_selected}}</strong></p>
+            <div class="time-grid" role="group" aria-label="Choose a time">
+              <button type="button" class="time-chip sel">{{slot_1}}</button>
+              <button type="button" class="time-chip">{{slot_2}}</button>
+              <button type="button" class="time-chip">{{slot_3}}</button>
+              <button type="button" class="time-chip muted" disabled>{{slot_4}}</button>
+              <button type="button" class="time-chip">{{slot_5}}</button>
+              <button type="button" class="time-chip">{{slot_6}}</button>
+            </div>
+          </div>
+          <div class="wx-foot">
+            <a class="wx-confirm" href="#hero" data-cta>
+              {{booking_confirm}}
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{booking_worker_url}}/embed.js" async></script>
+</section>

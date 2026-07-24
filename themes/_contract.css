@@ -5,27 +5,42 @@
   /* palette */
   --bg: #ffffff;
   --surface: #faf9f7;
+  --surface-2: #f2efe9;       /* alternate/tinted surface */
   --ink: #141414;
   --muted: #565656;
   --border: #e6e4e0;
   --accent: #b8893b;
   --accent-ink: #ffffff;      /* text/icon on --accent */
+  --accent-soft: var(--accent);  /* lighter accent (gradient start, soft fills) */
+  --accent-deep: var(--accent);  /* darker accent (deep bands, pressed states) */
+  --warm: var(--accent);      /* second/warm accent (media panels, underlines) */
+  --warm-2: var(--warm);      /* deeper warm accent (strokes, hovers) */
+  --gold: var(--accent);      /* metallic/eyebrow accent (signature pills, dashes) */
+  --gold-soft: var(--gold);   /* lighter gold */
   --band-dark-bg: #141414;    /* dark closing band */
   --band-dark-ink: #ffffff;
   /* type */
   --font-display: Georgia, "Times New Roman", serif;
   --font-body: system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-body);  /* technical/label accent; sans by default */
   --fs-h1: clamp(2rem, 5vw, 3.25rem);
   --fs-h2: clamp(1.5rem, 3.2vw, 2.25rem);
+  --fs-h3: clamp(1.15rem, 1.6vw, 1.4rem);
+  --fs-lead: var(--fs-body);  /* larger lead paragraph */
   --fs-body: 1.0625rem;
   --lh-body: 1.6;
   /* layout */
   --maxw: 1120px;
   --space-section: clamp(48px, 8vw, 96px);
   --gutter: clamp(20px, 5vw, 40px);
-  --radius: 12px;
+  --radius: 12px;             /* primary/large card radius */
+  --r-lg: var(--radius);      /* large-ish radius */
+  --r-md: var(--radius);      /* medium radius */
+  --r-sm: var(--radius);      /* small radius */
   --btn-radius: 8px;
   --shadow: none;
+  --shadow-sm: var(--shadow); /* subtle lift */
+  --shadow-lg: var(--shadow); /* deep drop */
   /* decorative (rich themes opt in; neutral defaults keep plain themes unchanged) */
   --cta-grad-a: var(--accent);   /* gradient CTA start; flat when a==b */
   --cta-grad-b: var(--accent);   /* gradient CTA end */
@@ -35,4 +50,6 @@
   --ghost-color: var(--border);  /* faded ghost step number */
   --deposit-accent: var(--accent); /* deposit/offer accent */
   --r-pill: 999px;               /* pill radius for chips */
+  --ease: cubic-bezier(.22,.68,0,1);   /* standard easing */
+  --spring: cubic-bezier(.34,1.4,.5,1); /* springy easing */
 }

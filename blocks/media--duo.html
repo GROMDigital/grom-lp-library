@@ -1,0 +1,35 @@
+<section class="lp-media-duo">
+  <style>
+    /* MEDIA ARCHETYPE: a two-up photo gallery, each panel with a floating glass
+       caption chip. The paired sibling of media--panel for when two images tell
+       the beat together (process + result, tools + texture). Portrait 4/5
+       panels, side-by-side >=640px, stacked below. Tokens only. */
+    .lp-media-duo,.lp-media-duo *{box-sizing:border-box}
+    .lp-media-duo{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-media-duo .in{max-width:var(--maxw);margin:0 auto}
+    .lp-media-duo .duo{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+    .lp-media-duo .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:4/5}
+    .lp-media-duo .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+    .lp-media-duo .photo-panel:hover img{transform:scale(1.06)}
+    .lp-media-duo .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
+    .lp-media-duo .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+    @media (min-width:640px){
+      .lp-media-duo .duo{grid-template-columns:1fr 1fr;gap:20px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-media-duo .photo-panel img,.lp-media-duo .photo-panel:hover img{transition:none;transform:scale(1.02)}
+    }
+  </style>
+  <div class="in">
+    <div class="duo reveal-stagger">
+      <div class="photo-panel">
+        <img src="{{duo_1_image}}" alt="{{duo_1_alt}}" loading="lazy">
+        <span class="photo-caption"><span class="dot" aria-hidden="true"></span> {{duo_1_caption}}</span>
+      </div>
+      <div class="photo-panel">
+        <img src="{{duo_2_image}}" alt="{{duo_2_alt}}" loading="lazy">
+        <span class="photo-caption"><span class="dot" aria-hidden="true"></span> {{duo_2_caption}}</span>
+      </div>
+    </div>
+  </div>
+</section>

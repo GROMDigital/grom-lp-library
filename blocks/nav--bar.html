@@ -1,0 +1,26 @@
+<header class="lp-nav-bar">
+  <style>
+    /* PAGE-OPENER CHROME: a slim top bar with a wordmark (name + sub-label) and
+       an optional nav CTA that scrolls to the hero booking. Not a numbered
+       section type; place it immediately before the hero when a page wants a
+       branded top strip. The nav CTA is hidden on narrow screens (the hero
+       booking sits one scroll away). Contract tokens only. */
+    .lp-nav-bar,.lp-nav-bar *{box-sizing:border-box}
+    .lp-nav-bar{position:relative;z-index:30;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:calc(var(--maxw) + var(--gutter) * 2);margin:0 auto;padding:20px var(--gutter) 8px}
+    .lp-nav-bar .wordmark{display:inline-flex;flex-direction:column;line-height:1;min-width:0}
+    .lp-nav-bar .wordmark .name{font-family:var(--font-display);font-weight:500;font-style:italic;font-size:clamp(19px,4.4vw,23px);letter-spacing:.005em;color:var(--ink)}
+    .lp-nav-bar .wordmark .sub{font-family:var(--font-body);font-weight:700;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+    .lp-nav-bar .nav-cta{display:none;align-items:center;gap:8px;font-family:var(--font-body);font-size:13.5px;font-weight:700;color:var(--ink);text-decoration:none;border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;transition:border-color .3s,background .3s,transform .3s}
+    .lp-nav-bar .nav-cta svg{flex:none}
+    .lp-nav-bar .nav-cta:hover{border-color:var(--accent);background:var(--surface);transform:translateY(-1px)}
+    @media (min-width:768px){.lp-nav-bar .nav-cta{display:inline-flex}}
+  </style>
+  <span class="wordmark">
+    <span class="name">{{wordmark_name}}</span>
+    <span class="sub">{{wordmark_sub}}</span>
+  </span>
+  <a class="nav-cta" href="#hero">
+    {{nav_cta}}
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</header>

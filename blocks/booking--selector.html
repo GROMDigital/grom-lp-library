@@ -1,40 +1,73 @@
 <section id="book" class="lp-book">
   <style>
+    /* BOOKING ARCHETYPE: standalone selector. A dark context panel (assurances)
+       beside a premium MONTH-CALENDAR picker, in one bordered card. Mirrors the
+       hero--booking widget skin so a page can carry the calendar lower down
+       instead of in the fold. This is a booking mount: exactly one
+       #lp-booking-widget per page (do not also use hero--booking on the same
+       page). Contract tokens only; the live embed replaces the skeleton. */
     .lp-book,.lp-book *{box-sizing:border-box}
     .lp-book{background:var(--surface);padding:var(--space-section) var(--gutter)}
     .lp-book .in{max-width:var(--maxw);margin:0 auto}
     .lp-book .book-head{max-width:640px;margin:0 auto clamp(28px,4vw,44px);text-align:center}
-    .lp-book h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.15;margin:0 0 .4em}
+    .lp-book h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.15;letter-spacing:-.01em;margin:0 0 .4em}
     .lp-book .book-head p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0}
-    .lp-book .book-card{display:grid;grid-template-columns:1fr;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .lp-book .book-card{position:relative;display:grid;grid-template-columns:1fr;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);overflow:hidden}
     /* dark context panel */
     .lp-book .book-side{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:clamp(26px,4vw,38px)}
-    .lp-book .book-side::before{content:"";position:absolute;width:240px;height:240px;top:-80px;right:-70px;border-radius:50%;background:color-mix(in srgb,var(--accent) 45%,transparent);filter:blur(60px);pointer-events:none}
-    .lp-book .book-side .k{position:relative;z-index:1;font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--band-dark-ink) 70%,transparent);margin:0 0 .8em}
-    .lp-book .book-side h3{position:relative;z-index:1;font-family:var(--font-display);font-size:1.5rem;line-height:1.15;color:var(--band-dark-ink);margin:0 0 .5em}
+    .lp-book .book-side::before{content:"";position:absolute;width:260px;height:260px;top:-90px;right:-80px;border-radius:50%;background:color-mix(in srgb,var(--accent) 48%,transparent);filter:blur(64px);pointer-events:none}
+    .lp-book .book-side .k{position:relative;z-index:1;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--band-dark-ink) 70%,transparent);margin:0 0 .8em}
+    .lp-book .book-side h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:700;font-size:1.5rem;line-height:1.15;color:var(--band-dark-ink);margin:0 0 .5em}
     .lp-book .book-side .side-lead{position:relative;z-index:1;font-family:var(--font-body);font-size:.95rem;line-height:var(--lh-body);color:color-mix(in srgb,var(--band-dark-ink) 78%,transparent);margin:0 0 1.4em;max-width:34ch}
     .lp-book .assure{position:relative;z-index:1;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7em}
     .lp-book .assure li{display:flex;gap:.6em;font-family:var(--font-body);font-size:.9rem;line-height:1.4;color:color-mix(in srgb,var(--band-dark-ink) 88%,transparent)}
     .lp-book .assure svg{flex:none;margin-top:.15em;color:var(--band-dark-ink)}
     /* booking body */
-    .lp-book .book-body{padding:clamp(22px,4vw,34px)}
-    .lp-book .step-label{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 .8em}
+    .lp-book .book-body{padding:clamp(22px,4vw,32px)}
     #lp-booking-widget{min-height:200px}
-    #lp-booking-widget .day-row{display:flex;flex-wrap:wrap;gap:.5em;margin:0 0 1.6em}
-    #lp-booking-widget .time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:.5em;margin:0 0 1.2em}
-    #lp-booking-widget .time-chip{font-family:var(--font-body);color:var(--ink);background:var(--bg);border:1px solid var(--border);border-radius:var(--btn-radius);padding:.7em .9em;cursor:pointer;text-align:center;line-height:1.1;transition:border-color .2s,color .2s,background .2s}
-    #lp-booking-widget .time-chip.day{min-width:66px}
-    #lp-booking-widget .time-chip.day .dow{display:block;font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.7}
-    #lp-booking-widget .time-chip.day .dom{display:block;font-family:var(--font-display);font-size:1.05rem;margin-top:.15em}
-    #lp-booking-widget .time-chip:hover:not(.muted):not(.sel){border-color:var(--accent);color:var(--accent)}
-    #lp-booking-widget .time-chip.sel{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-    #lp-booking-widget .time-chip.muted{color:var(--muted);opacity:.45;cursor:not-allowed;text-decoration:line-through}
-    .lp-book .book-summary{font-family:var(--font-body);font-size:.85rem;color:var(--muted);margin:0 0 1em;min-height:1.2em}
-    .lp-book .book-cta{display:inline-flex;align-items:center;justify-content:center;gap:.5em;width:100%;font-family:var(--font-body);font-size:1.02rem;font-weight:700;color:var(--accent-ink);background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));border:none;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);padding:.95em 1.4em;cursor:pointer;text-decoration:none}
+    /* header: live badge + month nav */
+    .lp-book #lp-booking-widget .wx-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
+    .lp-book #lp-booking-widget .wx-live{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .lp-book #lp-booking-widget .wx-live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-bookPulse 2.4s ease-in-out infinite}
+    @keyframes lp-bookPulse{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 10%,transparent)}}
+    .lp-book #lp-booking-widget .wx-monthnav{display:inline-flex;align-items:center;gap:4px}
+    .lp-book #lp-booking-widget .wx-month{font-family:var(--font-body);font-weight:700;font-size:13.5px;letter-spacing:.01em;color:var(--accent-deep);min-width:88px;text-align:center}
+    .lp-book #lp-booking-widget .wx-chev{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;padding:0;border:1px solid var(--border);border-radius:50%;background:var(--surface);color:var(--muted);cursor:pointer;transition:border-color .2s,color .2s}
+    .lp-book #lp-booking-widget .wx-chev:hover{border-color:var(--accent);color:var(--accent)}
+    .lp-book #lp-booking-widget .wx-chev svg{width:13px;height:13px}
+    /* month grid */
+    .lp-book #lp-booking-widget .wx-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin:0 0 3px}
+    .lp-book #lp-booking-widget .wx-weekdays span{text-align:center;font-family:var(--font-mono);font-size:9px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);opacity:.55}
+    .lp-book #lp-booking-widget .wx-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+    .lp-book #lp-booking-widget .wx-day{height:46px;display:flex;align-items:center;justify-content:center;position:relative;font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--ink);background:transparent;border:1px solid transparent;border-radius:var(--r-sm);cursor:pointer;transition:background .18s,color .18s,border-color .18s;padding:0}
+    .lp-book #lp-booking-widget .wx-day.wx-blank{visibility:hidden;cursor:default}
+    .lp-book #lp-booking-widget .wx-day.avail::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:3.5px;height:3.5px;border-radius:50%;background:var(--accent);opacity:.5}
+    .lp-book #lp-booking-widget .wx-day:hover:not(.muted):not(.sel){background:var(--glow-1);color:var(--accent-deep)}
+    .lp-book #lp-booking-widget .wx-day.sel{background:var(--accent);color:var(--accent-ink);font-weight:700;box-shadow:0 4px 12px -4px color-mix(in srgb,var(--accent) 55%,transparent)}
+    .lp-book #lp-booking-widget .wx-day.sel::after{background:var(--accent-ink);opacity:.85}
+    .lp-book #lp-booking-widget .wx-day.muted{color:var(--muted);opacity:.3;cursor:not-allowed}
+    /* time slots for the selected day */
+    .lp-book #lp-booking-widget .wx-times{margin-top:18px;padding-top:15px;border-top:1px solid var(--border)}
+    .lp-book #lp-booking-widget .wx-times-head{font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+    .lp-book #lp-booking-widget .wx-times-head strong{color:var(--accent-deep)}
+    .lp-book #lp-booking-widget .time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0}
+    .lp-book #lp-booking-widget .time-chip{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:.65em .5em;cursor:pointer;text-align:center;line-height:1.1;font-variant-numeric:tabular-nums;transition:border-color .18s,color .18s,background .18s,box-shadow .18s}
+    .lp-book #lp-booking-widget .time-chip:hover:not(.muted):not(.sel){border-color:var(--accent);color:var(--accent);box-shadow:0 2px 10px -6px color-mix(in srgb,var(--accent) 55%,transparent)}
+    .lp-book #lp-booking-widget .time-chip.sel{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+    .lp-book #lp-booking-widget .time-chip.muted{color:var(--muted);opacity:.4;cursor:not-allowed;text-decoration:line-through}
+    /* summary + confirm + fallback */
+    .lp-book .book-summary{font-family:var(--font-body);font-size:.85rem;color:var(--muted);margin:1.4em 0 1em;min-height:1.2em}
+    .lp-book .book-cta{display:inline-flex;align-items:center;justify-content:center;gap:.5em;width:100%;font-family:var(--font-body);font-size:1.02rem;font-weight:700;color:var(--accent-ink);background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));border:none;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);padding:.95em 1.4em;cursor:pointer;text-decoration:none;transition:filter .25s var(--ease)}
+    .lp-book .book-cta:hover{filter:brightness(1.03)}
+    .lp-book .book-cta svg{flex:none;transition:transform .25s var(--ease)}
+    .lp-book .book-cta:hover svg{transform:translateX(3px)}
     .lp-book .fallback{font-family:var(--font-body);font-size:.85rem;line-height:var(--lh-body);color:var(--muted);text-align:center;margin:1em 0 0}
     .lp-book .fallback a{color:var(--accent);text-decoration:underline}
     @media (min-width:840px){
       .lp-book .book-card{grid-template-columns:.82fr 1.18fr}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-book #lp-booking-widget .wx-live-dot{animation:none !important}
     }
   </style>
   <div class="in">
@@ -67,23 +100,64 @@
       <div class="book-body">
         <!-- The live booking embed replaces the skeleton inside #lp-booking-widget.
              KEEP the mount id and .time-chip class exactly: motion.js selection and
-             tracking both key off them. -->
+             the live embed both key off them. One #lp-booking-widget per page. -->
         <div id="lp-booking-widget">
-          <p class="step-label">{{booking_day_label}}</p>
-          <div class="day-row" role="group" aria-label="Choose a day">
-            <button type="button" class="time-chip day sel"><span class="dow">{{day_1_dow}}</span><span class="dom">{{day_1_dom}}</span></button>
-            <button type="button" class="time-chip day"><span class="dow">{{day_2_dow}}</span><span class="dom">{{day_2_dom}}</span></button>
-            <button type="button" class="time-chip day"><span class="dow">{{day_3_dow}}</span><span class="dom">{{day_3_dom}}</span></button>
-            <button type="button" class="time-chip day"><span class="dow">{{day_4_dow}}</span><span class="dom">{{day_4_dom}}</span></button>
+          <div class="wx-head">
+            <span class="wx-live"><span class="wx-live-dot" aria-hidden="true"></span> {{booking_live_label}}</span>
+            <span class="wx-monthnav">
+              <button type="button" class="wx-chev" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="wx-month">{{booking_month}}</span>
+              <button type="button" class="wx-chev" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </span>
           </div>
-          <p class="step-label">{{booking_time_label}}</p>
-          <div class="time-grid" role="group" aria-label="Choose a time">
-            <button type="button" class="time-chip">{{slot_1}}</button>
-            <button type="button" class="time-chip">{{slot_2}}</button>
-            <button type="button" class="time-chip">{{slot_3}}</button>
-            <button type="button" class="time-chip muted">{{slot_4}}</button>
-            <button type="button" class="time-chip">{{slot_5}}</button>
-            <button type="button" class="time-chip">{{slot_6}}</button>
+          <div class="wx-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+          <div class="wx-days" role="group" aria-label="Choose a date">
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <button type="button" class="wx-day muted" disabled>1</button>
+            <button type="button" class="wx-day muted" disabled>2</button>
+            <button type="button" class="wx-day muted" disabled>3</button>
+            <button type="button" class="wx-day muted" disabled>4</button>
+            <button type="button" class="wx-day muted" disabled>5</button>
+            <button type="button" class="wx-day muted" disabled>6</button>
+            <button type="button" class="wx-day muted" disabled>7</button>
+            <button type="button" class="wx-day muted" disabled>8</button>
+            <button type="button" class="wx-day muted" disabled>9</button>
+            <button type="button" class="wx-day muted" disabled>10</button>
+            <button type="button" class="wx-day muted" disabled>11</button>
+            <button type="button" class="wx-day muted" disabled>12</button>
+            <button type="button" class="wx-day muted" disabled>13</button>
+            <button type="button" class="wx-day muted" disabled>14</button>
+            <button type="button" class="wx-day muted" disabled>15</button>
+            <button type="button" class="wx-day sel" aria-current="date">16</button>
+            <button type="button" class="wx-day avail">17</button>
+            <button type="button" class="wx-day avail">18</button>
+            <button type="button" class="wx-day muted" disabled>19</button>
+            <button type="button" class="wx-day avail">20</button>
+            <button type="button" class="wx-day avail">21</button>
+            <button type="button" class="wx-day muted" disabled>22</button>
+            <button type="button" class="wx-day avail">23</button>
+            <button type="button" class="wx-day avail">24</button>
+            <button type="button" class="wx-day avail">25</button>
+            <button type="button" class="wx-day muted" disabled>26</button>
+            <button type="button" class="wx-day avail">27</button>
+            <button type="button" class="wx-day avail">28</button>
+            <button type="button" class="wx-day avail">29</button>
+            <button type="button" class="wx-day muted" disabled>30</button>
+            <button type="button" class="wx-day avail">31</button>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+          </div>
+          <div class="wx-times">
+            <p class="wx-times-head">Times for <strong>{{booking_selected}}</strong></p>
+            <div class="time-grid" role="group" aria-label="Choose a time">
+              <button type="button" class="time-chip sel">{{slot_1}}</button>
+              <button type="button" class="time-chip">{{slot_2}}</button>
+              <button type="button" class="time-chip">{{slot_3}}</button>
+              <button type="button" class="time-chip muted" disabled>{{slot_4}}</button>
+              <button type="button" class="time-chip">{{slot_5}}</button>
+              <button type="button" class="time-chip">{{slot_6}}</button>
+            </div>
           </div>
         </div>
         <p class="book-summary">{{booking_summary}}</p>

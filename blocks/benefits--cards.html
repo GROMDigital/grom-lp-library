@@ -1,0 +1,109 @@
+<section class="lp-benefits-cards">
+  <style>
+    /* BENEFITS ARCHETYPE: a kicker/title/sub head above a 3-up grid of icon
+       cards (icon tile, title, one-line body). The "what to expect" beat that
+       names the outcomes a treatment supports. Cards carry a pointer-follow
+       spotlight (via motion). 3 columns >=640px, 1 column below. Tokens only. */
+    .lp-benefits-cards,.lp-benefits-cards *{box-sizing:border-box}
+    .lp-benefits-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-benefits-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-benefits-cards .head{margin:0 0 8px}
+    .lp-benefits-cards .kicker{font-family:var(--font-body);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-benefits-cards h2{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);letter-spacing:-.01em;line-height:1.08;margin:0 0 14px;max-width:16ch;color:var(--ink)}
+    .lp-benefits-cards .sub{font-family:var(--font-body);font-size:16px;color:var(--muted);max-width:46ch;margin:0 0 36px;line-height:1.5}
+    .lp-benefits-cards .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+    .lp-benefits-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--shadow-sm);transition:box-shadow .4s var(--ease);overflow:hidden}
+    .lp-benefits-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(240px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-benefits-cards .card:hover{box-shadow:var(--shadow)}
+    .lp-benefits-cards .card:hover::before{opacity:1}
+    .lp-benefits-cards .icon{position:relative;z-index:1;width:46px;height:46px;border-radius:14px;background:var(--glow-1);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);margin-bottom:16px;transition:transform .4s var(--spring)}
+    .lp-benefits-cards .card:hover .icon{transform:scale(1.08) rotate(-4deg)}
+    .lp-benefits-cards h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:600;font-size:20px;margin:0 0 8px;color:var(--ink)}
+    .lp-benefits-cards p{position:relative;z-index:1;margin:0;font-family:var(--font-body);font-size:14.5px;color:var(--muted);line-height:1.5}
+
+    /* --numbered VARIANT (opt-in): a mono index in each card's top-right
+       corner. Hidden by default so the plain 3-up grid is untouched. */
+    .lp-benefits-cards .card .idx{position:absolute;top:16px;right:18px;font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--border);letter-spacing:.06em;z-index:1;display:none}
+    .lp-benefits-cards--numbered .card .idx{display:block}
+
+    /* --six VARIANT (opt-in): a two-row, six-card "what's included" grid.
+       Cards 4-6 (.card--extra) are hidden by default, so any page using the
+       plain block still renders exactly three cards. */
+    .lp-benefits-cards .card.card--extra{display:none}
+    .lp-benefits-cards--six .card.card--extra{display:flex;flex-direction:column}
+
+    /* offer card (opt-in, typically the trailing card of a --six grid): a
+       tinted panel with a price line and an inline CTA in place of an icon. */
+    .lp-benefits-cards .card--offer{background:linear-gradient(160deg,var(--surface-2),var(--bg));justify-content:center}
+    .lp-benefits-cards .card--offer .icon{display:none}
+    .lp-benefits-cards .card--offer .card-cta{display:inline-flex;align-items:center;gap:.5em;align-self:flex-start;margin-top:18px;font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--accent-deep);border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;text-decoration:none;transition:border-color .3s,transform .3s}
+    .lp-benefits-cards .card--offer .card-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .lp-benefits-cards .card--offer .card-cta svg{flex:none}
+
+    @media (min-width:640px){
+      .lp-benefits-cards .grid{grid-template-columns:repeat(3,1fr);gap:22px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-benefits-cards .card,.lp-benefits-cards .icon{transition:none}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">{{benefits_kicker}}</p>
+      <h2>{{benefits_headline}}</h2>
+      <p class="sub">{{benefits_sub}}</p>
+    </div>
+    <div class="grid reveal-stagger">
+      <div class="card">
+        <span class="idx" aria-hidden="true">01</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2.5 12h3M18.5 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>{{benefit_1_title}}</h3>
+        <p>{{benefit_1_body}}</p>
+      </div>
+      <div class="card">
+        <span class="idx" aria-hidden="true">02</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 15c3-6 6-9 9-9s6 3 9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3 19c3-4 6-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".5"/></svg>
+        </div>
+        <h3>{{benefit_2_title}}</h3>
+        <p>{{benefit_2_body}}</p>
+      </div>
+      <div class="card">
+        <span class="idx" aria-hidden="true">03</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.5 5 6.8 5 9.8A5 5 0 0 1 7 12.8C7 9.8 9 6.5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>{{benefit_3_title}}</h3>
+        <p>{{benefit_3_body}}</p>
+      </div>
+      <div class="card card--extra">
+        <span class="idx" aria-hidden="true">04</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="18" cy="18" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+        </div>
+        <h3>{{benefit_4_title}}</h3>
+        <p>{{benefit_4_body}}</p>
+      </div>
+      <div class="card card--extra">
+        <span class="idx" aria-hidden="true">05</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>{{benefit_5_title}}</h3>
+        <p>{{benefit_5_body}}</p>
+      </div>
+      <div class="card card--extra card--offer">
+        <span class="idx" aria-hidden="true">06</span>
+        <div class="icon"></div>
+        <h3>{{offer_card_title}}</h3>
+        <p>{{offer_card_body}}</p>
+        <a class="card-cta" href="#hero" data-cta>
+          {{offer_card_cta}}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

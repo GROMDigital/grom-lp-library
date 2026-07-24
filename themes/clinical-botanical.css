@@ -1,37 +1,54 @@
-/* clinical-botanical: porcelain + deep-green, mint/blush accents, gradient CTAs, soft glows (Fraunces + Hanken Grotesk) */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340..760;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+/* clinical-botanical: porcelain + deep-green, mint/blush accents, gradient CTAs, soft glows (Onest, soft luxury sans). Tuned for a deposit-led aesthetic-clinic palette. */
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap');
 :root {
   /* palette */
-  --bg: #F6F4EF;
-  --surface: #ffffff;
+  --bg: #F6F4EF;               /* porcelain */
+  --surface: #FFFFFF;          /* white */
+  --surface-2: #EFECE4;        /* tinted porcelain */
   --ink: #1C2620;
-  --muted: rgba(28,38,32,.65);
-  --border: rgba(28,38,32,.14);
-  --accent: #2F6B50;
-  --accent-ink: #ffffff;
-  --band-dark-bg: #1C2620;
+  --muted: rgba(28,38,32,.65); /* ink-65 */
+  --border: rgba(28,38,32,.14);/* ink-14 */
+  --accent: #2F6B50;           /* green */
+  --accent-ink: #FFFFFF;
+  --accent-soft: #3E7F62;      /* green-light */
+  --accent-deep: #234F3C;      /* green-ink */
+  --warm: #F0DBCF;             /* blush */
+  --warm-2: #E7C9B7;           /* blush-deep */
+  --gold: #2F6B50;             /* this palette has no metallic; keep on the green palette */
+  --gold-soft: #3E7F62;
+  --band-dark-bg: #234F3C;     /* deep-green closing band */
   --band-dark-ink: #F6F4EF;
   /* type */
-  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
-  --font-body: "Hanken Grotesk", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --fs-h1: clamp(2.2rem, 5.4vw, 3.6rem);
-  --fs-h2: clamp(1.6rem, 3.2vw, 2.4rem);
+  --font-display: "Onest", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Onest", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-body);
+  --fs-h1: clamp(2.55rem, 8vw + .3rem, 4.3rem);
+  --fs-h2: clamp(1.9rem, 5vw, 2.7rem);
+  --fs-h3: clamp(1.15rem, 1.6vw, 1.4rem);
+  --fs-lead: clamp(1.02rem, 2vw, 1.2rem);
   --fs-body: 1.0625rem;
-  --lh-body: 1.55;
+  --lh-body: 1.6;
   /* layout */
-  --maxw: 1160px;
-  --space-section: clamp(56px, 8vw, 96px);
-  --gutter: clamp(20px, 5.5vw, 40px);
-  --radius: 24px;
+  --maxw: 1160px;              /* container */
+  --space-section: clamp(56px, 8vw, 104px);
+  --gutter: clamp(20px, 5.5vw, 40px); /* edge */
+  --radius: 28px;             /* r-xl */
+  --r-lg: 24px;
+  --r-md: 20px;
+  --r-sm: 14px;
   --btn-radius: 999px;
-  --shadow: 0 10px 24px -12px rgba(28,38,32,.18), 0 2px 8px -2px rgba(28,38,32,.08);
-  /* decorative (rich: gradient CTA, soft ambient glows) */
-  --cta-grad-a: #3E7F62;
-  --cta-grad-b: #2F6B50;
-  --shadow-cta: 0 14px 30px -10px rgba(47,107,80,.45);
-  --glow-1: #E3EFE7;
-  --glow-2: #F0DBCF;
+  --shadow: 0 10px 24px -12px rgba(28,38,32,.18), 0 2px 8px -2px rgba(28,38,32,.08);       /* shadow-2 */
+  --shadow-sm: 0 1px 1px rgba(28,38,32,.05), 0 1px 2px rgba(28,38,32,.04);                  /* shadow-1 */
+  --shadow-lg: 0 30px 70px -24px rgba(28,38,32,.30), 0 10px 24px -10px rgba(28,38,32,.14);  /* shadow-3 */
+  /* decorative */
+  --cta-grad-a: #3E7F62;       /* green-light */
+  --cta-grad-b: #2F6B50;       /* green */
+  --shadow-cta: 0 14px 30px -10px rgba(47,107,80,.45), 0 4px 10px -2px rgba(47,107,80,.30);
+  --glow-1: #E3EFE7;           /* mint */
+  --glow-2: #F0DBCF;           /* blush */
   --ghost-color: rgba(28,38,32,.09);
-  --deposit-accent: #234F3C;
+  --deposit-accent: #234F3C;   /* green-ink */
   --r-pill: 999px;
+  --ease: cubic-bezier(.22,.68,0,1);
+  --spring: cubic-bezier(.34,1.56,.64,1);
 }

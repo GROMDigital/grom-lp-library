@@ -1,56 +1,133 @@
 <section class="lp-reviews-cards">
   <style>
-    .lp-reviews-cards{background:var(--surface);padding:var(--space-section) var(--gutter)}
+    /* REVIEWS ARCHETYPE: a head (optional kicker + headline) above an optional
+       mint rating-banner, a fixed 3-card grid of equal-weight quotes (each with
+       an initials avatar and a treatment tag), then an OPTIONAL trailing photo
+       panel and an OPTIONAL badge row. The rating-banner, trailing photo, and
+       badge row are optional slotted parts: drop those elements when a page
+       only needs the 3 cards. Tokens only. */
+    .lp-reviews-cards,.lp-reviews-cards *{box-sizing:border-box}
+    .lp-reviews-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
     .lp-reviews-cards .in{max-width:var(--maxw);margin:0 auto}
-    .lp-reviews-cards .head{text-align:center;max-width:44ch;margin:0 auto clamp(28px,4vw,44px)}
-    .lp-reviews-cards h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0 0 .35em}
-    .lp-reviews-cards .rating{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:var(--r-pill);padding:.5em 1.1em}
-    .lp-reviews-cards .rating .stars{color:var(--accent);letter-spacing:.14em}
-    .lp-reviews-cards .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gutter)}
-    .lp-reviews-cards .card{position:relative;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(22px,3vw,30px);text-align:left;display:flex;flex-direction:column}
-    .lp-reviews-cards .mark{font-family:var(--font-display);font-size:2.6rem;line-height:.6;color:var(--accent);opacity:.35;height:.5em;display:block}
-    .lp-reviews-cards .stars{color:var(--accent);font-size:1rem;letter-spacing:.15em;margin:0 0 .7em;display:block}
-    .lp-reviews-cards .quote{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--ink);margin:0 0 1.2em}
-    .lp-reviews-cards .who{display:flex;align-items:center;gap:.7em;margin-top:auto}
-    .lp-reviews-cards .avatar{width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--border);flex:none}
-    .lp-reviews-cards .name{font-family:var(--font-body);font-size:.9rem;font-weight:700;color:var(--ink);margin:0;line-height:1.3}
-    @media (max-width:768px){
-      .lp-reviews-cards .grid{grid-template-columns:1fr}
+    .lp-reviews-cards .head{margin:0 0 22px}
+    .lp-reviews-cards .kicker{font-family:var(--font-body);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-reviews-cards h2{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);color:var(--ink);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:16ch}
+
+    .lp-reviews-cards .rating-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--glow-1);border-radius:var(--r-lg);padding:18px 22px;margin:0 0 22px}
+    .lp-reviews-cards .rating-banner .big{font-family:var(--font-display);font-weight:600;font-size:26px;color:var(--accent-deep);font-variant-numeric:tabular-nums;line-height:1}
+    .lp-reviews-cards .rating-banner .stars{color:var(--accent);letter-spacing:1px;font-size:16px}
+    .lp-reviews-cards .rating-banner .fine{font-family:var(--font-body);font-size:13px;color:var(--muted);font-weight:600}
+
+    /* mobile: a horizontal snap-scroll carousel with dots (matches the live
+       a deposit-led social-proof scroller). Becomes a 3-col grid >=640px. */
+    .lp-reviews-cards .grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .lp-reviews-cards .grid::-webkit-scrollbar{display:none}
+    .lp-reviews-cards .rv-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+    .lp-reviews-cards .rv-dots .dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:width .35s var(--spring),background .35s var(--spring)}
+    .lp-reviews-cards .rv-dots .dot.active{width:22px;background:var(--accent)}
+    .lp-reviews-cards .card{scroll-snap-align:start;opacity:.55;transform:scale(.95);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+    .lp-reviews-cards .card.is-active{opacity:1;transform:scale(1)}
+    .lp-reviews-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-sm);text-align:left;display:flex;flex-direction:column;overflow:hidden}
+    .lp-reviews-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(220px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 10%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-reviews-cards .card:hover::before{opacity:1}
+    .lp-reviews-cards .card .stars{position:relative;z-index:1;color:var(--accent);font-size:13px;letter-spacing:1px;margin:0 0 12px;display:block}
+    .lp-reviews-cards .card .quote{position:relative;z-index:1;font-family:var(--font-display);font-style:italic;font-weight:400;font-size:17px;line-height:1.4;color:var(--ink);margin:0 0 16px}
+    .lp-reviews-cards .who{position:relative;z-index:1;display:flex;align-items:center;gap:10px;margin-top:auto}
+    .lp-reviews-cards .avatar{width:34px;height:34px;border-radius:50%;background:var(--glow-2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:13px;color:var(--accent-deep);flex:none}
+    .lp-reviews-cards .name{font-family:var(--font-body);font-size:13.5px;font-weight:700;color:var(--ink);margin:0;line-height:1.2}
+    .lp-reviews-cards .tag{font-family:var(--font-body);font-size:11.5px;color:var(--muted);font-weight:500;margin:0}
+
+    .lp-reviews-cards .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:21/9;margin-top:28px}
+    .lp-reviews-cards .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+    .lp-reviews-cards .photo-panel:hover img{transform:scale(1.06)}
+    .lp-reviews-cards .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
+    .lp-reviews-cards .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+
+    .lp-reviews-cards .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .lp-reviews-cards .badge{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-pill);padding:9px 15px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--muted);transition:transform .3s var(--spring),border-color .3s ease}
+    .lp-reviews-cards .badge:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .lp-reviews-cards .badge svg{color:var(--accent-deep);flex:none}
+
+    @media (min-width:640px){
+      .lp-reviews-cards .grid{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;gap:var(--gutter);overflow-x:visible}
+      .lp-reviews-cards .card{opacity:1;transform:none}
+      .lp-reviews-cards .rv-dots{display:none}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-reviews-cards .photo-panel img,.lp-reviews-cards .photo-panel:hover img{transition:none;transform:scale(1.02)}
     }
   </style>
   <div class="in">
     <div class="head reveal">
+      <p class="kicker">{{reviews_kicker}}</p>
       <h2>{{reviews_headline}}</h2>
-      <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> {{review_rating}}</p>
     </div>
+
+    <div class="rating-banner reveal">
+      <span class="big" data-count-to="{{rating_value}}" data-count-decimals="1">{{rating_value}}</span>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="fine">{{rating_fine}}</span>
+    </div>
+
     <div class="grid reveal-stagger">
-      <div class="card">
-        <span class="mark" aria-hidden="true">&ldquo;</span>
+      <div class="card is-active">
         <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p class="quote">{{review_1_quote}}</p>
         <div class="who">
-          <span class="avatar" aria-hidden="true"></span>
-          <p class="name">{{review_1_name}}</p>
+          <span class="avatar" aria-hidden="true">{{review_1_initials}}</span>
+          <div>
+            <p class="name">{{review_1_name}}</p>
+            <p class="tag">{{review_1_tag}}</p>
+          </div>
         </div>
       </div>
       <div class="card">
-        <span class="mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p class="quote">{{review_2_quote}}</p>
         <div class="who">
-          <span class="avatar" aria-hidden="true"></span>
-          <p class="name">{{review_2_name}}</p>
+          <span class="avatar" aria-hidden="true">{{review_2_initials}}</span>
+          <div>
+            <p class="name">{{review_2_name}}</p>
+            <p class="tag">{{review_2_tag}}</p>
+          </div>
         </div>
       </div>
       <div class="card">
-        <span class="mark" aria-hidden="true">&ldquo;</span>
         <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p class="quote">{{review_3_quote}}</p>
         <div class="who">
-          <span class="avatar" aria-hidden="true"></span>
-          <p class="name">{{review_3_name}}</p>
+          <span class="avatar" aria-hidden="true">{{review_3_initials}}</span>
+          <div>
+            <p class="name">{{review_3_name}}</p>
+            <p class="tag">{{review_3_tag}}</p>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="rv-dots" aria-hidden="true">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="photo-panel reveal">
+      <img src="{{reviews_photo}}" alt="{{reviews_photo_alt}}" loading="lazy">
+      <span class="photo-caption"><span class="dot" aria-hidden="true"></span> {{reviews_photo_caption}}</span>
+    </div>
+
+    <div class="badge-row reveal">
+      <span class="badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        {{badge_1}}
+      </span>
+      <span class="badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18" stroke="currentColor" stroke-width="1.8"/></svg>
+        {{badge_2}}
+      </span>
+      <span class="badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-7-11a7 7 0 0 1 14 0c0 6.4-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        {{badge_3}}
+      </span>
     </div>
   </div>
 </section>

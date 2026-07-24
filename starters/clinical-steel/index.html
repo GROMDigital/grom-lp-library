@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en-AU">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Signature Session | Sunna Skin Studio, Manly</title>
-<meta name="description" content="Book your signature skin treatment session at Sunna Skin Studio, Manly. A warm, one to one session with honest guidance on what would suit your skin. First session $89, normally $140, secured with a $25 deposit that comes off the price.">
+<title>The Contour Method | Verano Body Clinic, Harrogate</title>
+<meta name="description" content="Book your body contouring session at Verano Body Clinic, Harrogate. A personalised, one to one session with honest guidance on what would suit you next. £25 deposit comes off your £75 session.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- GROM LP head/tracking block. Paste into the page's Head / Tracking Code settings. Set the client key and Meta Pixel ID; the inline config MUST precede the async loader.
-<script>window.GROM_LP={clientKey:"demo-direct-response"};</script>
+<script>window.GROM_LP={clientKey:"demo-clinical-steel"};</script>
 <script async src="https://grom-lp-events.gromdigital001.workers.dev/lp.js"></script>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -17,7 +17,7 @@ fbq('init','YOUR_META_PIXEL_ID');fbq('track','PageView');
 </script>
 -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 /* ===== themes/_contract.css ===== */
 /* LP LIBRARY THEME TOKEN CONTRACT.
    Every theme file MUST define every variable below.
@@ -75,59 +75,59 @@ fbq('init','YOUR_META_PIXEL_ID');fbq('track','PageView');
   --spring: cubic-bezier(.34,1.4,.5,1); /* springy easing */
 }
 
-/* ===== themes/direct-response.css ===== */
-/* direct-response: bold, warm, price-led (SK lineage). Amber + terracotta, punchy grotesque display, expanded contract tokens tuned to the warm palette. */
+/* ===== themes/clinical-steel.css ===== */
+/* clinical-steel: ice + steel-blue, cool clinical/modern, Archivo + Inter (mono accent), sage secondary. Aligned 1:1 to the live body-contouring LP tokens. */
 :root {
   /* palette */
-  --bg: #fffdf9;
-  --surface: #fbf3e7;
-  --surface-2: #f4e6d1;        /* deeper warm tint */
-  --ink: #1a1208;
-  --muted: #5c5040;
-  --border: #ece0cd;
-  --accent: #c8892f;
-  --accent-ink: #ffffff;       /* text/icon on --accent */
-  --accent-soft: #dca94a;      /* lighter amber (gradient start, soft fills) */
-  --accent-deep: #9a6a22;      /* darker amber (deep bands, pressed states) */
-  --warm: #c2703a;             /* terracotta second accent (media panels, underlines) */
-  --warm-2: #9e5528;           /* deeper terracotta (strokes, hovers) */
-  --gold: #b8862f;             /* metallic/eyebrow accent */
-  --gold-soft: #d8ac52;        /* lighter gold */
-  --band-dark-bg: #1a1208;     /* dark closing band */
-  --band-dark-ink: #fdf6ea;
+  --bg: #EAF0F4;               /* ice */
+  --surface: #FCFDFE;          /* white */
+  --surface-2: #E2EAEF;        /* ice-2 */
+  --ink: #131C24;
+  --muted: rgba(19,28,36,.66); /* ink-66 */
+  --border: rgba(19,28,36,.16);/* ink-16 */
+  --accent: #1C6FA6;           /* steel */
+  --accent-ink: #FCFDFE;
+  --accent-soft: #2E8FC4;      /* steel-bright */
+  --accent-deep: #0E4B72;      /* steel-ink */
+  --warm: #5E7E74;             /* sage (secondary accent) */
+  --warm-2: #9FB6AC;           /* sage-soft */
+  --gold: #12557F;             /* no metallic; steel-deep stands in */
+  --gold-soft: #2E8FC4;
+  --band-dark-bg: #101A22;     /* graphite closing band */
+  --band-dark-ink: #EAF0F4;
   /* type */
-  --font-display: "Bricolage Grotesque", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Archivo", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --fs-h1: clamp(2.2rem, 6vw, 3.5rem);
-  --fs-h2: clamp(1.6rem, 3.4vw, 2.4rem);
-  --fs-h3: clamp(1.15rem, 1.6vw, 1.4rem);
-  --fs-lead: clamp(1.05rem, 1rem + .4vw, 1.25rem);  /* larger lead paragraph */
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --fs-h1: clamp(2.5rem, 6.2vw + .2rem, 4.7rem);
+  --fs-h2: clamp(1.9rem, 3.9vw, 2.95rem);
+  --fs-h3: clamp(1.1rem, 1.4vw, 1.32rem);
+  --fs-lead: clamp(1.04rem, 1rem + .4vw, 1.24rem);
   --fs-body: 1.0625rem;
   --lh-body: 1.6;
   /* layout */
-  --maxw: 1080px;
-  --space-section: clamp(48px, 8vw, 88px);
-  --gutter: clamp(20px, 5vw, 36px);
-  --radius: 14px;              /* primary/large card radius */
-  --r-lg: 16px;
+  --maxw: 1180px;              /* container */
+  --space-section: clamp(60px, 8.5vw, 122px);
+  --gutter: clamp(20px, 5.4vw, 46px); /* edge */
+  --radius: 22px;             /* r-xl */
+  --r-lg: 15px;
   --r-md: 11px;
   --r-sm: 8px;
   --btn-radius: 999px;
-  --shadow: 0 18px 40px -22px rgba(120,80,20,.30), 0 4px 12px -6px rgba(120,80,20,.12);
-  --shadow-sm: 0 1px 2px rgba(120,80,20,.05), 0 1px 3px rgba(120,80,20,.05);
-  --shadow-lg: 0 44px 96px -34px rgba(120,80,20,.40), 0 14px 34px -14px rgba(120,80,20,.20);
-  /* decorative (warm amber / terracotta richness) */
-  --cta-grad-a: #e0a53a;
-  --cta-grad-b: #b8742a;
-  --shadow-cta: 0 16px 34px -12px rgba(200,137,47,.50), 0 5px 12px -4px rgba(200,137,47,.34);
-  --glow-1: #f6e6cf;
-  --glow-2: #ecd0b8;
-  --ghost-color: rgba(26,18,8,.07);
-  --deposit-accent: #9a6a22;
+  --shadow: 0 18px 40px -22px rgba(19,40,58,.30), 0 4px 12px -6px rgba(19,40,58,.12);       /* shadow-2 */
+  --shadow-sm: 0 1px 2px rgba(23,44,62,.05), 0 1px 3px rgba(23,44,62,.05);                   /* shadow-1 */
+  --shadow-lg: 0 44px 96px -34px rgba(15,34,52,.42), 0 14px 34px -14px rgba(15,34,52,.20);   /* shadow-3 */
+  /* decorative */
+  --cta-grad-a: #2E8FC4;       /* steel-bright */
+  --cta-grad-b: #1C6FA6;       /* steel */
+  --shadow-cta: 0 16px 34px -14px rgba(18,85,127,.55), 0 5px 12px -5px rgba(18,85,127,.36);
+  --glow-1: #D3E6F2;           /* soft steel */
+  --glow-2: #DBE6E1;           /* soft sage */
+  --ghost-color: rgba(19,28,36,.07);
+  --deposit-accent: #0E4B72;   /* steel-ink */
   --r-pill: 999px;
   --ease: cubic-bezier(.22,.62,.14,1);
-  --spring: cubic-bezier(.34,1.34,.48,1);
+  --spring: cubic-bezier(.34,1.32,.48,1);
 }
 
 /* ===== base reset ===== */
@@ -259,10 +259,10 @@ html.js-motion #sticky.is-visible{
 
 /* ===== scaffold: top-only section padding collapses doubled inter-section gaps ===== */
 /* ===== hand-authored mobile sticky CTA (#sticky hook) ===== */
-#sticky{position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:14px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border-top:1px solid var(--border);box-shadow:0 -12px 34px -18px rgba(120,80,20,.3);padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-sizing:border-box}
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:14px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border-top:1px solid var(--border);box-shadow:0 -12px 34px -18px rgba(19,40,58,.3);padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-sizing:border-box}
 #sticky .s-info{display:flex;flex-direction:column;line-height:1.25;min-width:0}
 #sticky .s-t{font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--ink)}
-#sticky .s-b{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#sticky .s-b{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #sticky .s-btn{flex:none;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:.95rem;padding:.8em 1.5em;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none}
 @media (max-width:1023px){body{padding-bottom:76px}}
 @media (min-width:1024px){#sticky{display:none}}
@@ -279,16 +279,16 @@ html.js-motion #sticky.is-visible{
     .lp-nav-bar{position:relative;z-index:30;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:calc(var(--maxw) + var(--gutter) * 2);margin:0 auto;padding:20px var(--gutter) 13px}
     .lp-nav-bar::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:100vw;height:1px;background:var(--accent)}
     .lp-nav-bar .wordmark{display:inline-flex;flex-direction:column;line-height:1;min-width:0}
-    .lp-nav-bar .wordmark .name{font-family:var(--font-display);font-weight:800;font-style:normal;font-size:clamp(19px,4.4vw,23px);letter-spacing:-.01em;color:var(--ink)}
-    .lp-nav-bar .wordmark .sub{font-family:var(--font-mono);font-weight:400;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+    .lp-nav-bar .wordmark .name{font-family:var(--font-display);font-weight:700;font-style:normal;font-size:clamp(19px,4.4vw,23px);letter-spacing:-.01em;color:var(--ink)}
+    .lp-nav-bar .wordmark .sub{font-family:var(--font-mono);font-weight:500;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:6px}
     .lp-nav-bar .nav-cta{display:none;align-items:center;gap:8px;font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--accent-deep);text-decoration:none;border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;background:var(--surface);transition:border-color .3s,background .3s,transform .3s}
     .lp-nav-bar .nav-cta svg{flex:none}
     .lp-nav-bar .nav-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
     @media (min-width:768px){.lp-nav-bar .nav-cta{display:inline-flex}}
   </style>
   <span class="wordmark">
-    <span class="name">Sunna</span>
-    <span class="sub">Skin Studio &middot; Manly</span>
+    <span class="name">Verano</span>
+    <span class="sub">Body Clinic &middot; Harrogate</span>
   </span>
   <a class="nav-cta" href="#hero">
     Book your session
@@ -317,11 +317,11 @@ html.js-motion #sticky.is-visible{
 
     /* copy column */
     .lp-hero-book .copy{text-align:left;min-width:0}
-    .lp-hero-book .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);background:var(--glow-1);padding:7px 14px 7px 12px;border-radius:var(--r-pill);margin:0 0 22px}
+    .lp-hero-book .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);background:var(--glow-1);padding:7px 14px 7px 12px;border-radius:var(--r-pill);margin:0 0 22px}
     .lp-hero-book .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-pulseDot 2.4s ease-in-out infinite}
     @keyframes lp-pulseDot{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 10%,transparent)}}
 
-    .lp-hero-book h1{font-family:var(--font-display);font-weight:800;font-optical-sizing:auto;font-size:var(--fs-h1);line-height:1.03;letter-spacing:-.015em;margin:0 0 20px;color:var(--ink);max-width:14ch}
+    .lp-hero-book h1{font-family:var(--font-display);font-weight:700;font-optical-sizing:auto;font-size:var(--fs-h1);line-height:1.03;letter-spacing:-.015em;margin:0 0 20px;color:var(--ink);max-width:14ch}
     .lp-hero-book h1 .em{position:relative;font-style:normal;color:var(--accent);background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-position:0 100%;background-size:0 .07em;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size .7s var(--ease);transition-delay:1s}
     .lp-hero-book .copy.reveal-stagger.is-visible h1 .em,
     .lp-hero-book .copy.is-visible h1 .em{background-size:100% .07em}
@@ -348,15 +348,15 @@ html.js-motion #sticky.is-visible{
 
     /* treatment photo with floating price card (desktop only, balances the tall widget) */
     .lp-hero-book .hero-copy-photo{display:none}
-    .lp-hero-book .price-float{position:absolute;left:18px;bottom:0;background:rgba(255,253,249,.78);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:16px 20px;display:flex;align-items:baseline;gap:10px;z-index:3;animation:lp-floatY 5s ease-in-out infinite}
+    .lp-hero-book .price-float{position:absolute;left:18px;bottom:0;background:rgba(252,253,254,.78);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:16px 20px;display:flex;align-items:baseline;gap:10px;z-index:3;animation:lp-floatY 5s ease-in-out infinite}
     @keyframes lp-floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-    .lp-hero-book .price-float .now{font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--accent-deep);line-height:1;font-variant-numeric:tabular-nums}
+    .lp-hero-book .price-float .now{font-family:var(--font-display);font-weight:700;font-size:30px;color:var(--accent-deep);line-height:1;font-variant-numeric:tabular-nums}
     .lp-hero-book .price-float .was{font-family:var(--font-body);font-size:13.5px;color:var(--muted);text-decoration:line-through;font-weight:600}
-    .lp-hero-book .price-float .label{display:block;font-family:var(--font-mono);font-size:10px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+    .lp-hero-book .price-float .label{display:block;font-family:var(--font-mono);font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
 
     /* booking card (right column) */
     .lp-hero-book .book-card{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column}
-    .lp-hero-book .booking-title{font-family:var(--font-display);font-weight:800;font-size:clamp(1.35rem,1.1rem + 1.1vw,1.7rem);color:var(--accent-deep);margin:0 0 6px}
+    .lp-hero-book .booking-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.35rem,1.1rem + 1.1vw,1.7rem);color:var(--accent-deep);margin:0 0 6px}
     .lp-hero-book .booking-sub{font-family:var(--font-body);color:var(--muted);margin:0 auto;max-width:42ch;font-size:.92rem;line-height:1.5}
     .lp-hero-book .booking-sub strong{color:var(--accent-deep);font-weight:700}
     .lp-hero-book .book-card::before{content:"";position:absolute;z-index:0;left:50%;top:7%;transform:translateX(-50%);width:min(94%,560px);height:84%;border-radius:var(--radius);background:radial-gradient(58% 58% at 50% 26%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 72%);filter:blur(46px);opacity:.72;pointer-events:none}.lp-hero-book .booking-frame{position:relative;z-index:1;background:linear-gradient(176deg,var(--surface),color-mix(in srgb,var(--surface) 88%,var(--bg)));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.6);padding:24px 24px 22px;overflow:hidden;text-align:left;max-width:600px;margin-inline:auto}
@@ -364,7 +364,7 @@ html.js-motion #sticky.is-visible{
     .lp-hero-book #lp-booking-widget{min-height:200px}
     /* header: live badge + month nav */
     .lp-hero-book #lp-booking-widget .wx-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
-    .lp-hero-book #lp-booking-widget .wx-live{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .lp-hero-book #lp-booking-widget .wx-live{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
     .lp-hero-book #lp-booking-widget .wx-live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-pulseDot 2.4s ease-in-out infinite}
     .lp-hero-book #lp-booking-widget .wx-monthnav{display:inline-flex;align-items:center;gap:4px}
     .lp-hero-book #lp-booking-widget .wx-month{font-family:var(--font-body);font-weight:700;font-size:13.5px;letter-spacing:.01em;color:var(--accent-deep);min-width:88px;text-align:center}
@@ -373,7 +373,7 @@ html.js-motion #sticky.is-visible{
     .lp-hero-book #lp-booking-widget .wx-chev svg{width:13px;height:13px}
     /* month grid */
     .lp-hero-book #lp-booking-widget .wx-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin:0 0 3px}
-    .lp-hero-book #lp-booking-widget .wx-weekdays span{text-align:center;font-family:var(--font-mono);font-size:9px;font-weight:400;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);opacity:.55}
+    .lp-hero-book #lp-booking-widget .wx-weekdays span{text-align:center;font-family:var(--font-mono);font-size:9px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);opacity:.55}
     .lp-hero-book #lp-booking-widget .wx-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
     .lp-hero-book #lp-booking-widget .wx-day{height:48px;display:flex;align-items:center;justify-content:center;position:relative;font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--ink);background:transparent;border:1px solid transparent;border-radius:var(--r-sm);cursor:pointer;transition:background .18s,color .18s,border-color .18s;padding:0}
     .lp-hero-book #lp-booking-widget .wx-day.wx-blank{visibility:hidden;cursor:default}
@@ -384,10 +384,10 @@ html.js-motion #sticky.is-visible{
     .lp-hero-book #lp-booking-widget .wx-day.muted{color:var(--muted);opacity:.3;cursor:not-allowed}
     /* time slots for the selected day */
     .lp-hero-book #lp-booking-widget .wx-times{margin-top:18px;padding-top:15px;border-top:1px solid var(--ghost-color)}
-    .lp-hero-book #lp-booking-widget .wx-times-head{font-family:var(--font-mono);font-size:10.5px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+    .lp-hero-book #lp-booking-widget .wx-times-head{font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
     .lp-hero-book #lp-booking-widget .wx-times-head strong{color:var(--accent-deep)}
     .lp-hero-book #lp-booking-widget .time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0}
-    .lp-hero-book #lp-booking-widget .time-chip{font-family:var(--font-mono);font-size:13px;font-weight:400;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:.65em .5em;cursor:pointer;text-align:center;line-height:1.1;font-variant-numeric:tabular-nums;transition:border-color .18s,color .18s,background .18s,box-shadow .18s}
+    .lp-hero-book #lp-booking-widget .time-chip{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:.65em .5em;cursor:pointer;text-align:center;line-height:1.1;font-variant-numeric:tabular-nums;transition:border-color .18s,color .18s,background .18s,box-shadow .18s}
     .lp-hero-book #lp-booking-widget .time-chip:hover:not(.muted):not(.sel){border-color:var(--accent);color:var(--accent);box-shadow:0 2px 10px -6px color-mix(in srgb,var(--accent) 55%,transparent)}
     .lp-hero-book #lp-booking-widget .time-chip.sel{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
     .lp-hero-book #lp-booking-widget .time-chip.muted{color:var(--muted);opacity:.4;cursor:not-allowed;text-decoration:line-through}
@@ -424,20 +424,20 @@ html.js-motion #sticky.is-visible{
 
   <div class="in">
     <div class="copy reveal-stagger">
-      <span class="eyebrow">Signature skin treatment &middot; Manly</span>
+      <span class="eyebrow">Non-surgical body contouring &middot; Harrogate</span>
 
-      <h1>Great skin starts with <span class="em">one honest session.</span></h1>
+      <h1>Body contouring that starts with a <span class="em">personalised session.</span></h1>
 
-      <p class="subhead">Your signature session is a proper skin treatment and a warm, one to one consultation in one visit. We treat your skin, then give you a straight read on what would actually suit it next. No pressure and no packages pushed on the day.</p>
+      <p class="subhead">Every visit is a body contouring treatment and an unhurried, one to one consultation in one. We treat the area you would like to work on, then give you an honest read on what would suit you next. No pressure and no packages pushed on the day.</p>
 
       <div class="chip">
         <span class="dot" aria-hidden="true"></span>
-        <span><strong>$25 deposit</strong> &middot; comes off your $89 session</span>
+        <span><strong>&pound;25 deposit</strong> &middot; comes off your &pound;75 session</span>
       </div>
 
       <div class="cta-block">
         <a class="btn-primary" href="#hero" data-cta>
-          Book your $89 session
+          Book your &pound;75 session
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <p class="cta-micro">
@@ -450,11 +450,11 @@ html.js-motion #sticky.is-visible{
         <span class="trust-item"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 rating</span>
         <span class="trust-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Qualified therapists
+          Fully insured
         </span>
         <span class="trust-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.6-7-11a7 7 0 0 1 14 0c0 6.4-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
-          Manly studio
+          Harrogate clinic
         </span>
       </div>
 
@@ -466,7 +466,7 @@ html.js-motion #sticky.is-visible{
       <div class="booking-frame">
         <div class="booking-intro">
           <h3 class="booking-title">Pick your time</h3>
-          <p class="booking-sub">Choose a slot and secure it with your <strong>$25 deposit</strong>, which comes off your $89 session. Free to move with 48 hours notice.</p>
+          <p class="booking-sub">Choose a slot and secure it with your <strong>&pound;25 deposit</strong>, which comes off your &pound;75 session. Free to move with 48 hours notice.</p>
         </div>
         <div id="lp-booking-widget">
           <div class="wx-head">
@@ -528,7 +528,7 @@ html.js-motion #sticky.is-visible{
           </div>
           <div class="wx-foot">
             <a class="wx-confirm" href="#hero" data-cta>
-              Reserve with $25 deposit
+              Reserve with &pound;25 deposit
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -540,26 +540,26 @@ html.js-motion #sticky.is-visible{
 </section>
 
 <!-- ================= MARQUEE TRUST (marquee--trust) ================= -->
-<section class="lp-marquee-trust" aria-label="Trust and studio facts">
+<section class="lp-marquee-trust" aria-label="Trust and clinic facts">
   <style>
     .lp-marquee-trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(14px,2.4vw,20px) 0}
     .lp-marquee-trust .marquee{justify-content:center}
     .lp-marquee-trust .marquee-track{gap:clamp(22px,4vw,44px);padding:0 clamp(11px,2vw,22px)}
-    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.75rem;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
+    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
     .lp-marquee-trust .tick{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.25em;height:1.25em;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.7em;font-weight:700}
     .lp-marquee-trust .sep{flex:none;color:var(--accent);opacity:.45}
   </style>
   <div class="marquee">
     <div class="marquee-track">
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Signature skin treatment</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Non-surgical body contouring</span>
       <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Warm one to one session</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Personalised one to one session</span>
       <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>First session $89, normally $140</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>&pound;75 body contouring session</span>
       <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Honest, no pressure advice</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Skin tightening and fat reduction</span>
       <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Manly studio</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Harrogate clinic</span>
       <span class="sep" aria-hidden="true">&bull;</span>
       <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>No obligation to continue</span>
       <span class="sep" aria-hidden="true">&bull;</span>
@@ -569,333 +569,456 @@ html.js-motion #sticky.is-visible{
 
 <main>
 
-<!-- ================= OFFER, centered price (offer--centered-price) ================= -->
-<section class="lp-offer-centered">
+<!-- ================= CONSULTATION INCLUDES (benefits--cards, six + numbered) ================= -->
+<section class="lp-benefits-cards lp-benefits-cards--six lp-benefits-cards--numbered">
   <style>
-    /* OFFER ARCHETYPE: centered price lockup. One narrow centered card with a
-       large price hero (optional count-up), includes, note and full-width CTA.
-       Differs from offer--split-card (2-col with media) and offer--deposit
-       (deposit-forward horizontal panel). */
-    .lp-offer-centered{background:var(--bg);padding:var(--space-section) var(--gutter);text-align:center}
-    .lp-offer-centered .in{max-width:var(--maxw);margin:0 auto}
-    .lp-offer-centered .head{max-width:44ch;margin:0 auto clamp(24px,4vw,40px)}
-    .lp-offer-centered .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .6em}
-    .lp-offer-centered h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0;overflow-wrap:anywhere}
-    .lp-offer-centered h2 em{font-style:italic;color:var(--accent)}
-    .lp-offer-centered .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);max-width:480px;margin:0 auto;padding:clamp(28px,5vw,44px);text-align:center}
-    .lp-offer-centered .price-lockup{display:flex;flex-direction:column;align-items:center;gap:.3em;margin:0 0 1.4em;padding-bottom:1.4em;border-bottom:1px solid var(--border)}
-    .lp-offer-centered .price-now{font-family:var(--font-display);font-weight:800;font-size:clamp(3rem,9vw,4.4rem);color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;max-width:100%;overflow-wrap:anywhere}
-    .lp-offer-centered .price-sub{display:flex;align-items:baseline;gap:.6em}
-    .lp-offer-centered .price-was{font-family:var(--font-body);font-size:1rem;color:var(--muted);text-decoration:line-through;font-weight:600}
-    .lp-offer-centered .price-per{font-family:var(--font-body);font-size:.85rem;color:var(--muted);font-weight:600}
-    .lp-offer-centered ul{list-style:none;margin:0 0 1.3em;padding:0;display:grid;gap:.8em;text-align:left}
-    .lp-offer-centered li{display:flex;gap:.65em;font-family:var(--font-body);font-size:var(--fs-body);line-height:1.45;color:var(--ink)}
-    .lp-offer-centered li svg{flex:none;margin-top:.2em;color:var(--accent)}
-    .lp-offer-centered .note{font-family:var(--font-body);font-size:.88rem;line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;padding-top:1.1em;border-top:1px solid var(--border)}
-    .lp-offer-centered .btn-primary{display:flex;align-items:center;justify-content:center;gap:.6em;width:100%;box-sizing:border-box;background:linear-gradient(90deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:1rem;padding:1em 1.4em;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none}
-    .lp-offer-centered .btn-primary svg{flex:none}
-    .lp-offer-centered .cta-micro{display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:.82rem;color:var(--muted);margin:.9em 0 0}
-    .lp-offer-centered .cta-micro svg{flex:none;opacity:.6}
+    .lp-benefits-cards,.lp-benefits-cards *{box-sizing:border-box}
+    .lp-benefits-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-benefits-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-benefits-cards .head{margin:0 0 8px}
+    .lp-benefits-cards .kicker{font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-benefits-cards h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);letter-spacing:-.01em;line-height:1.08;margin:0 0 14px;max-width:20ch;color:var(--ink)}
+    .lp-benefits-cards .sub{font-family:var(--font-body);font-size:16px;color:var(--muted);max-width:52ch;margin:0 0 36px;line-height:1.5}
+    .lp-benefits-cards .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+    .lp-benefits-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--shadow-sm);transition:box-shadow .4s var(--ease);overflow:hidden}
+    .lp-benefits-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(240px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-benefits-cards .card:hover{box-shadow:var(--shadow)}
+    .lp-benefits-cards .card:hover::before{opacity:1}
+    .lp-benefits-cards .icon{position:relative;z-index:1;width:46px;height:46px;border-radius:14px;background:var(--glow-1);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);margin-bottom:16px;transition:transform .4s var(--spring)}
+    .lp-benefits-cards .card:hover .icon{transform:scale(1.08) rotate(-4deg)}
+    .lp-benefits-cards h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:700;font-size:20px;margin:0 0 8px;color:var(--ink)}
+    .lp-benefits-cards p{position:relative;z-index:1;margin:0;font-family:var(--font-body);font-size:14.5px;color:var(--muted);line-height:1.5}
+    .lp-benefits-cards .card .idx{position:absolute;top:16px;right:18px;font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--border);letter-spacing:.06em;z-index:1;display:none}
+    .lp-benefits-cards--numbered .card .idx{display:block}
+    .lp-benefits-cards .card.card--extra{display:none}
+    .lp-benefits-cards--six .card.card--extra{display:flex;flex-direction:column}
+    .lp-benefits-cards .card--offer{background:linear-gradient(160deg,var(--surface-2),var(--bg));justify-content:center}
+    .lp-benefits-cards .card--offer .icon{display:none}
+    .lp-benefits-cards .card--offer .card-cta{display:inline-flex;align-items:center;gap:.5em;align-self:flex-start;margin-top:18px;font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--accent-deep);border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;text-decoration:none;transition:border-color .3s,transform .3s}
+    .lp-benefits-cards .card--offer .card-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .lp-benefits-cards .card--offer .card-cta svg{flex:none}
+    @media (min-width:640px){
+      .lp-benefits-cards .grid{grid-template-columns:repeat(3,1fr);gap:22px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-benefits-cards .card,.lp-benefits-cards .icon{transition:none}
+    }
   </style>
   <div class="in">
     <div class="head reveal">
-      <p class="kicker">The signature session offer</p>
-      <h2>One session, one honest price, <em>everything included</em></h2>
+      <p class="kicker">What your &pound;75 session includes</p>
+      <h2>A personalised session before any plan is made</h2>
+      <p class="sub">The session is where the real work starts. We treat the area you would like to work on and talk through your goals, so you leave understanding your options clearly, whether or not you decide to go ahead with a course.</p>
     </div>
-    <div class="card reveal">
-      <div class="price-lockup">
-        <!-- optional count-up: 89 = plain number, $ = symbol prefix.
-             Visible text is the fallback; JS overwrites when the number is filled. -->
-        <span class="price-now" data-count-to="89" data-count-prefix="$">$89</span>
-        <span class="price-sub">
-          <span class="price-was">$140</span>
-          <span class="price-per">first signature session</span>
-        </span>
+    <div class="grid reveal-stagger">
+      <div class="card">
+        <span class="idx" aria-hidden="true">01</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2.5 12h3M18.5 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Your goals discussed</h3>
+        <p>A proper conversation about the areas you would like to change and the concerns you are most conscious of, so we understand what you are hoping for.</p>
       </div>
-      <ul>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A full signature skin treatment tailored to your skin on the day</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A warm, one to one consultation about your goals and concerns</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>An honest read on what would suit your skin next, if anything</li>
-        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No pressure to book a course, decide in your own time</li>
-      </ul>
-      <p class="note">Your $89 session is secured with a $25 deposit when you book, and the deposit comes off the price. To move your appointment, we ask for 48 hours notice. Suitability is assessed in person.</p>
-      <a class="btn-primary" href="#hero" data-cta>
-        Book your $89 session
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p class="cta-micro">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
-        $25 deposit, comes off the price, confirmed by text
-      </p>
+      <div class="card">
+        <span class="idx" aria-hidden="true">02</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 15c3-6 6-9 9-9s6 3 9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3 19c3-4 6-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".5"/></svg>
+        </div>
+        <h3>A personal consultation</h3>
+        <p>A review of your goals, the area you are focused on and any relevant health information, so any guidance is personalised to you, not taken from a template.</p>
+      </div>
+      <div class="card">
+        <span class="idx" aria-hidden="true">03</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.5 5 6.8 5 9.8A5 5 0 0 1 7 12.8C7 9.8 9 6.5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Honest suitability advice</h3>
+        <p>A candid view on whether non-surgical body contouring may be suitable for you. If it is not the right step for you, we will tell you plainly.</p>
+      </div>
+      <div class="card card--extra">
+        <span class="idx" aria-hidden="true">04</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="18" cy="18" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+        </div>
+        <h3>Clear next steps</h3>
+        <p>If a treatment course may suit your goals, we explain the options and the pricing clearly, so you can decide in your own time and are never rushed.</p>
+      </div>
+      <div class="card card--extra">
+        <span class="idx" aria-hidden="true">05</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>No pressure to continue</h3>
+        <p>No same-day pressure and no obligation to book a course. You take the guidance home, sit with it, and decide only when you feel genuinely ready.</p>
+      </div>
+      <div class="card card--extra card--offer">
+        <span class="idx" aria-hidden="true">06</span>
+        <div class="icon"></div>
+        <h3>&pound;75 session, &pound;25 deposit to book</h3>
+        <p>The session is &pound;75. A &pound;25 deposit secures your appointment when you book and comes off the price. To move your appointment, we ask for 48 hours notice.</p>
+        <a class="card-cta" href="#hero" data-cta>
+          Book your session
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROCESS, timeline (process--timeline) ================= -->
-<section class="lp-process-timeline">
+<!-- ================= HOW IT WORKS (process--ghost, boxed) ================= -->
+<section class="lp-process-ghost lp-process-ghost--boxed">
   <style>
-    .lp-process-timeline{background:var(--surface);padding:var(--space-section) var(--gutter)}
-    .lp-process-timeline .in{max-width:var(--maxw);margin:0 auto}
-    .lp-process-timeline .head{max-width:36ch;margin:0 0 clamp(30px,4vw,52px)}
-    .lp-process-timeline .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 .9em}
-    .lp-process-timeline h2{font-family:var(--font-display);font-size:var(--fs-h2);line-height:1.12;color:var(--ink);margin:0}
-    .lp-process-timeline .track{position:relative;list-style:none;margin:0;padding:0;max-width:660px}
-    .lp-process-timeline .track::before{content:"";position:absolute;top:.9em;bottom:.9em;left:calc(clamp(38px,5vw,46px) / 2 - 1px);width:2px;background:var(--border);z-index:0}
-    .lp-process-timeline .node{position:relative;display:grid;grid-template-columns:clamp(38px,5vw,46px) 1fr;gap:clamp(16px,3vw,28px);padding-bottom:clamp(30px,4vw,46px)}
-    .lp-process-timeline .node:last-child{padding-bottom:0}
-    .lp-process-timeline .marker{position:relative;z-index:1;width:clamp(38px,5vw,46px);height:clamp(38px,5vw,46px);border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1rem;box-shadow:0 0 0 6px var(--surface)}
-    .lp-process-timeline .body{min-width:0;padding-top:.15em}
-    .lp-process-timeline h3{font-family:var(--font-display);font-size:clamp(1.1rem,1.8vw,1.35rem);line-height:1.2;color:var(--ink);margin:0 0 .45em}
-    .lp-process-timeline p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:48ch}
+    .lp-process-ghost{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-process-ghost .in{max-width:var(--maxw);margin:0 auto}
+    .lp-process-ghost .head{max-width:36ch;margin:0 0 clamp(30px,4vw,52px)}
+    .lp-process-ghost .kicker{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 .9em}
+    .lp-process-ghost h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:1.12;color:var(--ink);margin:0}
+    .lp-process-ghost .row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3.4vw,44px)}
+    .lp-process-ghost .step{position:relative;min-width:0;padding-top:clamp(30px,4vw,46px);border-top:2px solid var(--accent);overflow:hidden}
+    .lp-process-ghost .ghost{position:absolute;right:0;top:-.34em;font-family:var(--font-display);font-weight:700;font-size:clamp(70px,9vw,116px);line-height:.8;color:var(--ghost-color);pointer-events:none;user-select:none;z-index:0;overflow-wrap:anywhere}
+    .lp-process-ghost .badge{display:none}
+    .lp-process-ghost .num{position:relative;z-index:1;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 1em}
+    .lp-process-ghost h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,2vw,1.42rem);line-height:1.2;color:var(--ink);margin:0 0 .5em}
+    .lp-process-ghost p{position:relative;z-index:1;font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:36ch}
+    @media (max-width:768px){
+      .lp-process-ghost .row{grid-template-columns:1fr;gap:clamp(30px,7vw,42px)}
+    }
+    .lp-process-ghost--boxed .head{max-width:640px}
+    .lp-process-ghost--boxed .row{grid-template-columns:1fr;gap:0;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+    .lp-process-ghost--boxed .step{display:flex;gap:18px;padding:26px 24px;border-top:none;padding-top:26px}
+    .lp-process-ghost--boxed .step + .step{border-top:1px solid var(--ghost-color)}
+    .lp-process-ghost--boxed .num{display:none}.lp-process-ghost--boxed .ghost{display:none}
+    .lp-process-ghost--boxed .badge{display:flex;flex:none;align-items:center;justify-content:center;width:38px;height:38px;border-radius:var(--r-sm);background:var(--band-dark-bg);color:var(--band-dark-ink);font-family:var(--font-mono);font-weight:600;font-size:15px;position:relative;z-index:1}
+    .lp-process-ghost--boxed .txt{min-width:0}
+    .lp-process-ghost--boxed .ghost{right:14px;top:-6px;font-size:76px;color:var(--ink);opacity:.045}
+    .lp-process-ghost--boxed h3{font-size:18px;margin:2px 0 6px}
+    .lp-process-ghost--boxed p{font-size:14.5px}
+    @media (min-width:640px){
+      .lp-process-ghost--boxed .row{grid-template-columns:repeat(3,1fr)}
+      .lp-process-ghost--boxed .step + .step{border-top:none;border-left:1px solid var(--ghost-color)}
+    }
   </style>
   <div class="in">
     <div class="head reveal">
       <p class="kicker">How it works</p>
-      <h2>From booking to booked in, in four simple steps</h2>
+      <h2>Three measured steps</h2>
     </div>
-    <ol class="track reveal-stagger">
-      <li class="node">
-        <span class="marker" aria-hidden="true">1</span>
-        <div class="body">
-          <h3>Pick your time</h3>
-          <p>Choose a slot that suits you and secure it with a $25 deposit. The deposit comes off your $89 session, so nothing extra is spent.</p>
+    <div class="row reveal-stagger">
+      <div class="step">
+        <span class="ghost" aria-hidden="true">01</span>
+        <span class="badge" aria-hidden="true">1</span>
+        <p class="num">Step 01</p>
+        <div class="txt">
+          <h3>Request a time</h3>
+          <p>Choose a slot that suits you. A &pound;25 deposit secures your appointment, with a text confirmation and a reminder before the day.</p>
         </div>
-      </li>
-      <li class="node">
-        <span class="marker" aria-hidden="true">2</span>
-        <div class="body">
-          <h3>Get confirmed by text</h3>
-          <p>You receive a text confirmation straight away and a friendly reminder before the day, so your appointment is easy to keep track of.</p>
+      </div>
+      <div class="step">
+        <span class="ghost" aria-hidden="true">02</span>
+        <span class="badge" aria-hidden="true">2</span>
+        <p class="num">Step 02</p>
+        <div class="txt">
+          <h3>Meet your practitioner</h3>
+          <p>Sit down for a personalised, one to one session. Your goals and the areas you would like to change are discussed together, and your questions are answered in full.</p>
         </div>
-      </li>
-      <li class="node">
-        <span class="marker" aria-hidden="true">3</span>
-        <div class="body">
-          <h3>Enjoy your signature session</h3>
-          <p>Relax into a full skin treatment and a warm, one to one chat about your skin. We answer your questions properly and never rush you.</p>
-        </div>
-      </li>
-      <li class="node">
-        <span class="marker" aria-hidden="true">4</span>
-        <div class="body">
+      </div>
+      <div class="step">
+        <span class="ghost" aria-hidden="true">03</span>
+        <span class="badge" aria-hidden="true">3</span>
+        <p class="num">Step 03</p>
+        <div class="txt">
           <h3>Decide in your own time</h3>
-          <p>Leave with a clear, honest read on what would suit your skin next. If a plan makes sense, we explain it plainly, with no pressure to commit.</p>
+          <p>Leave with clarity on what may be suitable. If a treatment course is right for your goals, we explain it clearly, with no pressure to decide on the day.</p>
         </div>
-      </li>
-    </ol>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= STATS BAND, row (band--stats-row) ================= -->
-<section class="lp-band-stats-row">
+<!-- ================= DARK STATS BAND (band--stats-grid) ================= -->
+<section class="lp-band-stats-grid">
   <style>
-    .lp-band-stats-row{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
-    .lp-band-stats-row .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;width:360px;height:360px;background:var(--glow-1);opacity:.16;top:-140px;left:50%;transform:translateX(-50%)}
-    .lp-band-stats-row .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto}
-    .lp-band-stats-row .quote{max-width:min(48rem,100%);margin:0 0 clamp(34px,5vw,56px)}
-    .lp-band-stats-row .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 1em}
-    .lp-band-stats-row .say{position:relative;font-family:var(--font-display);font-size:clamp(1.5rem,3.4vw,2.4rem);line-height:1.22;color:var(--band-dark-ink);margin:0;padding-left:.9em}
-    .lp-band-stats-row .say::before{content:"\201C";position:absolute;left:-.06em;top:.06em;font-family:var(--font-display);font-size:2.4em;line-height:1;color:var(--accent);opacity:.5}
-    .lp-band-stats-row .figures{display:flex;flex-wrap:wrap;border-top:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);padding-top:clamp(26px,3.4vw,40px)}
-    .lp-band-stats-row .fig{flex:1 1 0;min-width:0;padding:0 clamp(16px,3vw,32px)}
-    .lp-band-stats-row .fig:first-child{padding-left:0}
-    .lp-band-stats-row .fig:last-child{padding-right:0}
-    .lp-band-stats-row .fig + .fig{border-left:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent)}
-    .lp-band-stats-row .n{display:block;font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere}
-    .lp-band-stats-row .n .u{font-size:.46em;color:var(--accent);margin-left:.08em}
-    .lp-band-stats-row .l{display:block;font-family:var(--font-body);font-size:.88rem;line-height:1.4;color:color-mix(in srgb, var(--band-dark-ink) 66%, transparent);margin-top:.8em}
-    @media (max-width:600px){
-      .lp-band-stats-row .fig{flex:1 1 100%;padding:clamp(18px,5vw,24px) 0}
-      .lp-band-stats-row .fig:first-child{padding-top:0}
-      .lp-band-stats-row .fig + .fig{border-left:none;border-top:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent)}
+    .lp-band-stats-grid{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
+    .lp-band-stats-grid .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+    .lp-band-stats-grid .glow.a{width:340px;height:340px;background:var(--glow-1);opacity:.18;top:-120px;right:-80px}
+    .lp-band-stats-grid .glow.b{width:300px;height:300px;background:var(--glow-2);opacity:.12;bottom:-130px;left:-70px}
+    .lp-band-stats-grid .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,52px);align-items:center}
+    .lp-band-stats-grid .kicker{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 .9em}
+    .lp-band-stats-grid .say{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:1.15;color:var(--band-dark-ink);margin:0;max-width:22ch}
+    .lp-band-stats-grid .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border-radius:var(--radius);overflow:hidden}
+    .lp-band-stats-grid .stat{min-width:0;background:var(--band-dark-bg);padding:clamp(22px,3vw,32px) clamp(18px,2.6vw,28px)}
+    .lp-band-stats-grid .n{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4.4vw,3rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere;letter-spacing:-.02em}
+    .lp-band-stats-grid .n .u{font-size:.5em;color:var(--accent-soft);margin-left:.08em}
+    .lp-band-stats-grid .l{display:block;font-family:var(--font-mono);font-size:.82rem;line-height:1.4;color:color-mix(in srgb, var(--band-dark-ink) 62%, transparent);margin-top:.85em;letter-spacing:.02em}
+    @media (min-width:768px){
+      .lp-band-stats-grid .in{grid-template-columns:.92fr 1.08fr}
     }
   </style>
-  <div class="glow" aria-hidden="true"></div>
+  <div class="glow a" aria-hidden="true"></div>
+  <div class="glow b" aria-hidden="true"></div>
   <div class="in">
-    <div class="quote reveal">
-      <p class="kicker">The offer, in plain terms</p>
-      <p class="say">A real treatment and honest advice, at a price that makes the first step easy to say yes to.</p>
+    <div class="reveal">
+      <p class="kicker">The session, in plain terms</p>
+      <p class="say">Everything set out clearly, up front</p>
     </div>
-    <div class="figures reveal-stagger">
-      <div class="fig">
-        <span class="n" data-count-to="89" data-count-prefix="$">$89<span class="u"></span></span>
-        <span class="l">Your first signature session, normally $140</span>
+    <div class="grid reveal-stagger">
+      <div class="stat">
+        <span class="n" data-count-to="75" data-count-prefix="&pound;">&pound;75</span>
+        <span class="l">&pound;25 deposit, comes off the price</span>
       </div>
-      <div class="fig">
-        <span class="n" data-count-to="25" data-count-prefix="$">$25<span class="u"></span></span>
-        <span class="l">Deposit that comes off the price</span>
+      <div class="stat">
+        <span class="n">1:1</span>
+        <span class="l">A personalised session with your practitioner</span>
       </div>
-      <div class="fig">
-        <span class="n" data-count-to="48">48<span class="u">h</span></span>
-        <span class="l">Notice to move your appointment</span>
+      <div class="stat">
+        <span class="n">48h</span>
+        <span class="l">Notice to reschedule</span>
+      </div>
+      <div class="stat">
+        <span class="n">None</span>
+        <span class="l">Obligation to continue</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= REVIEWS, featured (reviews--featured) ================= -->
-<section class="lp-reviews-featured">
+<!-- ================= WHY VERANO / TEAM (practitioner--split) ================= -->
+<section class="lp-practitioner-split">
   <style>
-    .lp-reviews-featured{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-reviews-featured .in{max-width:var(--maxw);margin:0 auto}
-    .lp-reviews-featured .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6em 1.2em;margin:0 0 clamp(24px,3.4vw,40px)}
-    .lp-reviews-featured h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0}
-    .lp-reviews-featured .rating{font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--muted)}
-    .lp-reviews-featured .rating .stars{color:var(--accent);letter-spacing:.14em;margin-right:.4em}
-    .lp-reviews-featured .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--gutter)}
-    .lp-reviews-featured .feature{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:center}
-    .lp-reviews-featured .feature .mark{position:absolute;top:.1em;left:.3em;font-family:var(--font-display);font-size:9rem;line-height:.7;color:var(--accent);opacity:.12;pointer-events:none}
-    .lp-reviews-featured .feature .stars{position:relative;color:var(--accent);font-size:1.1rem;letter-spacing:.16em;margin:0 0 .6em}
-    .lp-reviews-featured .feature blockquote{position:relative;margin:0 0 1.1em}
-    .lp-reviews-featured .feature .q{font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.24;color:var(--ink);margin:0}
-    .lp-reviews-featured .who{position:relative;display:flex;align-items:center;gap:.75em}
-    .lp-reviews-featured .avatar{width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid var(--border);flex:none}
-    .lp-reviews-featured .name{font-family:var(--font-body);font-size:.98rem;font-weight:700;color:var(--ink);margin:0;line-height:1.25}
-    .lp-reviews-featured .meta{font-family:var(--font-body);font-size:.82rem;color:var(--muted);margin:0}
-    .lp-reviews-featured .support{display:grid;grid-template-rows:1fr 1fr;gap:var(--gutter)}
-    .lp-reviews-featured .mini{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(20px,2.6vw,26px);display:flex;flex-direction:column}
-    .lp-reviews-featured .mini .stars{color:var(--accent);font-size:.95rem;letter-spacing:.15em;margin:0 0 .6em;display:block}
-    .lp-reviews-featured .mini .mq{font-family:var(--font-body);font-size:var(--fs-body);line-height:1.5;color:var(--ink);margin:0 0 .9em}
-    .lp-reviews-featured .mini .mn{font-family:var(--font-body);font-size:.86rem;font-weight:700;color:var(--muted);margin:auto 0 0}
+    .lp-practitioner-split{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-practitioner-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,5vw,64px);align-items:center}
+    .lp-practitioner-split .portrait{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(160deg,var(--surface),var(--surface-2))}
+    .lp-practitioner-split .portrait svg{position:absolute;inset:0;width:100%;height:100%}
+    .lp-practitioner-split .copy{text-align:left}
+    .lp-practitioner-split .eyebrow{display:inline-block;color:var(--accent);font-family:var(--font-mono);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:500;margin:0 0 .8em}
+    .lp-practitioner-split h2{font-family:var(--font-display);font-weight:800;font-size:var(--fs-h2);color:var(--ink);line-height:1.1;margin:0 0 .15em;letter-spacing:-.02em}
+    .lp-practitioner-split .title{font-family:var(--font-mono);font-size:.86rem;font-weight:500;color:var(--accent-deep);letter-spacing:.04em;margin:0 0 1em}
+    .lp-practitioner-split .bio{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;max-width:52ch}
+    .lp-practitioner-split .creds{display:flex;flex-wrap:wrap;gap:.6em;margin:0 0 1.5em;padding:0;list-style:none}
+    .lp-practitioner-split .creds li{display:inline-flex;align-items:center;gap:.5em;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);padding:.55em 1em;font-family:var(--font-mono);font-size:.75rem;font-weight:500;color:var(--muted)}
+    .lp-practitioner-split .creds svg{flex:none;color:var(--accent)}
+    .lp-practitioner-split .btn-primary{display:inline-flex;align-items:center;gap:.6em;background:linear-gradient(90deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:600;font-size:1rem;padding:.95em 1.8em;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);text-decoration:none}
+    .lp-practitioner-split .btn-primary svg{flex:none}
     @media (max-width:768px){
-      .lp-reviews-featured .grid{grid-template-columns:1fr}
-      .lp-reviews-featured .support{grid-template-rows:auto}
+      .lp-practitioner-split .in{grid-template-columns:1fr}
+      .lp-practitioner-split .portrait{order:-1;max-width:340px;margin-inline:auto;width:100%}
+    }
+  </style>
+  <div class="in">
+    <div class="portrait" role="img" aria-label="A personalised consultation at Verano Body Clinic, Harrogate">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+          <path d="M140 470 C140 380 168 348 200 348 C232 348 260 380 260 470"/>
+          <circle cx="200" cy="250" r="78"/>
+          <path d="M164 240 C172 232 184 232 192 240"/>
+          <path d="M208 240 C216 232 228 232 236 240"/>
+          <path d="M186 290 C194 298 206 298 214 290"/>
+          <path d="M200 250 L200 274"/>
+        </g>
+        <g fill="var(--warm)" opacity="0.16">
+          <circle cx="320" cy="120" r="46"/>
+          <circle cx="86" cy="410" r="34"/>
+        </g>
+      </svg>
+    </div>
+    <div class="copy reveal">
+      <span class="eyebrow">Why Verano</span>
+      <h2>Care from your Verano practitioner</h2>
+      <p class="title">Non-surgical body contouring &middot; Harrogate</p>
+      <p class="bio">Verano Body Clinic takes a personalised, consultative approach to non-surgical body contouring, skin tightening and fat reduction. Your session is one to one, unhurried by design, and focused on your goals rather than a fixed script.</p>
+      <p class="bio">We are candid about what may be suitable, what may not, and when the honest answer is to take more time. If a treatment course would suit your goals, we explain it clearly, with no obligation to continue. That is the standard the clinic is built around.</p>
+      <ul class="creds">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Personalised, one to one session
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Non-surgical approach
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Clear &pound;75 pricing
+        </li>
+      </ul>
+      <a class="btn-primary" href="#hero">
+        Book your &pound;75 session
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS (reviews--cards, banner + 3 cards) ================= -->
+<section class="lp-reviews-cards">
+  <style>
+    .lp-reviews-cards,.lp-reviews-cards *{box-sizing:border-box}
+    .lp-reviews-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-reviews-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-reviews-cards .head{margin:0 0 22px}
+    .lp-reviews-cards .kicker{font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-reviews-cards h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:18ch}
+    .lp-reviews-cards .rating-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--ghost-color);box-shadow:var(--shadow-sm);border-radius:var(--r-lg);padding:18px 22px;margin:0 0 22px}
+    .lp-reviews-cards .rating-banner .big{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em}
+    .lp-reviews-cards .rating-banner .stars{color:var(--accent-soft);letter-spacing:1px;font-size:16px}
+    .lp-reviews-cards .rating-banner .fine{font-family:var(--font-mono);font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.02em}
+    .lp-reviews-cards .grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .lp-reviews-cards .grid::-webkit-scrollbar{display:none}
+    .lp-reviews-cards .rv-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+    .lp-reviews-cards .rv-dots .dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:width .35s var(--spring),background .35s var(--spring)}
+    .lp-reviews-cards .rv-dots .dot.active{width:22px;background:var(--accent)}
+    .lp-reviews-cards .card{scroll-snap-align:start;opacity:.55;transform:scale(.95);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+    .lp-reviews-cards .card.is-active{opacity:1;transform:scale(1)}
+    .lp-reviews-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-sm);text-align:left;display:flex;flex-direction:column;overflow:hidden}
+    .lp-reviews-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(220px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 10%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-reviews-cards .card:hover::before{opacity:1}
+    .lp-reviews-cards .card .stars{position:relative;z-index:1;color:var(--accent-soft);font-size:13px;letter-spacing:1px;margin:0 0 14px;display:block}
+    .lp-reviews-cards .card .quote{position:relative;z-index:1;font-family:var(--font-body);font-style:normal;font-weight:400;font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px}
+    .lp-reviews-cards .who{position:relative;z-index:1;display:flex;align-items:center;gap:11px;margin-top:auto}
+    .lp-reviews-cards .avatar{width:38px;height:38px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--accent-deep);flex:none}
+    .lp-reviews-cards .name{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink);margin:0;line-height:1.2}
+    .lp-reviews-cards .tag{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.02em;margin:0}
+    @media (min-width:640px){
+      .lp-reviews-cards .grid{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;gap:var(--gutter);overflow-x:visible}
+      .lp-reviews-cards .card{opacity:1;transform:none}
+      .lp-reviews-cards .rv-dots{display:none}
     }
   </style>
   <div class="in">
     <div class="head reveal">
-      <h2>What clients say about their session</h2>
-      <p class="rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>4.9 average, rated by clients across Manly</p>
+      <p class="kicker">What clients say</p>
+      <h2>A clearer idea of what your session involves</h2>
     </div>
+
+    <div class="rating-banner reveal">
+      <span class="big" data-count-to="4.9" data-count-decimals="1">4.9</span>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="fine">Rated by clients across Harrogate</span>
+    </div>
+
     <div class="grid reveal-stagger">
-      <figure class="feature">
-        <span class="mark" aria-hidden="true">&ldquo;</span>
-        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote><p class="q">My skin looked fresh walking out, but what I loved most was the honest advice. No pressure, just a clear plan I actually understood.</p></blockquote>
-        <figcaption class="who">
-          <span class="avatar" aria-hidden="true"></span>
-          <span>
-            <p class="name">K. Tran</p>
-            <p class="meta">Signature session</p>
-          </span>
-        </figcaption>
-      </figure>
-      <div class="support">
-        <figure class="mini">
-          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote class="mq">The whole session felt warm and unrushed. I never once felt sold to.</blockquote>
-          <figcaption class="mn">M. Reid</figcaption>
-        </figure>
-        <figure class="mini">
-          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote class="mq">Booking was simple, the deposit came off the price, and the advice was genuinely helpful.</blockquote>
-          <figcaption class="mn">L. Sadler</figcaption>
-        </figure>
+      <div class="card is-active">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">The session never felt rushed. We talked through my goals properly and I left knowing exactly what my options were.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">RE</span>
+          <div>
+            <p class="name">R. Ellison</p>
+            <p class="tag">&pound;75 session</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">Honest advice with no pressure to book anything on the day. That is exactly why I came back for the full course.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">SH</span>
+          <div>
+            <p class="name">S. Hartley</p>
+            <p class="tag">Body contouring</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">Everything was explained clearly, the price included. I never felt pushed into a course I was not ready for.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">JM</span>
+          <div>
+            <p class="name">J. Marsh</p>
+            <p class="tag">Consultation</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ================= FAQ, two column (faq--two-col) ================= -->
-<section class="lp-faq-two">
-  <style>
-    .lp-faq-two,.lp-faq-two *{box-sizing:border-box}
-    .lp-faq-two{background:var(--surface);padding:var(--space-section) var(--gutter)}
-    .lp-faq-two .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px)}
-    /* intro column */
-    .lp-faq-two .intro .kicker{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .8em}
-    .lp-faq-two .intro h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.15;margin:0 0 .5em}
-    .lp-faq-two .intro p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0 0 1.4em;max-width:40ch}
-    .lp-faq-two .intro .help{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-body);font-size:.9rem;font-weight:600;color:var(--accent);text-decoration:none}
-    .lp-faq-two .intro .help svg{flex:none}
-    /* Q/A column */
-    .lp-faq-two .qa{display:flex;flex-direction:column;gap:.7em}
-    .lp-faq-two .faq-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
-    .lp-faq-two summary{display:flex;align-items:center;justify-content:space-between;gap:1em;list-style:none;cursor:pointer;font-family:var(--font-body);font-size:1.02rem;font-weight:600;color:var(--ink);padding:1.05em 1.2em}
-    .lp-faq-two summary::-webkit-details-marker{display:none}
-    .lp-faq-two summary .chev{flex:none;color:var(--accent);transition:transform .3s}
-    .lp-faq-two .faq-item[open] summary .chev{transform:rotate(180deg)}
-    .lp-faq-two .faq-a{padding:0 1.2em 1.15em}
-    .lp-faq-two .faq-a p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:60ch}
-    @media (min-width:900px){
-      .lp-faq-two .in{grid-template-columns:.82fr 1.18fr;align-items:start}
-      .lp-faq-two .intro{position:sticky;top:24px}
-    }
-  </style>
-  <div class="in">
-    <div class="intro reveal">
-      <p class="kicker">Good to know</p>
-      <h2>Your questions, answered plainly</h2>
-      <p>Everything about your signature session is set out up front, from the price to the deposit. If anything is still unclear, we are happy to help.</p>
-      <a class="help" href="#hero">
-        Book your session
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-    <div class="qa reveal">
-      <details class="faq-item">
-        <summary>What does the $89 signature session include?<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="faq-a"><p>Your $89 session is a full signature skin treatment tailored to your skin on the day, plus a warm one to one consultation about your goals. You leave with honest guidance on what would suit your skin next. It is normally $140.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Is there a deposit, and what if I need to reschedule?<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="faq-a"><p>A $25 deposit secures your appointment when you book, and it comes off your $89 session. To move your appointment, we simply ask for 48 hours notice.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Is it a treatment or a consultation?<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="faq-a"><p>It is both. The signature session includes a real skin treatment and a proper conversation about your skin. If an ongoing plan would suit you, we explain the options and the pricing clearly, with no pressure to decide on the day.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>How do I know what would suit my skin?<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="faq-a"><p>The best way to know is to be assessed in person during your session. We look at your skin, listen to your goals, and give you a straight, honest read. Suitability is assessed in person, never promised beforehand.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Where is the studio, and what are the hours?<svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="faq-a"><p>Sunna Skin Studio is at Shop 3, 41 The Corso, Manly NSW 2095. We are open Tuesday to Friday 9:30am to 7pm and Saturday 9:00am to 4pm, closed Sunday and Monday.</p></div>
-      </details>
+    <div class="rv-dots" aria-hidden="true">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </div>
 </section>
 
-<!-- ================= FINAL CTA, split (cta--split) ================= -->
-<section class="lp-cta-split">
+<!-- ================= FAQ (faq--accordion) ================= -->
+<section class="lp-faq-acc">
   <style>
-    .lp-cta-split,.lp-cta-split *{box-sizing:border-box}
-    .lp-cta-split{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-cta-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,44px);align-items:center}
-    /* statement column */
-    .lp-cta-split .statement .kicker{font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .8em}
-    .lp-cta-split .statement h2{font-family:var(--font-display);font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0 0 .5em;max-width:18ch}
-    .lp-cta-split .statement p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:46ch}
-    /* action card */
-    .lp-cta-split .action{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(26px,4vw,38px)}
-    .lp-cta-split .action .price-line{font-family:var(--font-body);font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--deposit-accent);margin:0 0 .6em}
-    .lp-cta-split .action h3{font-family:var(--font-display);font-size:1.4rem;line-height:1.15;color:var(--ink);margin:0 0 .5em}
-    .lp-cta-split .action p{font-family:var(--font-body);font-size:.95rem;line-height:var(--lh-body);color:var(--muted);margin:0 0 1.4em}
-    .lp-cta-split .action .cta{display:inline-flex;align-items:center;justify-content:center;gap:.5em;width:100%;font-family:var(--font-body);font-size:1.02rem;font-weight:700;color:var(--accent-ink);background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));border:none;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);padding:.95em 1.4em;cursor:pointer;text-decoration:none}
-    .lp-cta-split .action .reassure{display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:.82rem;color:var(--muted);margin:1em 0 0}
-    .lp-cta-split .action .reassure svg{flex:none;opacity:.7}
-    @media (min-width:840px){
-      .lp-cta-split .in{grid-template-columns:1.1fr .9fr}
+    .lp-faq-acc,.lp-faq-acc *{box-sizing:border-box}
+    .lp-faq-acc{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-faq-acc .in{max-width:min(760px,var(--maxw));margin:0 auto}
+    .lp-faq-acc .kicker{display:none}
+    .lp-faq-acc h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.15;text-align:center;margin:0 0 1.4em;letter-spacing:-.02em}
+    .lp-faq-acc .faq-item{background:var(--surface);border:1px solid var(--ghost-color);box-shadow:var(--shadow-sm);border-radius:var(--r-md);margin:0 0 .8em;overflow:hidden}
+    .lp-faq-acc summary{display:flex;align-items:center;justify-content:space-between;gap:1em;list-style:none;cursor:pointer;font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--ink);padding:1.1em 1.3em;letter-spacing:-.01em}
+    .lp-faq-acc summary::-webkit-details-marker{display:none}
+    .lp-faq-acc summary .plus{flex:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--ghost-color);color:var(--accent-deep);transition:transform .3s,background .3s,color .3s,border-color .3s}
+    .lp-faq-acc .faq-item[open] summary .plus{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+    .lp-faq-acc .faq-a{padding:0 1.3em 1.2em}
+    .lp-faq-acc .faq-a p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:62ch}
+    @media (max-width:768px){
+      .lp-faq-acc summary{font-size:1rem;padding:1em 1.1em}
+      .lp-faq-acc .faq-a{padding:0 1.1em 1.1em}
     }
   </style>
   <div class="in">
-    <div class="statement reveal">
-      <p class="kicker">Ready when you are</p>
+    <p class="kicker">Common questions</p>
+    <h2>Answered plainly</h2>
+    <details class="faq-item">
+      <summary>What does the &pound;75 session include?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>The &pound;75 session is a personalised, one to one appointment. You talk through your goals and the areas you would like to change, have a body contouring treatment, and get honest guidance on what would suit you next. It is secured with a &pound;25 deposit when you book, which comes off the price.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Is there a deposit, and what if I need to change my appointment?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>The session is &pound;75. To secure your appointment we take a &pound;25 deposit when you book, and it comes off the price. To move your appointment, we ask for 48 hours notice.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Is it a treatment or a consultation?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>It is both. Your &pound;75 session includes a body contouring treatment on the area you would like to work on, and it is also when we look at your goals and advise what would suit you next. If a treatment course is right for you, we explain the options and pricing clearly, with no pressure to decide on the day.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Where is the clinic, and what are the opening hours?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>Verano Body Clinic is at 22 Prospect Street, Harrogate, HG1 1AA. We are open Tuesday to Thursday 9:30am to 8pm, Friday 9:30am to 6:30pm, and Saturday 9:30am to 5pm. The clinic is closed on Sunday and Monday.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>How do I know if body contouring may be suitable for me?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>The best way to know is to be assessed properly during your session. We will understand your goals, look at what may be suitable, and explain the recommended next steps. Suitability is decided in person, not promised beforehand.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA (cta--band) ================= -->
+<section class="lp-cta-band">
+  <style>
+    .lp-cta-band,.lp-cta-band *{box-sizing:border-box}
+    .lp-cta-band{position:relative}
+    .lp-cta-band .band{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter);text-align:center}
+    .lp-cta-band .band-photo{display:none}
+    .lp-cta-band .glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:1}
+    .lp-cta-band .glow-a{width:300px;height:300px;top:-120px;right:-60px;background:color-mix(in srgb,var(--accent) 42%,transparent)}
+    .lp-cta-band .glow-b{width:260px;height:260px;bottom:-120px;left:-50px;background:color-mix(in srgb,var(--band-dark-ink) 16%,transparent)}
+    .lp-cta-band .in{position:relative;z-index:2;max-width:640px;margin:0 auto}
+    .lp-cta-band .eyebrow{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--band-dark-ink) 72%,transparent);border:1px solid color-mix(in srgb,var(--band-dark-ink) 22%,transparent);border-radius:var(--r-pill);padding:.5em 1em;margin:0 0 1.2em}
+    .lp-cta-band .eyebrow .dot{display:none;width:6px;height:6px;border-radius:50%;background:var(--band-dark-ink);opacity:.85;flex:none}
+    .lp-cta-band h2{font-family:var(--font-display);font-weight:800;font-size:var(--fs-h2);line-height:1.12;color:var(--band-dark-ink);margin:0 0 .5em;max-width:17ch;margin-inline:auto;letter-spacing:-.02em}
+    .lp-cta-band .sub{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:color-mix(in srgb,var(--band-dark-ink) 78%,transparent);margin:0 auto 1.8em;max-width:44ch}
+    .lp-cta-band .cta{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:1.05rem;font-weight:600;color:var(--accent-deep);background:var(--surface);border:none;border-radius:var(--btn-radius);box-shadow:0 16px 34px -16px rgba(0,0,0,.5);padding:.95em 1.8em;cursor:pointer;text-decoration:none}
+    .lp-cta-band .reassure{display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:.85rem;color:color-mix(in srgb,var(--band-dark-ink) 66%,transparent);margin:1.2em 0 0}
+    .lp-cta-band .reassure svg{flex:none;opacity:.85}
+  </style>
+  <div class="band">
+    <div class="band-photo" aria-hidden="true"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'1'%20height%3D'1'%2F%3E" alt=""></div>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
+    <div class="in reveal">
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Harrogate</span>
       <h2>Start with a session, decide later</h2>
-      <p>Book your signature skin session in Manly. Enjoy a real treatment, get honest guidance on what would suit your skin, and take your time deciding what comes next.</p>
-    </div>
-    <div class="action reveal">
-      <p class="price-line">$89 first session, normally $140</p>
-      <h3>Your signature session</h3>
-      <p>Secured with a $25 deposit that comes off the price. Free to move with 48 hours notice, and no obligation to continue.</p>
+      <p class="sub">Book your &pound;75 body contouring session. Talk through your goals, get honest guidance on what may be suitable, and decide in your own time.</p>
       <a class="cta" href="#hero" data-cta>
-        Book your $89 session
+        Book your &pound;75 session
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <p class="reassure">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
-        Deposit comes off the price, confirmed by text
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        The full session fee, confirmed by text
       </p>
     </div>
   </div>
@@ -910,9 +1033,9 @@ html.js-motion #sticky.is-visible{
     .lp-footer-mc{background:var(--band-dark-bg);color:var(--band-dark-ink);padding:clamp(40px,6vw,64px) var(--gutter)}
     .lp-footer-mc .in{max-width:var(--maxw);margin:0 auto}
     .lp-footer-mc .foot-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
-    .lp-footer-mc .brand .name{font-family:var(--font-display);font-size:1.3rem;font-weight:800;color:var(--band-dark-ink);margin:0 0 .5em}
+    .lp-footer-mc .brand .name{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--band-dark-ink);margin:0 0 .5em}
     .lp-footer-mc .brand .blurb{font-family:var(--font-body);font-size:.9rem;line-height:var(--lh-body);color:color-mix(in srgb,var(--band-dark-ink) 72%,transparent);margin:0;max-width:36ch}
-    .lp-footer-mc .col h4{font-family:var(--font-mono);font-size:.72rem;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 1em}
+    .lp-footer-mc .col h4{font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 1em}
     .lp-footer-mc .col p,.lp-footer-mc .col a{display:block;font-family:var(--font-body);font-size:.9rem;line-height:1.5;color:color-mix(in srgb,var(--band-dark-ink) 80%,transparent);margin:0 0 .5em;text-decoration:none}
     .lp-footer-mc .col a:hover{color:var(--band-dark-ink);text-decoration:underline}
     .lp-footer-mc .foot-fine{border-top:1px solid color-mix(in srgb,var(--band-dark-ink) 16%,transparent);margin-top:clamp(28px,4vw,40px);padding-top:1.4em;font-family:var(--font-mono);font-size:.72rem;line-height:1.7;color:color-mix(in srgb,var(--band-dark-ink) 55%,transparent);max-width:80ch}
@@ -927,27 +1050,27 @@ html.js-motion #sticky.is-visible{
   <div class="in">
     <div class="foot-grid">
       <div class="brand">
-        <p class="name">Sunna Skin Studio</p>
-        <p class="blurb">Signature skin treatments in Manly, with a warm, one to one approach and honest advice you can trust.</p>
+        <p class="name">Verano Body Clinic</p>
+        <p class="blurb">Non-surgical body contouring, skin tightening and fat reduction in Harrogate. A personalised, one to one approach.</p>
       </div>
       <div class="col">
         <h4>Visit</h4>
-        <p>Shop 3, 41 The Corso<br>Manly, NSW 2095</p>
+        <p>22 Prospect Street<br>Harrogate, HG1 1AA</p>
         <a href="#">Get directions</a>
       </div>
       <div class="col">
         <h4>Contact</h4>
-        <a href="tel:0280064127">02 8006 4127</a>
-        <a href="mailto:hello@sunnaskin.com.au">hello@sunnaskin.com.au</a>
+        <a href="tel:01632960100">01632 960100</a>
+        <a href="mailto:hello@veranobody.co.uk">hello@veranobody.co.uk</a>
       </div>
       <div class="col">
         <h4>Hours</h4>
-        <p>Tuesday to Friday, 9:30am to 7:00pm<br>Saturday, 9:00am to 4:00pm<br>Sunday and Monday, closed</p>
+        <p>Tuesday to Thursday, 9:30am to 8:00pm<br>Friday, 9:30am to 6:30pm<br>Saturday, 9:30am to 5:00pm<br>Sunday and Monday, closed</p>
       </div>
     </div>
     <p class="foot-fine">
-      &copy; 2026 Sunna Skin Studio. The $89 is the price of your first signature session, normally $140. A $25 deposit secures your appointment when you book and comes off the price. <a href="#">Privacy</a>
-      <br>Skin treatments referred to on this page are personalised to the individual, and suitability is assessed in person at your session before any ongoing plan is recommended. Nothing on this page is medical advice, and individual experiences vary.
+      &copy; 2026 Verano Body Clinic. The &pound;75 is the price of your session. A &pound;25 deposit secures your appointment when you book and comes off the price. <a href="#">Privacy</a>
+      <br>Non-surgical body treatments referred to on this page are personalised to the individual, and suitability is assessed in person at your session before any treatment course is recommended. Nothing on this page is medical advice, and individual experiences vary.
     </p>
   </div>
 </footer>
@@ -955,8 +1078,8 @@ html.js-motion #sticky.is-visible{
 <!-- ================= STICKY MOBILE CTA (#sticky hook) ================= -->
 <div id="sticky">
   <div class="s-info">
-    <span class="s-t">$89 signature skin session</span>
-    <span class="s-b">Normally $140 &middot; no obligation to continue</span>
+    <span class="s-t">&pound;75 body contouring session</span>
+    <span class="s-b">Personalised &middot; no obligation to continue</span>
   </div>
   <a class="s-btn" href="#hero" data-cta>Book</a>
 </div>

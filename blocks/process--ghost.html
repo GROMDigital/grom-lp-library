@@ -6,13 +6,35 @@
     .lp-process-ghost .kicker{font-family:var(--font-body);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 .9em}
     .lp-process-ghost h2{font-family:var(--font-display);font-size:var(--fs-h2);line-height:1.12;color:var(--ink);margin:0}
     .lp-process-ghost .row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3.4vw,44px)}
-    .lp-process-ghost .step{position:relative;min-width:0;padding-top:clamp(30px,4vw,46px);border-top:2px solid var(--accent)}
+    .lp-process-ghost .step{position:relative;min-width:0;padding-top:clamp(30px,4vw,46px);border-top:2px solid var(--accent);overflow:hidden}
     .lp-process-ghost .ghost{position:absolute;right:0;top:-.34em;font-family:var(--font-display);font-weight:700;font-size:clamp(70px,9vw,116px);line-height:.8;color:var(--ghost-color);pointer-events:none;user-select:none;z-index:0;overflow-wrap:anywhere}
+    .lp-process-ghost .badge{display:none}
     .lp-process-ghost .num{position:relative;z-index:1;font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 1em}
     .lp-process-ghost h3{position:relative;z-index:1;font-family:var(--font-display);font-size:clamp(1.15rem,2vw,1.42rem);line-height:1.2;color:var(--ink);margin:0 0 .5em}
     .lp-process-ghost p{position:relative;z-index:1;font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:36ch}
     @media (max-width:768px){
       .lp-process-ghost .row{grid-template-columns:1fr;gap:clamp(30px,7vw,42px)}
+    }
+
+    /* --boxed VARIANT (opt-in): the 3 steps sit inside one white rounded card,
+       each row a solid circular number badge + a faint ghost numeral behind, the
+       "Step 0N" text label hidden. Rows divided by top borders on mobile and by
+       left borders across 3 columns >=640px. Default (unmodified) layout above
+       is untouched, so other pages keep the open ghost-numeral columns. */
+    .lp-process-ghost--boxed .head{max-width:640px}
+    .lp-process-ghost--boxed .row{grid-template-columns:1fr;gap:0;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+    .lp-process-ghost--boxed .step{display:flex;gap:18px;padding:26px 24px;border-top:none;padding-top:26px}
+    .lp-process-ghost--boxed .step + .step{border-top:1px solid var(--ghost-color)}
+    .lp-process-ghost--boxed .num{display:none}
+    .lp-process-ghost--boxed .ghost{display:none}
+    .lp-process-ghost--boxed .badge{display:flex;flex:none;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-family:var(--font-display);font-weight:600;font-size:16px;position:relative;z-index:1}
+    .lp-process-ghost--boxed .txt{min-width:0}
+    .lp-process-ghost--boxed .ghost{right:14px;top:-6px;font-size:76px;color:var(--ink);opacity:.045}
+    .lp-process-ghost--boxed h3{font-size:18px;margin:2px 0 6px}
+    .lp-process-ghost--boxed p{font-size:14.5px}
+    @media (min-width:640px){
+      .lp-process-ghost--boxed .row{grid-template-columns:repeat(3,1fr)}
+      .lp-process-ghost--boxed .step + .step{border-top:none;border-left:1px solid var(--ghost-color)}
     }
   </style>
   <div class="in">
@@ -23,21 +45,30 @@
     <div class="row reveal-stagger">
       <div class="step">
         <span class="ghost" aria-hidden="true">01</span>
+        <span class="badge" aria-hidden="true">1</span>
         <p class="num">Step 01</p>
-        <h3>{{step_1_title}}</h3>
-        <p>{{step_1_body}}</p>
+        <div class="txt">
+          <h3>{{step_1_title}}</h3>
+          <p>{{step_1_body}}</p>
+        </div>
       </div>
       <div class="step">
         <span class="ghost" aria-hidden="true">02</span>
+        <span class="badge" aria-hidden="true">2</span>
         <p class="num">Step 02</p>
-        <h3>{{step_2_title}}</h3>
-        <p>{{step_2_body}}</p>
+        <div class="txt">
+          <h3>{{step_2_title}}</h3>
+          <p>{{step_2_body}}</p>
+        </div>
       </div>
       <div class="step">
         <span class="ghost" aria-hidden="true">03</span>
+        <span class="badge" aria-hidden="true">3</span>
         <p class="num">Step 03</p>
-        <h3>{{step_3_title}}</h3>
-        <p>{{step_3_body}}</p>
+        <div class="txt">
+          <h3>{{step_3_title}}</h3>
+          <p>{{step_3_body}}</p>
+        </div>
       </div>
     </div>
   </div>

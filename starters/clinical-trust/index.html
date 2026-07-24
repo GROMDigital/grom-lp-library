@@ -3,1242 +3,1316 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Meridian Cosmetic Medicine | Dr Elise Warner, South Yarra Melbourne</title>
-<meta name="description" content="A considered, doctor-led approach to cosmetic injectables and facial aesthetics in South Yarra, Melbourne. Every treatment begins with a complimentary consultation and an honest assessment from Dr Elise Warner.">
+<title>Complimentary Consultation | Northcott Skin &amp; Laser, Chatswood</title>
+<meta name="description" content="Book a complimentary consultation at Northcott Skin & Laser, Chatswood. A calm, one to one assessment with honest, evidence-led guidance on what would suit your skin. No deposit and no card needed.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- GROM LP head/tracking block. Paste into the page's Head / Tracking Code settings. Set the client key and Meta Pixel ID; the inline config MUST precede the async loader.
+<script>window.GROM_LP={clientKey:"demo-clinical-trust"};</script>
+<script async src="https://grom-lp-events.gromdigital001.workers.dev/lp.js"></script>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','YOUR_META_PIXEL_ID');fbq('track','PageView');
+</script>
+-->
 <style>
-/* ============================================================
-   MERIDIAN COSMETIC MEDICINE, clinical-trust LP
-   Design language: grotesque display (Archivo) + neutral sans
-   (Inter) + mono data labels (IBM Plex Mono). Cool ice ground,
-   graphite ink, cool sage, one precise steel-blue accent.
-   Measured, credibility-led motion. Reduced-motion safe.
-   ============================================================ */
-
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+/* ===== themes/_contract.css ===== */
+/* LP LIBRARY THEME TOKEN CONTRACT.
+   Every theme file MUST define every variable below.
+   Every block MUST style using only these variables (no hardcoded colors/fonts). */
+:root {
   /* palette */
-  --ice:#EAF0F4;
-  --ice-2:#E2EAEF;
-  --paper:#F6F9FB;
-  --white:#FCFDFE;
-  --ink:#131C24;
-  --ink-84:rgba(19,28,36,.84);
-  --ink-66:rgba(19,28,36,.66);
-  --ink-50:rgba(19,28,36,.50);
-  --ink-16:rgba(19,28,36,.16);
-  --ink-11:rgba(19,28,36,.11);
-  --ink-07:rgba(19,28,36,.07);
-  --slate:#41525F;
-  --steel:#1C6FA6;
-  --steel-deep:#12557F;
-  --steel-bright:#2E8FC4;
-  --steel-ink:#0E4B72;
-  --sage:#5E7E74;
-  --sage-soft:#9FB6AC;
-  --line:#CFDBE3;
-
-  --graphite:#101A22;
-  --graphite-2:#16242F;
-  --graphite-3:#1E3140;
-
+  --bg: #ffffff;
+  --surface: #faf9f7;
+  --surface-2: #f2efe9;       /* alternate/tinted surface */
+  --ink: #141414;
+  --muted: #565656;
+  --border: #e6e4e0;
+  --accent: #b8893b;
+  --accent-ink: #ffffff;      /* text/icon on --accent */
+  --accent-soft: var(--accent);  /* lighter accent (gradient start, soft fills) */
+  --accent-deep: var(--accent);  /* darker accent (deep bands, pressed states) */
+  --warm: var(--accent);      /* second/warm accent (media panels, underlines) */
+  --warm-2: var(--warm);      /* deeper warm accent (strokes, hovers) */
+  --gold: var(--accent);      /* metallic/eyebrow accent (signature pills, dashes) */
+  --gold-soft: var(--gold);   /* lighter gold */
+  --band-dark-bg: #141414;    /* dark closing band */
+  --band-dark-ink: #ffffff;
   /* type */
-  --display:"Archivo", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
-  --sans:"Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-
-  --fs-display:clamp(2.5rem, 6.2vw + .2rem, 4.7rem);
-  --fs-h2:clamp(1.9rem, 3.9vw, 2.95rem);
-  --fs-h3:clamp(1.1rem, 1.4vw, 1.32rem);
-  --fs-lead:clamp(1.04rem, 1rem + .4vw, 1.24rem);
-
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-body);  /* technical/label accent; sans by default */
+  --fs-h1: clamp(2rem, 5vw, 3.25rem);
+  --fs-h2: clamp(1.5rem, 3.2vw, 2.25rem);
+  --fs-h3: clamp(1.15rem, 1.6vw, 1.4rem);
+  --fs-lead: var(--fs-body);  /* larger lead paragraph */
+  --fs-body: 1.0625rem;
+  --lh-body: 1.6;
   /* layout */
-  --container:1180px;
-  --edge:clamp(20px, 5.4vw, 46px);
-  --sect:clamp(60px, 8.5vw, 122px);
-
-  --r-xl:22px;
-  --r-lg:15px;
-  --r-md:11px;
-  --r-sm:8px;
-  --r-pill:999px;
-
-  --shadow-1:0 1px 2px rgba(23,44,62,.05), 0 1px 3px rgba(23,44,62,.05);
-  --shadow-2:0 18px 40px -22px rgba(19,40,58,.30), 0 4px 12px -6px rgba(19,40,58,.12);
-  --shadow-3:0 44px 96px -34px rgba(15,34,52,.42), 0 14px 34px -14px rgba(15,34,52,.20);
-  --shadow-cta:0 16px 34px -14px rgba(18,85,127,.55), 0 5px 12px -5px rgba(18,85,127,.36);
-
-  --ease:cubic-bezier(.22,.62,.14,1);
-  --spring:cubic-bezier(.34,1.32,.48,1);
+  --maxw: 1120px;
+  --space-section: clamp(48px, 8vw, 96px);
+  --gutter: clamp(20px, 5vw, 40px);
+  --radius: 12px;             /* primary/large card radius */
+  --r-lg: var(--radius);      /* large-ish radius */
+  --r-md: var(--radius);      /* medium radius */
+  --r-sm: var(--radius);      /* small radius */
+  --btn-radius: 8px;
+  --shadow: none;
+  --shadow-sm: var(--shadow); /* subtle lift */
+  --shadow-lg: var(--shadow); /* deep drop */
+  /* decorative (rich themes opt in; neutral defaults keep plain themes unchanged) */
+  --cta-grad-a: var(--accent);   /* gradient CTA start; flat when a==b */
+  --cta-grad-b: var(--accent);   /* gradient CTA end */
+  --shadow-cta: none;            /* CTA drop shadow */
+  --glow-1: transparent;         /* hero decorative glow color 1 */
+  --glow-2: transparent;         /* hero decorative glow color 2 */
+  --ghost-color: var(--border);  /* faded ghost step number */
+  --deposit-accent: var(--accent); /* deposit/offer accent */
+  --r-pill: 999px;               /* pill radius for chips */
+  --ease: cubic-bezier(.22,.68,0,1);   /* standard easing */
+  --spring: cubic-bezier(.34,1.4,.5,1); /* springy easing */
 }
 
-*,*::before,*::after{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
-@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
-
-body{
-  margin:0;
-  background:var(--ice);
-  color:var(--ink);
-  font-family:var(--sans);
-  font-size:16px;
-  line-height:1.6;
-  letter-spacing:-.006em;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-}
-img,svg{ display:block; max-width:100%; }
-button{ font-family:inherit; }
-a{ color:inherit; text-decoration:none; }
-
-.wrap{ max-width:var(--container); margin-inline:auto; padding-inline:var(--edge); }
-
-/* blueprint grid wash + fine grain */
-.grid-wash{
-  position:fixed; inset:0; pointer-events:none; z-index:1; opacity:.5;
-  background-image:
-    linear-gradient(to right, rgba(28,111,166,.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(28,111,166,.05) 1px, transparent 1px);
-  background-size:58px 58px;
-  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%, #000 20%, transparent 78%);
-  mask-image:radial-gradient(120% 90% at 50% 0%, #000 20%, transparent 78%);
-}
-.grain{
-  position:fixed; inset:0; pointer-events:none; z-index:300;
-  opacity:.03; mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  background-size:200px 200px;
-}
-
-/* scroll progress */
-.scroll-progress{
-  position:fixed; top:0; left:0; height:2px; width:0%;
-  background:linear-gradient(90deg, var(--steel-deep), var(--steel-bright));
-  z-index:400; box-shadow:0 0 10px rgba(28,111,166,.5);
-}
-
-/* ambient glows */
-.glow{ position:absolute; border-radius:50%; filter:blur(74px); pointer-events:none; z-index:0; will-change:transform; }
-@keyframes driftA{ 0%,100%{ transform:translate3d(0,0,0) scale(1); } 50%{ transform:translate3d(-26px,22px,0) scale(1.1); } }
-@keyframes driftB{ 0%,100%{ transform:translate3d(0,0,0) scale(1); } 50%{ transform:translate3d(24px,-18px,0) scale(1.07); } }
-@keyframes driftC{ 0%,100%{ transform:translate3d(0,0,0) scale(1); } 50%{ transform:translate3d(16px,18px,0) scale(1.08); } }
-.g-a{ animation:driftA 20s ease-in-out infinite; }
-.g-b{ animation:driftB 24s ease-in-out infinite; }
-.g-c{ animation:driftC 22s ease-in-out infinite; }
-
-/* reveal system, measured */
-.reveal{ opacity:0; transform:translateY(20px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
-.reveal.in{ opacity:1; transform:none; }
-.stagger > *{ opacity:0; transform:translateY(16px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
-.stagger.in > *{ opacity:1; transform:none; }
-.stagger.in > *:nth-child(1){ transition-delay:.04s; }
-.stagger.in > *:nth-child(2){ transition-delay:.11s; }
-.stagger.in > *:nth-child(3){ transition-delay:.18s; }
-.stagger.in > *:nth-child(4){ transition-delay:.25s; }
-.stagger.in > *:nth-child(5){ transition-delay:.32s; }
-.stagger.in > *:nth-child(6){ transition-delay:.39s; }
-.stagger.in > *:nth-child(7){ transition-delay:.46s; }
-.stagger.in > *:nth-child(8){ transition-delay:.53s; }
-
-@media (prefers-reduced-motion: reduce){
-  .glow{ animation:none !important; }
-  .reveal, .stagger > *{ opacity:1 !important; transform:none !important; transition:none !important; }
-  .hero h1 .w, .hero .seq{ opacity:1 !important; transform:none !important; filter:none !important; animation:none !important; }
-  .hero h1 .em .ul path{ stroke-dashoffset:0 !important; transition:none !important; }
-  .assess .guide-draw{ stroke-dashoffset:0 !important; transition:none !important; }
+/* ===== themes/clinical-trust.css ===== */
+/* clinical-trust: cool sage, credibility-led, complimentary-consult (no price/deposit). Trustworthy grotesque (Manrope) + neutral sans body (Public Sans) + mono labels, tighter radii, hairlines, cool-tinted depth. Expanded contract tokens tuned to the sage palette. */
+:root {
+  /* palette */
+  --bg: #f7faf9;
+  --surface: #eef4f1;
+  --surface-2: #e4eee9;        /* deeper sage tint */
+  --ink: #12201c;
+  --muted: #4d635b;
+  --border: #d7e3de;
+  --accent: #3f7767;
+  --accent-ink: #ffffff;       /* text/icon on --accent */
+  --accent-soft: #4d8a78;      /* lighter sage (gradient start, soft fills) */
+  --accent-deep: #2f5b4e;      /* darker sage (deep bands, pressed states) */
+  --warm: #6e8f83;             /* muted teal-sage second accent (media panels, underlines) */
+  --warm-2: #4f6f64;           /* deeper teal-sage (strokes, hovers) */
+  --gold: #35685a;             /* no metallic; sage-deep stands in */
+  --gold-soft: #4d8a78;        /* lighter sage */
+  --band-dark-bg: #16221f;     /* deep evergreen closing band */
+  --band-dark-ink: #eef6f2;
+  /* type */
+  --font-display: "Manrope", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Public Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --fs-h1: clamp(1.95rem, 4.8vw, 3rem);
+  --fs-h2: clamp(1.4rem, 2.8vw, 2rem);
+  --fs-h3: clamp(1.1rem, 1.4vw, 1.3rem);
+  --fs-lead: clamp(1.02rem, 1rem + .35vw, 1.2rem);  /* larger lead paragraph */
+  --fs-body: 1rem;
+  --lh-body: 1.55;
+  /* layout */
+  --maxw: 1040px;
+  --space-section: clamp(40px, 6vw, 72px);
+  --gutter: clamp(18px, 4vw, 32px);
+  --radius: 6px;               /* soft-clinical card radius */
+  --r-lg: 10px;
+  --r-md: 7px;
+  --r-sm: 5px;
+  --btn-radius: 6px;
+  --shadow: 0 16px 38px -22px rgba(30,60,52,.28), 0 4px 12px -6px rgba(30,60,52,.12);
+  --shadow-sm: 0 1px 2px rgba(30,60,52,.05), 0 1px 3px rgba(30,60,52,.05);
+  --shadow-lg: 0 42px 92px -34px rgba(22,44,38,.40), 0 13px 32px -14px rgba(22,44,38,.18);
+  /* decorative (cool sage / clinical richness) */
+  --cta-grad-a: #4d8a78;
+  --cta-grad-b: #35685a;
+  --shadow-cta: 0 14px 30px -12px rgba(63,119,103,.44), 0 4px 10px -3px rgba(63,119,103,.28);
+  --glow-1: #e3efe9;
+  --glow-2: #d7e6df;
+  --ghost-color: rgba(18,32,28,.06);
+  --deposit-accent: #2f5b4e;
+  --r-pill: 999px;
+  --ease: cubic-bezier(.22,.62,.14,1);
+  --spring: cubic-bezier(.34,1.3,.5,1);
 }
 
-/* top bar */
-.topbar{
-  position:relative; z-index:30;
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
-  padding:20px var(--edge) 8px;
-  max-width:var(--container); margin-inline:auto;
-}
-.wordmark{ display:inline-flex; align-items:center; gap:11px; }
-.wordmark .mk{ width:34px; height:34px; flex:none; }
-.wordmark .mk svg{ width:100%; height:100%; }
-.wordmark .txt{ display:inline-flex; flex-direction:column; line-height:1; }
-.wordmark .name{ font-family:var(--display); font-weight:700; font-size:clamp(18px,4.2vw,21px); letter-spacing:-.01em; color:var(--ink); }
-.wordmark .sub{ font-family:var(--mono); font-weight:500; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--slate); margin-top:5px; }
-.topbar .nav-cta{
-  display:none; align-items:center; gap:8px;
-  font-size:13.5px; font-weight:600; color:var(--steel-ink);
-  border:1px solid var(--line); border-radius:var(--r-pill); padding:10px 18px; background:var(--white);
-  transition:border-color .3s var(--ease), background .3s var(--ease), transform .3s var(--spring);
-}
-.topbar .nav-cta:hover{ border-color:var(--steel); background:var(--paper); transform:translateY(-1px); }
-@media (min-width:768px){ .topbar .nav-cta{ display:inline-flex; } }
+/* ===== base reset ===== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+/* film grain, whisper-thin, whole page */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.03;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");background-size:200px 200px}
 
-/* buttons */
-.btn{
-  appearance:none; border:none; cursor:pointer;
-  position:relative; overflow:hidden;
-  display:inline-flex; align-items:center; justify-content:center; gap:10px;
-  font-family:var(--sans); font-weight:600; font-size:16px; letter-spacing:-.01em;
-  padding:16px 28px; border-radius:var(--r-pill); min-height:54px;
-  transition:transform .3s var(--spring), box-shadow .3s var(--ease), background .3s var(--ease);
+/* ===== motion/motion.css ===== */
+:root{
+  --motion-ease: cubic-bezier(.22,.68,0,1);
+  --motion-spring: cubic-bezier(.34,1.4,.5,1);
+  --motion-dur: .8s;
+  --motion-stagger-step: .08s;
+}
+html.js-motion .reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity var(--motion-dur) var(--motion-ease), transform var(--motion-dur) var(--motion-ease);
+}
+html.js-motion .reveal.is-visible{
+  opacity:1;
+  transform:none;
+}
+html.js-motion .reveal-stagger > *{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity var(--motion-dur) var(--motion-ease), transform var(--motion-dur) var(--motion-ease);
+}
+html.js-motion .reveal-stagger.is-visible > *{
+  opacity:1;
+  transform:none;
+}
+html.js-motion .reveal-stagger.is-visible > *:nth-child(1){ transition-delay: calc(var(--motion-stagger-step) * 0); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(2){ transition-delay: calc(var(--motion-stagger-step) * 1); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(3){ transition-delay: calc(var(--motion-stagger-step) * 2); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(4){ transition-delay: calc(var(--motion-stagger-step) * 3); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(5){ transition-delay: calc(var(--motion-stagger-step) * 4); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(6){ transition-delay: calc(var(--motion-stagger-step) * 5); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(7){ transition-delay: calc(var(--motion-stagger-step) * 6); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(8){ transition-delay: calc(var(--motion-stagger-step) * 7); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(9){ transition-delay: calc(var(--motion-stagger-step) * 8); }
+html.js-motion .reveal-stagger.is-visible > *:nth-child(10){ transition-delay: calc(var(--motion-stagger-step) * 9); }
+.marquee{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  width:100%;
+}
+html.js-motion .marquee{
+  flex-wrap:nowrap;
+  overflow:hidden;
+}
+.marquee-track{
+  display:flex;
+  flex:none;
+  align-items:center;
+  gap:20px;
+}
+html.js-motion .marquee-track{
+  animation: lp-marquee 30s linear infinite;
   will-change:transform;
 }
-.btn svg{ flex:none; transition:transform .3s var(--ease); }
-.btn:hover svg{ transform:translateX(4px); }
-.btn::after{
-  content:""; position:absolute; top:0; left:-70%; width:44%; height:100%;
-  background:linear-gradient(120deg, transparent, rgba(255,255,255,.4), transparent);
-  transform:skewX(-20deg); transition:left .8s var(--ease); pointer-events:none;
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track{
+  animation-play-state:paused;
 }
-.btn:hover::after{ left:130%; }
-.btn:active{ transform:scale(.975); }
-.btn:focus-visible{ outline:3px solid var(--steel-ink); outline-offset:3px; }
-.btn-primary{ background:linear-gradient(180deg, var(--steel), var(--steel-deep)); color:#fff; box-shadow:var(--shadow-cta); }
-.btn-primary:hover{ box-shadow:0 20px 40px -14px rgba(18,85,127,.62), 0 7px 16px -6px rgba(18,85,127,.4); }
-.btn-light{ background:var(--white); color:var(--steel-ink); box-shadow:0 16px 34px -16px rgba(0,0,0,.4); }
-.btn-light:hover{ background:#fff; }
-.btn-ghost{ background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none; min-height:54px; }
-.btn-ghost:hover{ border-color:var(--steel); }
-@media (prefers-reduced-motion: reduce){ .btn, .btn::after, .btn svg{ transition:none; } }
-
-.cta-micro{ display:flex; align-items:center; gap:8px; font-size:13px; color:var(--slate); font-weight:500; margin-top:14px; }
-.cta-micro svg{ flex:none; color:var(--steel); }
-
-/* kicker (mono, precise) */
-.kicker{
-  font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
-  color:var(--steel-ink); margin:0 0 16px; display:inline-flex; align-items:center; gap:11px;
+.marquee-track[aria-hidden="true"]{
+  display:none;
 }
-.kicker::before{ content:""; width:22px; height:1px; background:var(--steel); }
-.kicker.dot::before{ width:7px; height:7px; border-radius:50%; background:var(--steel); box-shadow:0 0 0 4px rgba(28,111,166,.14); animation:pulseDot 2.6s ease-in-out infinite; }
-@keyframes pulseDot{ 0%,100%{ box-shadow:0 0 0 4px rgba(28,111,166,.14); } 50%{ box-shadow:0 0 0 8px rgba(28,111,166,.04); } }
-@media (prefers-reduced-motion: reduce){ .kicker.dot::before{ animation:none; } }
-
-h2.h2{ font-family:var(--display); font-weight:700; font-size:var(--fs-h2); line-height:1.04; letter-spacing:-.02em; margin:0 0 16px; max-width:20ch; }
-h2.h2 em{ font-style:normal; color:var(--steel); }
-.lead{ font-size:var(--fs-lead); color:var(--ink-66); max-width:52ch; margin:0; line-height:1.55; }
-
-.section{ position:relative; padding:var(--sect) 0; }
-.section.tint{ background:var(--paper); border-block:1px solid var(--ink-07); }
-.section-head{ max-width:660px; margin:0 0 clamp(34px,4vw,54px); }
-
-/* ======================================================
-   HERO
-   ====================================================== */
-.hero{ position:relative; padding:22px var(--edge) 0; overflow:hidden; }
-.hero .glow.h1{ width:440px; height:440px; background:rgba(46,143,196,.32); top:-170px; right:-120px; }
-.hero .glow.h2{ width:320px; height:320px; background:rgba(94,126,116,.24); bottom:20px; left:-150px; }
-.hero .glow.h3{ width:240px; height:240px; background:rgba(46,143,196,.18); top:130px; left:40%; }
-
-.hero-inner{ position:relative; z-index:2; max-width:var(--container); margin-inline:auto; padding-bottom:clamp(38px,7vw,78px); }
-.hero-copy{ max-width:600px; }
-
-.hero h1{
-  font-family:var(--display); font-weight:700;
-  font-size:var(--fs-display); line-height:1.01; letter-spacing:-.028em;
-  margin:20px 0 22px; color:var(--ink); max-width:15ch;
+html.js-motion .marquee-track[aria-hidden="true"]{
+  display:flex;
 }
-.hero h1 .em{ color:var(--steel); position:relative; white-space:nowrap; }
-.hero h1 .em .ul{ position:absolute; left:0; right:0; bottom:-.06em; height:.42em; z-index:-1; overflow:visible; }
-.hero h1 .em .ul path{ stroke:var(--steel-bright); stroke-width:5; fill:none; stroke-linecap:round; stroke-dasharray:340; stroke-dashoffset:340; }
-.hero.loaded h1 .em .ul path{ transition:stroke-dashoffset 1s var(--ease) 1.0s; stroke-dashoffset:0; }
-
-.hero h1 .w{ display:inline-block; opacity:0; filter:blur(10px); transform:translateY(.42em); }
-.hero.loaded h1 .w{ animation:wordUp .8s var(--ease) forwards; }
-@keyframes wordUp{ to{ opacity:1; filter:blur(0); transform:none; } }
-
-.hero .seq{ opacity:0; transform:translateY(16px); }
-.hero.loaded .seq{ animation:seqUp .75s var(--ease) forwards; }
-@keyframes seqUp{ to{ opacity:1; transform:none; } }
-
-.hero .subhead{ font-size:var(--fs-lead); color:var(--ink-66); max-width:44ch; margin:0 0 26px; line-height:1.55; }
-.chip-row{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; }
-.chip{
-  display:inline-flex; align-items:center; gap:9px; background:var(--white);
-  border:1px solid var(--line); padding:9px 15px; border-radius:var(--r-pill);
-  font-size:13px; font-weight:500; color:var(--ink-84); box-shadow:var(--shadow-1);
+@keyframes lp-marquee{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-100%); }
 }
-.chip svg{ flex:none; color:var(--steel); }
-.chip strong{ color:var(--steel-ink); font-weight:700; }
-
-.cta-block{ display:flex; flex-direction:column; }
-.hero .trust-row{ display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; margin-top:32px; padding-top:24px; border-top:1px solid var(--ink-11); }
-.trust-item{ display:flex; align-items:center; gap:8px; font-size:13px; font-weight:500; color:var(--ink-66); }
-.trust-item svg{ flex:none; color:var(--steel); }
-.trust-item strong{ color:var(--ink); font-weight:700; }
-.stars{ color:var(--steel-bright); letter-spacing:1.5px; font-size:13px; }
-
-/* hero visual: clinical assessment card */
-.hero-visual{ position:relative; margin-top:40px; will-change:transform; }
-.assess{
-  position:relative; border-radius:var(--r-xl); overflow:hidden;
-  border:1px solid var(--ink-07); box-shadow:var(--shadow-2);
-  background:
-    radial-gradient(120% 80% at 78% 8%, #DCE8EF 0%, transparent 52%),
-    radial-gradient(90% 80% at 12% 96%, #E4EBE7 0%, transparent 50%),
-    linear-gradient(162deg, #F1F6F9 0%, #E3EDF2 52%, #DBE7E3 100%);
-  aspect-ratio:4/4.5;
+.lp-progress-bar{
+  position:fixed;
+  top:0; left:0;
+  height:3px;
+  width:0%;
+  background:var(--accent, #2E6248);
+  z-index:9999;
+  pointer-events:none;
+  transition:width .12s linear;
 }
-.assess-svg{ position:absolute; inset:0; width:100%; height:100%; }
-.assess .profile{ fill:none; stroke:rgba(16,38,54,.42); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
-.assess .guide{ fill:none; stroke:var(--steel); stroke-width:1; stroke-dasharray:5 5; opacity:.55; }
-.assess .guide-draw{ stroke-dasharray:520; stroke-dashoffset:520; }
-.hero.loaded .assess .guide-draw{ transition:stroke-dashoffset 1.3s var(--ease) .5s; stroke-dashoffset:0; }
-.assess .node{ fill:var(--steel); }
-.assess .ring-o{ fill:none; stroke:var(--steel-bright); stroke-width:1.4; opacity:.7; }
-.assess .tick{ stroke:rgba(16,38,54,.34); stroke-width:1.2; }
-.assess-scan{
-  position:absolute; left:0; right:0; height:32%; z-index:2;
-  background:linear-gradient(180deg, transparent, rgba(46,143,196,.14), transparent);
-  border-block:1px solid rgba(46,143,196,.3);
-  animation:scanY 5.5s ease-in-out infinite;
+html.js-motion #sticky{
+  transform:translateY(115%);
+  transition:transform .5s var(--motion-spring);
+  will-change:transform;
 }
-@keyframes scanY{ 0%,100%{ transform:translateY(-10%); } 50%{ transform:translateY(210%); } }
-@media (prefers-reduced-motion: reduce){ .assess-scan{ animation:none; opacity:.4; } }
-
-.assess-tags{ position:absolute; inset:0; z-index:3; }
-.datachip{
-  position:absolute; display:inline-flex; align-items:center; gap:7px;
-  background:rgba(252,253,254,.84); backdrop-filter:blur(12px) saturate(150%); -webkit-backdrop-filter:blur(12px) saturate(150%);
-  border:1px solid rgba(255,255,255,.7); border-radius:var(--r-pill); padding:8px 13px;
-  font-family:var(--mono); font-size:11px; font-weight:500; color:var(--slate); box-shadow:var(--shadow-1);
-  white-space:nowrap;
+html.js-motion #sticky.is-visible{
+  transform:none;
 }
-.datachip .dot{ width:6px; height:6px; border-radius:50%; background:var(--steel); flex:none; }
-.datachip.t1{ top:12%; left:8%; }
-.datachip.t2{ top:44%; right:7%; }
-.datachip.t3{ bottom:18%; left:11%; }
-
-.cred-float{
-  position:absolute; left:18px; bottom:-20px; z-index:4;
-  background:rgba(252,253,254,.9); backdrop-filter:blur(16px) saturate(160%); -webkit-backdrop-filter:blur(16px) saturate(160%);
-  border:1px solid rgba(255,255,255,.75); border-radius:var(--r-lg); box-shadow:var(--shadow-3);
-  padding:14px 18px; display:flex; align-items:center; gap:13px;
-  animation:floatY 6s ease-in-out infinite;
+.faq-item{
+  overflow:hidden;
 }
-@keyframes floatY{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-9px); } }
-@media (prefers-reduced-motion: reduce){ .cred-float{ animation:none; } }
-.cred-float .shield{ width:36px; height:36px; flex:none; color:var(--steel); }
-.cred-float .label{ display:block; font-family:var(--mono); font-size:9.5px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); margin-bottom:3px; }
-.cred-float .who{ font-family:var(--display); font-weight:700; font-size:15px; color:var(--ink); line-height:1.1; }
-
-.seal{ position:absolute; top:-26px; right:-6px; z-index:5; width:98px; height:98px; filter:drop-shadow(0 12px 24px rgba(16,34,52,.24)); }
-.seal .ring{ animation:spin 28s linear infinite; transform-origin:50% 50%; }
-@keyframes spin{ to{ transform:rotate(360deg); } }
-@media (prefers-reduced-motion: reduce){ .seal .ring{ animation:none; } }
-.seal .disc{ fill:var(--graphite); }
-.seal text{ fill:#DCE8EF; font-family:var(--mono); font-size:7.6px; font-weight:500; letter-spacing:.2em; }
-.seal .mark{ fill:none; stroke:var(--steel-bright); stroke-width:1.3; }
-
-/* ======================================================
-   MARQUEE
-   ====================================================== */
-.marquee{
-  position:relative; z-index:2; overflow:hidden;
-  border-block:1px solid var(--ink-11);
-  background:var(--white); padding:16px 0; margin-top:clamp(46px,7vw,72px);
-}
-.marquee-track{ display:flex; align-items:center; gap:22px; width:max-content; animation:marquee 34s linear infinite; will-change:transform; }
-.marquee:hover .marquee-track, .marquee:focus-within .marquee-track{ animation-play-state:paused; }
-.marquee-track span{ font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); white-space:nowrap; display:inline-flex; align-items:center; gap:10px; }
-.marquee-track .sep{ color:var(--sage-soft); }
-@keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
 @media (prefers-reduced-motion: reduce){
-  .marquee-track{ animation:none; flex-wrap:wrap; justify-content:center; width:auto; padding-inline:var(--edge); gap:12px 22px; }
-  .marquee-track span:nth-child(n+11){ display:none; }
+  html.js-motion .reveal,
+  html.js-motion .reveal-stagger > *{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+  html.js-motion .marquee{
+    flex-wrap:wrap !important;
+    overflow:visible !important;
+  }
+  html.js-motion .marquee-track{
+    animation:none !important;
+  }
+  html.js-motion .marquee-track[aria-hidden="true"]{
+    display:none !important;
+  }
+  html.js-motion #sticky{
+    transform:none !important;
+    transition:none !important;
+  }
+  .lp-progress-bar{
+    transition:none !important;
+  }
 }
 
-/* ======================================================
-   CONSULTATION INCLUDES
-   ====================================================== */
-.inc-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
-.inc-card{
-  position:relative; background:var(--white); border:1px solid var(--ink-07); border-radius:var(--r-lg);
-  box-shadow:var(--shadow-1); padding:clamp(22px,3vw,28px); overflow:hidden;
-  transition:transform .35s var(--spring), box-shadow .35s var(--ease), border-color .35s var(--ease);
-}
-.inc-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-2); border-color:var(--line); }
-.inc-card .idx{ position:absolute; top:16px; right:18px; font-family:var(--mono); font-size:11px; font-weight:500; color:var(--ink-16); letter-spacing:.06em; }
-.inc-icn{ width:44px; height:44px; border-radius:var(--r-md); background:var(--ice-2); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; margin:0 0 16px; color:var(--steel); transition:background .3s var(--ease), color .3s var(--ease); }
-.inc-card:hover .inc-icn{ background:var(--steel); color:#fff; }
-.inc-card h3{ font-family:var(--display); font-weight:700; font-size:var(--fs-h3); margin:0 0 8px; letter-spacing:-.01em; }
-.inc-card p{ margin:0; font-size:14.5px; color:var(--ink-66); line-height:1.55; max-width:40ch; }
-
-/* ======================================================
-   HOW IT WORKS
-   ====================================================== */
-.steps{ display:grid; grid-template-columns:1fr; gap:0; background:var(--white); border:1px solid var(--ink-07); border-radius:var(--r-xl); box-shadow:var(--shadow-1); overflow:hidden; }
-.step{ position:relative; padding:clamp(26px,3.2vw,36px); overflow:hidden; }
-.step + .step{ border-top:1px solid var(--ink-07); }
-.step-ghost{ position:absolute; right:18px; top:-6px; font-family:var(--mono); font-weight:600; font-size:clamp(46px,7vw,68px); line-height:1; color:var(--ink); opacity:.04; pointer-events:none; user-select:none; }
-.step-num{ position:relative; z-index:1; width:42px; height:42px; border-radius:var(--r-sm); background:var(--graphite); color:#fff; font-family:var(--mono); font-weight:600; font-size:15px; display:flex; align-items:center; justify-content:center; margin:0 0 16px; }
-.step h3{ position:relative; z-index:1; font-family:var(--display); font-weight:700; font-size:var(--fs-h3); margin:0 0 8px; letter-spacing:-.01em; }
-.step p{ position:relative; z-index:1; margin:0; font-size:14.5px; color:var(--ink-66); max-width:38ch; line-height:1.55; }
-
-/* ======================================================
-   DARK STATS BAND
-   ====================================================== */
-.band-dark{ position:relative; overflow:hidden; background:linear-gradient(162deg, var(--graphite) 0%, var(--graphite-2) 56%, var(--graphite-3) 120%); color:#E9F1F5; }
-.band-dark::before{ content:""; position:absolute; inset:0; opacity:.4; pointer-events:none;
-  background-image:linear-gradient(to right, rgba(151,182,204,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(151,182,204,.06) 1px, transparent 1px);
-  background-size:52px 52px; }
-.band-dark .glow.d1{ width:340px; height:340px; background:rgba(46,143,196,.22); top:-120px; right:-80px; }
-.band-dark .glow.d2{ width:300px; height:300px; background:rgba(94,126,116,.2); bottom:-120px; left:-70px; }
-.band-dark .inner{ position:relative; z-index:2; }
-.band-dark .kicker{ color:var(--steel-bright); }
-.band-dark .kicker::before{ background:var(--steel-bright); }
-.band-dark h2{ font-family:var(--display); font-weight:700; font-size:var(--fs-h2); line-height:1.06; letter-spacing:-.02em; margin:0 0 16px; max-width:20ch; color:#F3F8FA; }
-.band-dark h2 em{ font-style:normal; color:var(--steel-bright); }
-.band-dark .lead{ color:rgba(233,241,245,.72); }
-.stat-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(233,241,245,.13); border:1px solid rgba(233,241,245,.13); border-radius:var(--r-lg); overflow:hidden; margin-top:clamp(30px,4vw,44px); }
-.stat{ min-width:0; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0)); padding:clamp(22px,3vw,30px) clamp(18px,2.4vw,26px); }
-.stat .n{ font-family:var(--display); font-weight:800; font-size:clamp(2rem,3.6vw,2.9rem); line-height:1; color:#F3F8FA; font-variant-numeric:tabular-nums; white-space:nowrap; letter-spacing:-.02em; }
-.stat .n .u{ font-family:var(--mono); font-size:.42em; color:var(--steel-bright); font-weight:500; margin-left:2px; letter-spacing:0; }
-.stat .l{ font-family:var(--mono); font-size:11.5px; color:rgba(233,241,245,.62); font-weight:500; margin-top:12px; letter-spacing:.06em; text-transform:uppercase; }
-
-/* ======================================================
-   PHYSICIAN
-   ====================================================== */
-.doc-grid{ display:grid; grid-template-columns:1fr; gap:clamp(26px,4vw,52px); align-items:center; }
-.doc-media{ position:relative; }
-.doc-portrait{
-  position:relative; border-radius:var(--r-xl); overflow:hidden; border:1px solid var(--ink-07); box-shadow:var(--shadow-2);
-  background:
-    radial-gradient(110% 80% at 74% 12%, #DCE8EF 0%, transparent 54%),
-    linear-gradient(160deg, #EDF3F6 0%, #DFEAEF 58%, #D6E3E4 100%);
-  aspect-ratio:4/4.5;
-}
-.doc-portrait svg{ position:absolute; inset:0; width:100%; height:100%; }
-.doc-portrait .fig{ fill:none; stroke:rgba(16,38,54,.4); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
-.doc-portrait .fill{ fill:rgba(94,126,116,.16); }
-.doc-badge{
-  position:absolute; right:16px; bottom:16px; z-index:2;
-  display:inline-flex; align-items:center; gap:9px;
-  background:rgba(252,253,254,.9); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,.72); border-radius:var(--r-pill); padding:9px 15px;
-  font-family:var(--mono); font-size:11px; font-weight:500; color:var(--slate); box-shadow:var(--shadow-1);
-}
-.doc-badge svg{ color:var(--steel); flex:none; }
-.doc .doc-name{ font-family:var(--display); font-weight:800; font-size:var(--fs-h2); line-height:1.04; margin:4px 0 4px; letter-spacing:-.02em; }
-.doc .doc-title{ font-family:var(--mono); font-size:12.5px; font-weight:500; color:var(--steel-ink); letter-spacing:.06em; margin:0 0 22px; }
-.doc p.bio{ font-size:15.5px; color:var(--ink-66); line-height:1.65; margin:0 0 16px; max-width:54ch; }
-.cred-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
-.cred{ display:inline-flex; align-items:center; gap:8px; background:var(--white); border:1px solid var(--line); border-radius:var(--r-pill); padding:9px 15px; font-family:var(--mono); font-size:11.5px; font-weight:500; color:var(--slate); transition:transform .3s var(--spring), border-color .3s var(--ease), color .3s var(--ease); }
-.cred:hover{ transform:translateY(-2px); border-color:var(--steel); color:var(--steel-ink); }
-.cred svg{ color:var(--steel); flex:none; }
-.doc .sig{ font-family:var(--display); font-weight:600; font-style:italic; font-size:1.4rem; color:var(--steel-ink); margin:20px 0 0; letter-spacing:-.01em; }
-
-/* ======================================================
-   REVIEWS
-   ====================================================== */
-.rating-banner{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; background:var(--white); border:1px solid var(--ink-07); border-radius:var(--r-lg); padding:18px 24px; margin-bottom:26px; box-shadow:var(--shadow-1); }
-.rating-banner .big{ font-family:var(--display); font-weight:800; font-size:30px; color:var(--ink); font-variant-numeric:tabular-nums; line-height:1; letter-spacing:-.02em; }
-.rating-banner .stars{ font-size:18px; }
-.rating-banner .fine{ font-family:var(--mono); font-size:11.5px; color:var(--slate); font-weight:500; letter-spacing:.04em; }
-.rating-banner .src{ margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--ink-50); font-weight:500; letter-spacing:.06em; text-transform:uppercase; }
-.reviews-track{ display:grid; grid-auto-flow:column; grid-auto-columns:84%; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px; margin:0 calc(var(--edge) * -1); padding-inline:var(--edge); -webkit-overflow-scrolling:touch; scrollbar-width:none; }
-.reviews-track::-webkit-scrollbar{ display:none; }
-.review{ position:relative; scroll-snap-align:start; background:var(--white); border:1px solid var(--ink-07); border-radius:var(--r-lg); padding:26px; box-shadow:var(--shadow-1); overflow:hidden; transition:transform .35s var(--ease), opacity .35s var(--ease); }
-.review::before{ content:""; position:absolute; inset:0; border-radius:inherit; background:radial-gradient(240px circle at var(--sx,50%) var(--sy,50%), rgba(28,111,166,.09), transparent 66%); opacity:0; transition:opacity .35s var(--ease); pointer-events:none; }
-.review:hover::before{ opacity:1; }
-.review .rv-stars{ color:var(--steel-bright); letter-spacing:2px; font-size:14px; display:block; margin-bottom:14px; }
-.review p{ position:relative; z-index:1; font-size:16px; line-height:1.55; color:var(--ink-84); margin:0 0 18px; }
-.review .who{ position:relative; z-index:1; display:flex; align-items:center; gap:11px; }
-.review .avatar{ width:38px; height:38px; border-radius:var(--r-sm); background:var(--ice-2); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-family:var(--display); font-weight:700; font-size:14px; color:var(--steel-ink); flex:none; }
-.review .name{ font-size:14px; font-weight:600; color:var(--ink); line-height:1.2; }
-.review .tag{ font-family:var(--mono); font-size:10.5px; color:var(--ink-50); font-weight:500; letter-spacing:.04em; }
-@media (max-width:1023px){ .review{ opacity:.5; transform:scale(.96); } .review.active{ opacity:1; transform:scale(1); } }
-.review-dots{ display:flex; justify-content:center; gap:8px; margin-top:20px; }
-.review-dots .d{ width:6px; height:6px; border-radius:50%; background:var(--ink-16); transition:width .35s var(--spring), background .35s var(--ease); }
-.review-dots .d.on{ width:22px; background:var(--steel); }
-@media (min-width:1024px){ .review-dots{ display:none; } }
-
-/* ======================================================
-   BOOKING
-   ====================================================== */
-.book-card{ background:var(--white); border:1px solid var(--ink-07); border-radius:var(--r-xl); box-shadow:var(--shadow-2); overflow:hidden; display:grid; grid-template-columns:1fr; }
-.book-side{ padding:clamp(26px,4vw,38px); background:linear-gradient(162deg, var(--graphite), var(--graphite-2)); color:#E9F1F5; position:relative; overflow:hidden; }
-.book-side .glow{ width:220px; height:220px; background:rgba(46,143,196,.24); top:-70px; right:-50px; }
-.book-side .k{ font-family:var(--mono); font-size:11.5px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--steel-bright); margin:0 0 12px; position:relative; z-index:1; }
-.book-side h3{ font-family:var(--display); font-weight:700; font-size:clamp(1.7rem,3.6vw,2.15rem); line-height:1.08; margin:0 0 12px; position:relative; z-index:1; letter-spacing:-.02em; }
-.book-side p{ font-size:14.5px; color:rgba(233,241,245,.74); line-height:1.6; margin:0 0 22px; max-width:36ch; position:relative; z-index:1; }
-.book-side .assure{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px; position:relative; z-index:1; }
-.book-side .assure li{ display:flex; gap:11px; font-size:13.5px; color:rgba(233,241,245,.9); font-weight:500; }
-.book-side .assure svg{ flex:none; color:var(--steel-bright); margin-top:2px; }
-.book-body{ padding:clamp(24px,4vw,34px); }
-.book-body .step-label{ font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--slate); margin:0 0 12px; }
-.day-tabs{ display:flex; gap:8px; flex-wrap:wrap; margin:0 0 22px; }
-.day-tab{ cursor:pointer; border:1px solid var(--line); background:var(--white); border-radius:var(--r-md); padding:10px 14px; text-align:center; min-width:64px; transition:border-color .25s var(--ease), background .25s var(--ease), transform .25s var(--spring); }
-.day-tab:hover{ border-color:var(--steel); }
-.day-tab.sel{ background:var(--graphite); border-color:var(--graphite); color:#fff; }
-.day-tab .dow{ display:block; font-family:var(--mono); font-size:10.5px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; opacity:.72; }
-.day-tab .dom{ display:block; font-family:var(--display); font-size:18px; font-weight:700; margin-top:2px; }
-.time-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(92px,1fr)); gap:9px; margin:0 0 24px; }
-.time-chip{ cursor:pointer; border:1px solid var(--line); background:var(--white); border-radius:var(--r-pill); padding:11px 10px; font-family:var(--mono); font-size:13.5px; font-weight:500; color:var(--ink-84); text-align:center; font-variant-numeric:tabular-nums; transition:border-color .25s var(--ease), color .25s var(--ease), background .25s var(--ease), transform .2s var(--spring); }
-.time-chip:hover:not(.muted):not(.sel){ border-color:var(--steel); color:var(--steel-ink); transform:translateY(-1px); }
-.time-chip.sel{ background:var(--steel); border-color:var(--steel); color:#fff; }
-.time-chip.muted{ opacity:.38; cursor:not-allowed; text-decoration:line-through; }
-.book-body .btn-primary{ width:100%; }
-.book-summary{ font-size:13px; color:var(--ink-66); font-weight:500; margin:0 0 16px; min-height:20px; }
-.book-summary strong{ color:var(--steel-ink); }
-
-/* ======================================================
-   FAQ
-   ====================================================== */
-.faq-list{ display:flex; flex-direction:column; gap:12px; max-width:820px; margin:0 auto; }
-.faq-item{ background:var(--white); border:1px solid var(--ink-07); border-radius:var(--r-md); box-shadow:var(--shadow-1); overflow:hidden; transition:box-shadow .3s var(--ease), border-color .3s var(--ease); }
-.faq-item[data-open="true"]{ box-shadow:var(--shadow-2); border-color:var(--line); }
-.faq-q{ width:100%; text-align:left; background:none; border:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:18px; padding:20px 22px; font-family:var(--display); font-weight:700; font-size:16.5px; color:var(--ink); letter-spacing:-.01em; }
-.faq-q .plus{ flex:none; width:28px; height:28px; border-radius:var(--r-sm); background:var(--ice-2); color:var(--steel-ink); display:flex; align-items:center; justify-content:center; transition:transform .45s var(--spring), background .3s var(--ease), color .3s var(--ease); }
-.faq-item[data-open="true"] .plus{ transform:rotate(135deg); background:var(--steel); color:#fff; }
-.faq-a{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .45s var(--spring); }
-.faq-a > div{ overflow:hidden; }
-.faq-item[data-open="true"] .faq-a{ grid-template-rows:1fr; }
-.faq-a p{ margin:0; padding:0 22px 22px; font-size:14.5px; color:var(--ink-66); max-width:64ch; line-height:1.6; }
-@media (prefers-reduced-motion: reduce){ .faq-a{ transition:none; } }
-
-/* ======================================================
-   FINAL CTA
-   ====================================================== */
-.final{ position:relative; overflow:hidden; border-radius:var(--r-xl); padding:clamp(48px,7vw,84px) clamp(26px,5vw,48px); text-align:center; color:#E9F1F5; background:linear-gradient(160deg, var(--graphite) 0%, var(--graphite-2) 52%, var(--graphite-3) 120%); box-shadow:var(--shadow-3); }
-.final::before{ content:""; position:absolute; inset:0; opacity:.4; pointer-events:none;
-  background-image:linear-gradient(to right, rgba(151,182,204,.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(151,182,204,.06) 1px, transparent 1px); background-size:52px 52px; }
-.final .glow.f1{ width:320px; height:320px; background:rgba(46,143,196,.26); top:-110px; right:-60px; }
-.final .glow.f2{ width:280px; height:280px; background:rgba(94,126,116,.2); bottom:-120px; left:-50px; }
-.final .inner{ position:relative; z-index:2; }
-.final .kicker{ color:var(--steel-bright); justify-content:center; }
-.final .kicker::before{ background:var(--steel-bright); }
-.final h2{ font-family:var(--display); font-weight:800; font-size:clamp(2rem,5vw,3rem); line-height:1.05; letter-spacing:-.025em; margin:0 0 16px; max-width:17ch; margin-inline:auto; color:#F3F8FA; }
-.final h2 em{ font-style:normal; color:var(--steel-bright); }
-.final p{ font-size:15.5px; color:rgba(233,241,245,.78); margin:0 auto 30px; max-width:42ch; }
-.final .btn-light{ margin-inline:auto; }
-.final .cta-micro{ justify-content:center; color:rgba(233,241,245,.72); }
-.final .cta-micro svg{ color:var(--steel-bright); }
-
-/* ======================================================
-   FOOTER
-   ====================================================== */
-footer{ background:var(--ink); color:rgba(233,241,245,.9); padding:clamp(40px,6vw,64px) 0 calc(clamp(40px,6vw,64px) + env(safe-area-inset-bottom)); margin-top:var(--sect); }
-.foot-grid{ display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:32px 40px; align-items:start; }
-@media (max-width:680px){ .foot-grid{ grid-template-columns:1fr; gap:26px; } }
-footer .wordmark .name{ color:#F3F8FA; }
-footer .wordmark .sub{ color:rgba(233,241,245,.5); }
-footer .col h4{ font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--steel-bright); margin:0 0 14px; }
-footer .col p, footer .col a{ font-size:14px; color:rgba(233,241,245,.7); margin:0 0 8px; display:block; line-height:1.55; }
-footer .col a:hover{ color:#F3F8FA; }
-.foot-fine{ border-top:1px solid rgba(233,241,245,.14); margin-top:34px; padding-top:22px; font-family:var(--mono); font-size:11.5px; color:rgba(233,241,245,.5); line-height:1.7; max-width:80ch; }
-
-/* ======================================================
-   STICKY MOBILE CTA
-   ====================================================== */
-.sticky-cta{
-  position:fixed; left:0; right:0; bottom:0; z-index:200;
-  display:flex; align-items:center; justify-content:space-between; gap:14px;
-  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
-  background:rgba(246,249,251,.92); backdrop-filter:blur(16px) saturate(160%); -webkit-backdrop-filter:blur(16px) saturate(160%);
-  border-top:1px solid var(--line); box-shadow:0 -12px 34px -18px rgba(19,40,58,.3);
-  transform:translateY(115%); transition:transform .55s var(--spring);
-}
-.sticky-cta.in{ transform:translateY(0); }
-.sticky-cta .info{ display:flex; flex-direction:column; line-height:1.25; }
-.sticky-cta .info .t{ font-size:14px; font-weight:700; color:var(--ink); }
-.sticky-cta .info .b{ font-family:var(--mono); font-size:11px; color:var(--slate); font-weight:500; }
-.sticky-cta .btn{ padding:13px 22px; min-height:48px; font-size:14.5px; }
-@media (min-width:1024px){ .sticky-cta{ display:none; } }
-@media (prefers-reduced-motion: reduce){ .sticky-cta{ transition:transform .3s ease; } }
-@media (max-width:1023px){ body{ padding-bottom:76px; } }
-
-/* ======================================================
-   RESPONSIVE
-   ====================================================== */
-@media (min-width:640px){
-  .inc-grid{ grid-template-columns:1fr 1fr; }
-}
-@media (min-width:1024px){
-  .topbar{ padding:30px var(--edge) 0; }
-  .hero{ padding:26px var(--edge) 0; }
-  .hero-inner{ display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(40px,5vw,76px); align-items:center; }
-  .hero-visual{ margin-top:0; }
-  .hero h1{ max-width:13ch; }
-
-  .inc-grid{ grid-template-columns:repeat(3,1fr); }
-  .steps{ grid-template-columns:repeat(3,1fr); }
-  .step + .step{ border-top:none; border-left:1px solid var(--ink-07); }
-  .band-dark .inner{ display:grid; grid-template-columns:.92fr 1.08fr; gap:clamp(30px,4vw,56px); align-items:center; }
-  .band-dark .stat-grid{ margin-top:0; }
-  .doc-grid{ grid-template-columns:.85fr 1.15fr; }
-  .reviews-track{ grid-auto-flow:row; grid-template-columns:repeat(3,1fr); grid-auto-columns:auto; overflow:visible; margin:0; padding-inline:0; }
-  .review, .review:not(.active){ opacity:1; transform:none; }
-  .book-card{ grid-template-columns:.85fr 1.15fr; }
-}
-@media (min-width:640px) and (max-width:1023px){
-  .steps{ grid-template-columns:1fr 1fr; }
-  .step:nth-child(2){ border-top:1px solid var(--ink-07); border-left:1px solid var(--ink-07); }
-  .doc-grid{ grid-template-columns:1fr 1fr; }
-  .inc-grid .inc-card:nth-child(5){ grid-column:1 / -1; }
-}
-
-a:focus-visible, button:focus-visible, summary:focus-visible{ outline:3px solid var(--steel-ink); outline-offset:2px; border-radius:8px; }
+/* ===== hand-authored mobile sticky CTA (#sticky hook) ===== */
+#sticky{position:fixed;left:0;right:0;bottom:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:14px;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border-top:1px solid var(--border);box-shadow:0 -12px 34px -18px rgba(22,44,38,.3);padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-sizing:border-box}
+#sticky .s-info{display:flex;flex-direction:column;line-height:1.25;min-width:0}
+#sticky .s-t{font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--ink)}
+#sticky .s-b{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#sticky .s-btn{flex:none;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:700;font-size:.95rem;padding:.8em 1.5em;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none}
+@media (max-width:1023px){body{padding-bottom:76px}}
+@media (min-width:1024px){#sticky{display:none}}
 </style>
 </head>
 <body>
 
-<div class="scroll-progress" id="progress" aria-hidden="true"></div>
-<div class="grid-wash" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
 
-<!-- ============ TOP BAR ============ -->
-<div class="topbar">
+<!-- ================= NAV BAR (nav--bar) ================= -->
+<header class="lp-nav-bar">
+  <style>
+    .lp-nav-bar,.lp-nav-bar *{box-sizing:border-box}
+    .lp-nav-bar{position:relative;z-index:30;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:calc(var(--maxw) + var(--gutter) * 2);margin:0 auto;padding:20px var(--gutter) 13px}
+    .lp-nav-bar::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:100vw;height:1px;background:var(--accent)}
+    .lp-nav-bar .wordmark{display:inline-flex;flex-direction:column;line-height:1;min-width:0}
+    .lp-nav-bar .wordmark .name{font-family:var(--font-display);font-weight:700;font-style:normal;font-size:clamp(19px,4.4vw,23px);letter-spacing:-.01em;color:var(--ink)}
+    .lp-nav-bar .wordmark .sub{font-family:var(--font-mono);font-weight:500;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+    .lp-nav-bar .nav-cta{display:none;align-items:center;gap:8px;font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--accent-deep);text-decoration:none;border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;background:var(--surface);transition:border-color .3s,background .3s,transform .3s}
+    .lp-nav-bar .nav-cta svg{flex:none}
+    .lp-nav-bar .nav-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
+    @media (min-width:768px){.lp-nav-bar .nav-cta{display:inline-flex}}
+  </style>
   <span class="wordmark">
-    <span class="mk" aria-hidden="true">
-      <svg viewBox="0 0 40 40" fill="none">
-        <rect x="1" y="1" width="38" height="38" rx="9" fill="#101A22"/>
-        <path d="M9 27V13l5.5 8L20 13l5.5 8L31 13v14" stroke="#2E8FC4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="20" cy="30.5" r="1.6" fill="#5E7E74"/>
-      </svg>
-    </span>
-    <span class="txt">
-      <span class="name">Meridian</span>
-      <span class="sub">Cosmetic Medicine</span>
-    </span>
+    <span class="name">Northcott</span>
+    <span class="sub">Skin &amp; Laser &middot; Chatswood</span>
   </span>
-  <a class="nav-cta" href="#book">
+  <a class="nav-cta" href="#hero">
     Book a consultation
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
-</div>
+</header>
 
-<!-- ============ HERO ============ -->
-<header class="hero" id="hero">
-  <div class="glow h1 g-a" aria-hidden="true"></div>
-  <div class="glow h2 g-b" aria-hidden="true"></div>
-  <div class="glow h3 g-c" aria-hidden="true"></div>
+<!-- ================= HERO, calendar-at-top (hero--booking) ================= -->
+<section class="lp-hero-book" id="hero">
+  <style>
+    /* HERO ARCHETYPE: calendar-at-top. A full value-prop stack on the LEFT
+       beside the live booking widget on the RIGHT, both in the first fold.
+       This is the ONLY booking section on the page: exactly one
+       #lp-booking-widget. Contract tokens only. */
+    .lp-hero-book,.lp-hero-book *{box-sizing:border-box}
+    .lp-hero-book{position:relative;background:var(--bg);padding:14px var(--gutter) 0;overflow:hidden}
+    .lp-hero-book .glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0;will-change:transform}
+    .lp-hero-book .glow.g1{width:340px;height:340px;background:var(--glow-1);top:-140px;right:-120px;opacity:.9}
+    .lp-hero-book .glow.g2{width:260px;height:260px;background:var(--glow-2);bottom:-40px;left:-100px;opacity:.7}
+    @keyframes lp-heroDriftA{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-26px,20px) scale(1.09)}}
+    @keyframes lp-heroDriftB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(22px,-18px) scale(1.06)}}
+    .lp-hero-book .glow.g1{animation:lp-heroDriftA 16s ease-in-out infinite}
+    .lp-hero-book .glow.g2{animation:lp-heroDriftB 19s ease-in-out infinite}
 
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="kicker dot seq" style="animation-delay:.05s">Cosmetic injectables and facial aesthetics, South Yarra</p>
+    .lp-hero-book .in{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,52px)}
 
-      <h1 aria-label="Cosmetic medicine that starts with an honest assessment.">
-        <span class="w" style="animation-delay:.28s">Cosmetic</span>
-        <span class="w" style="animation-delay:.37s">medicine</span>
-        <span class="w" style="animation-delay:.46s">that</span>
-        <span class="w" style="animation-delay:.55s">starts</span>
-        <span class="w" style="animation-delay:.64s">with</span>
-        <span class="w" style="animation-delay:.73s">an</span>
-        <span class="em"><span class="w" style="animation-delay:.86s">honest</span>
-          <svg class="ul" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M5 15 C 80 8, 170 7, 295 13"/></svg>
-        </span>
-        <span class="w" style="animation-delay:1.0s">assessment.</span>
-      </h1>
+    /* copy column */
+    .lp-hero-book .copy{text-align:left;min-width:0}
+    .lp-hero-book .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);background:var(--glow-1);padding:7px 14px 7px 12px;border-radius:var(--r-pill);margin:0 0 22px}
+    .lp-hero-book .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-pulseDot 2.4s ease-in-out infinite}
+    @keyframes lp-pulseDot{0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 10%,transparent)}}
 
-      <p class="subhead seq" style="animation-delay:1.05s">Every treatment at Meridian begins with an unhurried consultation with Dr Elise Warner. No pressure and no packages, just a clear, medically informed read on what suits your face and what does not.</p>
+    .lp-hero-book h1{font-family:var(--font-display);font-weight:700;font-optical-sizing:auto;font-size:var(--fs-h1);line-height:1.05;letter-spacing:-.015em;margin:0 0 20px;color:var(--ink);max-width:15ch}
+    .lp-hero-book h1 .em{position:relative;font-style:normal;color:var(--accent);background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-position:0 100%;background-size:0 .07em;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size .7s var(--ease);transition-delay:1s}
+    .lp-hero-book .copy.reveal-stagger.is-visible h1 .em,
+    .lp-hero-book .copy.is-visible h1 .em{background-size:100% .07em}
 
-      <div class="chip-row seq" style="animation-delay:1.15s">
-        <span class="chip">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <strong>Complimentary</strong> consultation
-        </span>
-        <span class="chip">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-          Doctor-led, every visit
-        </span>
+    .lp-hero-book .subhead{font-family:var(--font-body);font-size:var(--fs-lead);color:var(--muted);max-width:46ch;margin:0 0 26px;font-weight:400;line-height:1.5}
+
+    .lp-hero-book .chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--ghost-color);padding:9px 16px;border-radius:var(--r-pill);font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--muted);box-shadow:var(--shadow-sm);margin:0 0 26px}
+    .lp-hero-book .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--deposit-accent);flex:none}
+    .lp-hero-book .chip strong{color:var(--accent-deep);font-weight:700}
+
+    .lp-hero-book .cta-block{margin:0 0 22px}
+    .lp-hero-book .btn-primary{appearance:none;border:none;cursor:pointer;position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:600;font-size:16px;letter-spacing:.01em;padding:17px 30px;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);min-height:56px;text-decoration:none;width:100%;max-width:420px;transition:box-shadow .28s var(--ease),filter .25s var(--ease)}
+    .lp-hero-book .btn-primary::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(120deg,transparent,color-mix(in srgb,var(--accent-ink) 40%,transparent),transparent);transform:skewX(-20deg);transition:left .75s ease;pointer-events:none}
+    .lp-hero-book .btn-primary:hover::after{left:120%}
+    .lp-hero-book .btn-primary svg{flex:none;transition:transform .25s var(--ease)}
+    .lp-hero-book .btn-primary:hover svg{transform:translateX(3px)}
+    .lp-hero-book .cta-micro{display:flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:13px;color:var(--muted);margin-top:12px;font-weight:500}
+    .lp-hero-book .cta-micro svg{flex:none;opacity:.6}
+
+    .lp-hero-book .trust-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:30px;padding-top:24px;border-top:1px solid var(--ghost-color)}
+    .lp-hero-book .trust-item{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--muted)}
+    .lp-hero-book .trust-item svg{flex:none;color:var(--accent)}
+    .lp-hero-book .stars{color:var(--accent-soft);letter-spacing:1px;font-size:13px}
+
+    /* booking card (right column) */
+    .lp-hero-book .book-card{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column}
+    .lp-hero-book .booking-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.35rem,1.1rem + 1.1vw,1.7rem);color:var(--accent-deep);margin:0 0 6px}
+    .lp-hero-book .booking-sub{font-family:var(--font-body);color:var(--muted);margin:0 auto;max-width:42ch;font-size:.92rem;line-height:1.5}
+    .lp-hero-book .booking-sub strong{color:var(--accent-deep);font-weight:700}
+    .lp-hero-book .book-card::before{content:"";position:absolute;z-index:0;left:50%;top:7%;transform:translateX(-50%);width:min(94%,560px);height:84%;border-radius:var(--radius);background:radial-gradient(58% 58% at 50% 26%,color-mix(in srgb,var(--accent) 20%,transparent),transparent 72%);filter:blur(46px);opacity:.72;pointer-events:none}.lp-hero-book .booking-frame{position:relative;z-index:1;background:linear-gradient(176deg,var(--surface),color-mix(in srgb,var(--surface) 88%,var(--bg)));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg),inset 0 1px 0 rgba(255,255,255,.6);padding:24px 24px 22px;overflow:hidden;text-align:left;max-width:600px;margin-inline:auto}
+    .lp-hero-book .booking-intro{text-align:center;padding:0 0 18px;margin:0 0 18px;border-bottom:1px solid var(--ghost-color)}
+    .lp-hero-book #lp-booking-widget{min-height:200px}
+    /* header: live badge + month nav */
+    .lp-hero-book #lp-booking-widget .wx-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px}
+    .lp-hero-book #lp-booking-widget .wx-live{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+    .lp-hero-book #lp-booking-widget .wx-live-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent);animation:lp-pulseDot 2.4s ease-in-out infinite}
+    .lp-hero-book #lp-booking-widget .wx-monthnav{display:inline-flex;align-items:center;gap:4px}
+    .lp-hero-book #lp-booking-widget .wx-month{font-family:var(--font-body);font-weight:700;font-size:13.5px;letter-spacing:.01em;color:var(--accent-deep);min-width:88px;text-align:center}
+    .lp-hero-book #lp-booking-widget .wx-chev{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;padding:0;border:1px solid var(--ghost-color);border-radius:50%;background:var(--surface);color:var(--muted);cursor:pointer;transition:border-color .2s,color .2s}
+    .lp-hero-book #lp-booking-widget .wx-chev:hover{border-color:var(--accent);color:var(--accent)}
+    .lp-hero-book #lp-booking-widget .wx-chev svg{width:13px;height:13px}
+    /* month grid */
+    .lp-hero-book #lp-booking-widget .wx-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin:0 0 3px}
+    .lp-hero-book #lp-booking-widget .wx-weekdays span{text-align:center;font-family:var(--font-mono);font-size:9px;font-weight:500;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);opacity:.55}
+    .lp-hero-book #lp-booking-widget .wx-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+    .lp-hero-book #lp-booking-widget .wx-day{height:48px;display:flex;align-items:center;justify-content:center;position:relative;font-family:var(--font-body);font-size:13.5px;font-weight:600;color:var(--ink);background:transparent;border:1px solid transparent;border-radius:var(--r-sm);cursor:pointer;transition:background .18s,color .18s,border-color .18s;padding:0}
+    .lp-hero-book #lp-booking-widget .wx-day.wx-blank{visibility:hidden;cursor:default}
+    .lp-hero-book #lp-booking-widget .wx-day.avail::after{content:"";position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:3.5px;height:3.5px;border-radius:50%;background:var(--accent);opacity:.5}
+    .lp-hero-book #lp-booking-widget .wx-day:hover:not(.muted):not(.sel){background:var(--glow-1);color:var(--accent-deep)}
+    .lp-hero-book #lp-booking-widget .wx-day.sel{background:var(--accent);color:var(--accent-ink);font-weight:700;box-shadow:0 4px 12px -4px color-mix(in srgb,var(--accent) 55%,transparent)}
+    .lp-hero-book #lp-booking-widget .wx-day.sel::after{background:var(--accent-ink);opacity:.85}
+    .lp-hero-book #lp-booking-widget .wx-day.muted{color:var(--muted);opacity:.3;cursor:not-allowed}
+    /* time slots for the selected day */
+    .lp-hero-book #lp-booking-widget .wx-times{margin-top:18px;padding-top:15px;border-top:1px solid var(--ghost-color)}
+    .lp-hero-book #lp-booking-widget .wx-times-head{font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+    .lp-hero-book #lp-booking-widget .wx-times-head strong{color:var(--accent-deep)}
+    .lp-hero-book #lp-booking-widget .time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0}
+    .lp-hero-book #lp-booking-widget .time-chip{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:.65em .5em;cursor:pointer;text-align:center;line-height:1.1;font-variant-numeric:tabular-nums;transition:border-color .18s,color .18s,background .18s,box-shadow .18s}
+    .lp-hero-book #lp-booking-widget .time-chip:hover:not(.muted):not(.sel){border-color:var(--accent);color:var(--accent);box-shadow:0 2px 10px -6px color-mix(in srgb,var(--accent) 55%,transparent)}
+    .lp-hero-book #lp-booking-widget .time-chip.sel{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+    .lp-hero-book #lp-booking-widget .time-chip.muted{color:var(--muted);opacity:.4;cursor:not-allowed;text-decoration:line-through}
+    /* confirm CTA */
+    .lp-hero-book #lp-booking-widget .wx-foot{margin-top:16px}
+    .lp-hero-book #lp-booking-widget .wx-confirm{appearance:none;border:none;cursor:pointer;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:600;font-size:15px;letter-spacing:.01em;padding:13px 22px;border-radius:var(--r-pill);box-shadow:var(--shadow-cta);text-decoration:none;min-height:50px;transition:box-shadow .28s var(--ease),filter .25s var(--ease)}
+    .lp-hero-book #lp-booking-widget .wx-confirm svg{flex:none;transition:transform .25s var(--ease)}
+    .lp-hero-book #lp-booking-widget .wx-confirm:hover{filter:brightness(1.03)}
+    .lp-hero-book #lp-booking-widget .wx-confirm:hover svg{transform:translateX(3px)}
+
+    /* desktop: two-column fold */
+    @media (min-width:1024px){
+      .lp-hero-book{padding:20px var(--gutter) 0}
+      .lp-hero-book .in{grid-template-columns:1fr 1.06fr;gap:52px;align-items:start;padding-top:32px;padding-bottom:80px}
+      .lp-hero-book .copy{display:flex;flex-direction:column}
+      .lp-hero-book .copy .eyebrow,.lp-hero-book .copy h1,.lp-hero-book .copy .subhead,.lp-hero-book .copy .chip,.lp-hero-book .copy .cta-block,.lp-hero-book .copy .trust-row{max-width:520px}
+      .lp-hero-book h1{max-width:14ch}
+      .lp-hero-book .cta-block .btn-primary{width:auto}
+      .lp-hero-book .book-card{align-self:start}
+      .lp-hero-book .booking-frame{padding:26px 26px 24px;width:444px;max-width:100%;align-self:center}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .lp-hero-book .glow,.lp-hero-book .eyebrow::before,.lp-hero-book #lp-booking-widget .wx-live-dot{animation:none !important}
+      .lp-hero-book h1 .em{background-size:100% .07em;transition:none}
+    }
+  </style>
+
+  <div class="glow g1" aria-hidden="true"></div>
+  <div class="glow g2" aria-hidden="true"></div>
+
+  <div class="in">
+    <div class="copy reveal-stagger">
+      <span class="eyebrow">Skin &amp; laser clinic &middot; Chatswood NSW</span>
+
+      <h1>Skin and laser care that starts with a <span class="em">complimentary consultation.</span></h1>
+
+      <p class="subhead">Every consultation is a calm, one to one assessment with a qualified clinician. We look at your skin properly, talk through your concerns, and give you an honest, evidence-led view on what would suit you. No pressure, and nothing pushed on the day.</p>
+
+      <div class="chip">
+        <span class="dot" aria-hidden="true"></span>
+        <span><strong>Complimentary consultation</strong> &middot; no deposit or card needed</span>
       </div>
 
-      <div class="cta-block seq" style="animation-delay:1.25s">
-        <a class="btn btn-primary" href="#book" data-cta>
-          Request your consultation
+      <div class="cta-block">
+        <a class="btn-primary" href="#hero" data-cta>
+          Book my free consultation
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <p class="cta-micro">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
-          No obligation to proceed, confirmed by text
+          No obligation to continue, confirmed by text
         </p>
       </div>
 
-      <div class="trust-row seq" style="animation-delay:1.35s">
-        <span class="trust-item"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <strong>4.9</strong>&nbsp;from 300+ reviews</span>
+      <div class="trust-row">
+        <span class="trust-item"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.9 rating</span>
         <span class="trust-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          AHPRA registered practitioner
+          Accredited clinic
+        </span>
+        <span class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.6-7-11a7 7 0 0 1 14 0c0 6.4-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
+          Chatswood clinic
         </span>
       </div>
+
     </div>
 
-    <div class="hero-visual seq" style="animation-delay:.6s" id="heroVisual">
-      <div class="assess">
-        <svg class="assess-svg" viewBox="0 0 400 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <g class="tick">
-            <line x1="26" y1="70" x2="34" y2="70"/><line x1="26" y1="110" x2="34" y2="110"/>
-            <line x1="26" y1="150" x2="38" y2="150"/><line x1="26" y1="190" x2="34" y2="190"/>
-            <line x1="26" y1="230" x2="34" y2="230"/><line x1="26" y1="270" x2="38" y2="270"/>
-            <line x1="26" y1="310" x2="34" y2="310"/><line x1="26" y1="350" x2="34" y2="350"/>
-          </g>
-          <path class="profile" d="M244 96 C 210 82, 168 96, 156 140 C 150 162, 156 178, 150 196 C 146 208, 134 214, 136 226 C 138 236, 150 236, 152 244 C 154 258, 146 274, 156 286 C 166 298, 190 300, 210 296 C 232 292, 250 280, 258 258 C 268 232, 262 196, 268 168 C 274 138, 272 108, 244 96 Z"/>
-          <path class="profile" d="M196 150 C 208 146, 220 148, 228 156"/>
-          <path class="profile" d="M188 210 C 196 206, 206 206, 214 210"/>
-          <path class="profile" d="M178 250 C 194 260, 216 260, 230 250"/>
-          <g class="guide guide-draw">
-            <line x1="80" y1="150" x2="320" y2="150"/>
-            <line x1="80" y1="230" x2="320" y2="230"/>
-            <line x1="80" y1="286" x2="320" y2="286"/>
-            <line x1="210" y1="60" x2="210" y2="380"/>
-          </g>
-          <g class="node">
-            <circle cx="210" cy="150" r="3.4"/><circle cx="210" cy="230" r="3.4"/><circle cx="210" cy="286" r="3.4"/>
-          </g>
-          <circle class="ring-o" cx="210" cy="150" r="13"/>
-          <circle class="ring-o" cx="210" cy="286" r="13"/>
-        </svg>
-        <div class="assess-scan" aria-hidden="true"></div>
-        <div class="assess-tags" aria-hidden="true">
-          <span class="datachip t1"><span class="dot"></span> Facial mapping</span>
-          <span class="datachip t2"><span class="dot"></span> Symmetry review</span>
-          <span class="datachip t3"><span class="dot"></span> Suitability check</span>
+    <!-- The live booking embed replaces the skeleton inside #lp-booking-widget.
+         KEEP the mount id and .time-chip class exactly. This is the ONLY booking mount. -->
+    <div class="book-card reveal">
+      <div class="booking-frame">
+        <div class="booking-intro">
+          <h3 class="booking-title">Pick your time</h3>
+          <p class="booking-sub">Choose a time that suits you and we will confirm it by text. It is <strong>free to book</strong>, with no deposit and no card needed.</p>
         </div>
-        <div class="seal" aria-hidden="true">
-          <svg viewBox="0 0 98 98">
-            <circle class="disc" cx="49" cy="49" r="49"/>
-            <circle class="mark" cx="49" cy="49" r="41"/>
-            <g class="ring">
-              <defs><path id="sealPath" d="M49 16 a33 33 0 1 1 -0.01 0"/></defs>
-              <text><textPath href="#sealPath" startOffset="0">MERIDIAN &middot; COSMETIC MEDICINE &middot; MELBOURNE &middot; </textPath></text>
-            </g>
-            <path d="M49 37 L 44 41 v7 c0 5 2.6 8 5 9 2.4-1 5-4 5-9 v-7 Z" fill="none" stroke="#2E8FC4" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="m46 47 2 2 3.4-3.6" fill="none" stroke="#2E8FC4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
-      <div class="cred-float">
-        <svg class="shield" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div>
-          <span class="label">Your consultation</span>
-          <span class="who">With Dr Elise Warner</span>
+        <div id="lp-booking-widget">
+          <div class="wx-head">
+            <span class="wx-live"><span class="wx-live-dot" aria-hidden="true"></span> Live availability</span>
+            <span class="wx-monthnav">
+              <button type="button" class="wx-chev" aria-label="Previous month"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <span class="wx-month">July 2026</span>
+              <button type="button" class="wx-chev" aria-label="Next month"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </span>
+          </div>
+          <div class="wx-weekdays" aria-hidden="true"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+          <div class="wx-days" role="group" aria-label="Choose a date">
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+            <button type="button" class="wx-day muted" disabled>1</button>
+            <button type="button" class="wx-day muted" disabled>2</button>
+            <button type="button" class="wx-day muted" disabled>3</button>
+            <button type="button" class="wx-day muted" disabled>4</button>
+            <button type="button" class="wx-day muted" disabled>5</button>
+            <button type="button" class="wx-day muted" disabled>6</button>
+            <button type="button" class="wx-day muted" disabled>7</button>
+            <button type="button" class="wx-day muted" disabled>8</button>
+            <button type="button" class="wx-day muted" disabled>9</button>
+            <button type="button" class="wx-day muted" disabled>10</button>
+            <button type="button" class="wx-day muted" disabled>11</button>
+            <button type="button" class="wx-day muted" disabled>12</button>
+            <button type="button" class="wx-day muted" disabled>13</button>
+            <button type="button" class="wx-day muted" disabled>14</button>
+            <button type="button" class="wx-day muted" disabled>15</button>
+            <button type="button" class="wx-day sel" aria-current="date">16</button>
+            <button type="button" class="wx-day avail">17</button>
+            <button type="button" class="wx-day avail">18</button>
+            <button type="button" class="wx-day muted" disabled>19</button>
+            <button type="button" class="wx-day avail">20</button>
+            <button type="button" class="wx-day avail">21</button>
+            <button type="button" class="wx-day muted" disabled>22</button>
+            <button type="button" class="wx-day avail">23</button>
+            <button type="button" class="wx-day avail">24</button>
+            <button type="button" class="wx-day avail">25</button>
+            <button type="button" class="wx-day muted" disabled>26</button>
+            <button type="button" class="wx-day avail">27</button>
+            <button type="button" class="wx-day avail">28</button>
+            <button type="button" class="wx-day avail">29</button>
+            <button type="button" class="wx-day muted" disabled>30</button>
+            <button type="button" class="wx-day avail">31</button>
+            <span class="wx-day wx-blank" aria-hidden="true"></span>
+          </div>
+          <div class="wx-times">
+            <p class="wx-times-head">Times for <strong>Thursday 16 July</strong></p>
+            <div class="time-grid" role="group" aria-label="Choose a time">
+              <button type="button" class="time-chip sel">9:30 am</button>
+              <button type="button" class="time-chip">11:00 am</button>
+              <button type="button" class="time-chip">12:30 pm</button>
+              <button type="button" class="time-chip muted" disabled>2:00 pm</button>
+              <button type="button" class="time-chip">3:30 pm</button>
+              <button type="button" class="time-chip">5:00 pm</button>
+            </div>
+          </div>
+          <div class="wx-foot">
+            <a class="wx-confirm" href="#hero" data-cta>
+              Book my free consultation
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <script src="https://your-booking-worker.invalid/embed.js" async></script>
+</section>
 
-  <!-- marquee -->
-  <div class="marquee" aria-hidden="true">
+<!-- ================= MARQUEE TRUST (marquee--trust) ================= -->
+<section class="lp-marquee-trust" aria-label="Trust and clinic facts">
+  <style>
+    .lp-marquee-trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(14px,2.4vw,20px) 0}
+    .lp-marquee-trust .marquee{justify-content:center}
+    .lp-marquee-trust .marquee-track{gap:clamp(22px,4vw,44px);padding:0 clamp(11px,2vw,22px)}
+    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
+    .lp-marquee-trust .tick{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.25em;height:1.25em;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.7em;font-weight:700}
+    .lp-marquee-trust .sep{flex:none;color:var(--accent);opacity:.45}
+  </style>
+  <div class="marquee">
     <div class="marquee-track">
-      <span>AHPRA registered</span><span class="sep">/</span>
-      <span>Doctor-led treatments</span><span class="sep">/</span>
-      <span>Fully insured practice</span><span class="sep">/</span>
-      <span>Medical-grade facility</span><span class="sep">/</span>
-      <span>Sterile single-use technique</span><span class="sep">/</span>
-      <span>4.9 from 300+ reviews</span><span class="sep">/</span>
-      <span>AHPRA registered</span><span class="sep">/</span>
-      <span>Doctor-led treatments</span><span class="sep">/</span>
-      <span>Fully insured practice</span><span class="sep">/</span>
-      <span>Medical-grade facility</span><span class="sep">/</span>
-      <span>Sterile single-use technique</span><span class="sep">/</span>
-      <span>4.9 from 300+ reviews</span><span class="sep">/</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Accredited skin and laser clinic</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Qualified, experienced clinicians</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Complimentary consultation</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Evidence-led, honest advice</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Chatswood clinic</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>No obligation to continue</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
     </div>
   </div>
-</header>
+</section>
 
 <main>
 
-  <!-- ============ CONSULTATION INCLUDES ============ -->
-  <section class="section" id="consultation">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="kicker">What the consultation includes</p>
-        <h2 class="h2">A careful hour before any <em>decision is made</em></h2>
-        <p class="lead">The consultation is where the real work happens. You sit with Dr Warner, you are properly assessed, and you leave understanding your options clearly, whether or not you decide to go ahead.</p>
+<!-- ================= CONSULTATION INCLUDES (benefits--cards, six + numbered) ================= -->
+<section class="lp-benefits-cards lp-benefits-cards--six lp-benefits-cards--numbered">
+  <style>
+    .lp-benefits-cards,.lp-benefits-cards *{box-sizing:border-box}
+    .lp-benefits-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-benefits-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-benefits-cards .head{margin:0 0 8px}
+    .lp-benefits-cards .kicker{font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-benefits-cards h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);letter-spacing:-.01em;line-height:1.08;margin:0 0 14px;max-width:20ch;color:var(--ink)}
+    .lp-benefits-cards .sub{font-family:var(--font-body);font-size:16px;color:var(--muted);max-width:52ch;margin:0 0 36px;line-height:1.5}
+    .lp-benefits-cards .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+    .lp-benefits-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--shadow-sm);transition:box-shadow .4s var(--ease);overflow:hidden}
+    .lp-benefits-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(240px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-benefits-cards .card:hover{box-shadow:var(--shadow)}
+    .lp-benefits-cards .card:hover::before{opacity:1}
+    .lp-benefits-cards .icon{position:relative;z-index:1;width:46px;height:46px;border-radius:14px;background:var(--glow-1);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);margin-bottom:16px;transition:transform .4s var(--spring)}
+    .lp-benefits-cards .card:hover .icon{transform:scale(1.08) rotate(-4deg)}
+    .lp-benefits-cards h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:700;font-size:20px;margin:0 0 8px;color:var(--ink)}
+    .lp-benefits-cards p{position:relative;z-index:1;margin:0;font-family:var(--font-body);font-size:14.5px;color:var(--muted);line-height:1.5}
+    .lp-benefits-cards .card .idx{position:absolute;top:16px;right:18px;font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--border);letter-spacing:.06em;z-index:1;display:none}
+    .lp-benefits-cards--numbered .card .idx{display:block}
+    .lp-benefits-cards .card.card--extra{display:none}
+    .lp-benefits-cards--six .card.card--extra{display:flex;flex-direction:column}
+    .lp-benefits-cards .card--offer{background:linear-gradient(160deg,var(--surface-2),var(--bg));justify-content:center}
+    .lp-benefits-cards .card--offer .icon{display:none}
+    .lp-benefits-cards .card--offer .card-cta{display:inline-flex;align-items:center;gap:.5em;align-self:flex-start;margin-top:18px;font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--accent-deep);border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;text-decoration:none;transition:border-color .3s,transform .3s}
+    .lp-benefits-cards .card--offer .card-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .lp-benefits-cards .card--offer .card-cta svg{flex:none}
+    @media (min-width:640px){
+      .lp-benefits-cards .grid{grid-template-columns:repeat(3,1fr);gap:22px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-benefits-cards .card,.lp-benefits-cards .icon{transition:none}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">What your consultation includes</p>
+      <h2>A proper assessment before anything is recommended</h2>
+      <p class="sub">The consultation is where the real work starts. We assess your skin, talk through your concerns and goals, and set out your options plainly, so you leave understanding them clearly, whether or not you decide to go ahead.</p>
+    </div>
+    <div class="grid reveal-stagger">
+      <div class="card">
+        <span class="idx" aria-hidden="true">01</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2.5 12h3M18.5 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Your concerns heard</h3>
+        <p>A proper conversation about the skin concerns and goals you are most conscious of, so we understand what you are hoping to change.</p>
       </div>
-
-      <div class="inc-grid stagger">
-        <div class="inc-card">
-          <span class="idx">01</span>
-          <div class="inc-icn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-          <h3>Facial assessment</h3>
-          <p>A structured read of your face at rest and in movement, mapping proportion, symmetry and the areas you are most conscious of.</p>
+      <div class="card">
+        <span class="idx" aria-hidden="true">02</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 15c3-6 6-9 9-9s6 3 9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3 19c3-4 6-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".5"/></svg>
         </div>
-        <div class="inc-card">
-          <span class="idx">02</span>
-          <div class="inc-icn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="1.8"/><rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-          <h3>Medical history</h3>
-          <p>A full review of your health, medications and any past treatments, so every recommendation is made on medical ground, not on a template.</p>
+        <h3>A proper skin assessment</h3>
+        <p>A calm, one to one review of your skin and any relevant history, so any guidance is personalised to you, not taken from a template.</p>
+      </div>
+      <div class="card">
+        <span class="idx" aria-hidden="true">03</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.5 5 6.8 5 9.8A5 5 0 0 1 7 12.8C7 9.8 9 6.5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
         </div>
-        <div class="inc-card">
-          <span class="idx">03</span>
-          <div class="inc-icn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2V17h6v-1.5c0-.7.3-1.3 1-2A6 6 0 0 0 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20h6M10 22h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-          <h3>Honest suitability advice</h3>
-          <p>A candid view on whether a treatment is right for you at all. If it is not the right time, or not right for you, Dr Warner will tell you plainly.</p>
+        <h3>Honest suitability advice</h3>
+        <p>A candid, evidence-led view on what may suit your skin and what may not. If a treatment is not the right step for you, we will tell you plainly.</p>
+      </div>
+      <div class="card card--extra">
+        <span class="idx" aria-hidden="true">04</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="18" cy="18" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
         </div>
-        <div class="inc-card">
-          <span class="idx">04</span>
-          <div class="inc-icn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="18" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg></div>
-          <h3>A considered plan</h3>
-          <p>If you choose to proceed, you leave with a written plan set to your priorities and paced sensibly, never rushed into more than you asked for.</p>
+        <h3>Clear, evidence-led options</h3>
+        <p>If a treatment plan may suit your goals, we explain the options and what to expect clearly, so you can weigh them up in your own time.</p>
+      </div>
+      <div class="card card--extra">
+        <span class="idx" aria-hidden="true">05</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
         </div>
-        <div class="inc-card">
-          <span class="idx">05</span>
-          <div class="inc-icn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
-          <h3>Time to think</h3>
-          <p>No same-day pressure. You are welcome to take your plan home, sit with it, and book only when you feel genuinely ready.</p>
-        </div>
-        <div class="inc-card" style="display:flex;flex-direction:column;justify-content:center;background:linear-gradient(160deg,var(--ice-2),var(--paper));">
-          <h3 style="margin-bottom:6px;">Complimentary, always</h3>
-          <p>The consultation is free and carries no obligation. It exists so you can make a calm, well-informed choice.</p>
-          <a class="btn btn-ghost" href="#book" data-cta style="margin-top:18px;align-self:flex-start;">
-            Book yours
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
+        <h3>No pressure to continue</h3>
+        <p>No same-day pressure and no obligation to book anything. You take the guidance home, sit with it, and decide only when you feel genuinely ready.</p>
+      </div>
+      <div class="card card--extra card--offer">
+        <span class="idx" aria-hidden="true">06</span>
+        <div class="icon"></div>
+        <h3>Complimentary, no deposit</h3>
+        <p>Your consultation is complimentary. There is no deposit and no card needed to book. To move your appointment, we ask for 48 hours notice.</p>
+        <a class="card-cta" href="#hero" data-cta>
+          Book a consultation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ HOW IT WORKS ============ -->
-  <section class="section tint">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="kicker">How it works</p>
-        <h2 class="h2">Three measured steps</h2>
-        <p class="lead">A clear, unhurried path from your first enquiry to a plan you feel confident about.</p>
-      </div>
-      <div class="steps reveal">
-        <div class="step">
-          <span class="step-ghost" aria-hidden="true">01</span>
-          <span class="step-num">01</span>
+<!-- ================= HOW IT WORKS (process--ghost, boxed) ================= -->
+<section class="lp-process-ghost lp-process-ghost--boxed">
+  <style>
+    .lp-process-ghost{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-process-ghost .in{max-width:var(--maxw);margin:0 auto}
+    .lp-process-ghost .head{max-width:36ch;margin:0 0 clamp(30px,4vw,52px)}
+    .lp-process-ghost .kicker{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 .9em}
+    .lp-process-ghost h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:1.12;color:var(--ink);margin:0}
+    .lp-process-ghost .row{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3.4vw,44px)}
+    .lp-process-ghost .step{position:relative;min-width:0;padding-top:clamp(30px,4vw,46px);border-top:2px solid var(--accent);overflow:hidden}
+    .lp-process-ghost .ghost{position:absolute;right:0;top:-.34em;font-family:var(--font-display);font-weight:700;font-size:clamp(70px,9vw,116px);line-height:.8;color:var(--ghost-color);pointer-events:none;user-select:none;z-index:0;overflow-wrap:anywhere}
+    .lp-process-ghost .badge{display:none}
+    .lp-process-ghost .num{position:relative;z-index:1;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 1em}
+    .lp-process-ghost h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:700;font-size:clamp(1.15rem,2vw,1.42rem);line-height:1.2;color:var(--ink);margin:0 0 .5em}
+    .lp-process-ghost p{position:relative;z-index:1;font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:36ch}
+    @media (max-width:768px){
+      .lp-process-ghost .row{grid-template-columns:1fr;gap:clamp(30px,7vw,42px)}
+    }
+    .lp-process-ghost--boxed .head{max-width:640px}
+    .lp-process-ghost--boxed .row{grid-template-columns:1fr;gap:0;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+    .lp-process-ghost--boxed .step{display:flex;gap:18px;padding:26px 24px;border-top:none;padding-top:26px}
+    .lp-process-ghost--boxed .step + .step{border-top:1px solid var(--ghost-color)}
+    .lp-process-ghost--boxed .num{display:none}.lp-process-ghost--boxed .ghost{display:none}
+    .lp-process-ghost--boxed .badge{display:flex;flex:none;align-items:center;justify-content:center;width:38px;height:38px;border-radius:var(--r-sm);background:var(--band-dark-bg);color:var(--band-dark-ink);font-family:var(--font-mono);font-weight:600;font-size:15px;position:relative;z-index:1}
+    .lp-process-ghost--boxed .txt{min-width:0}
+    .lp-process-ghost--boxed .ghost{right:14px;top:-6px;font-size:76px;color:var(--ink);opacity:.045}
+    .lp-process-ghost--boxed h3{font-size:18px;margin:2px 0 6px}
+    .lp-process-ghost--boxed p{font-size:14.5px}
+    @media (min-width:640px){
+      .lp-process-ghost--boxed .row{grid-template-columns:repeat(3,1fr)}
+      .lp-process-ghost--boxed .step + .step{border-top:none;border-left:1px solid var(--ghost-color)}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">How it works</p>
+      <h2>Three measured steps</h2>
+    </div>
+    <div class="row reveal-stagger">
+      <div class="step">
+        <span class="ghost" aria-hidden="true">01</span>
+        <span class="badge" aria-hidden="true">1</span>
+        <p class="num">Step 01</p>
+        <div class="txt">
           <h3>Request a time</h3>
-          <p>Choose a slot that suits you. Your complimentary consultation is held for you, with a text confirmation and a reminder before the day.</p>
+          <p>Choose a time that suits you. Your complimentary consultation is confirmed by text, with a reminder before the day. No deposit and no card needed.</p>
         </div>
-        <div class="step">
-          <span class="step-ghost" aria-hidden="true">02</span>
-          <span class="step-num">02</span>
-          <h3>Meet Dr Warner</h3>
-          <p>Sit down for a proper assessment. Your face, your history and your concerns are reviewed together, and your questions are answered in full.</p>
+      </div>
+      <div class="step">
+        <span class="ghost" aria-hidden="true">02</span>
+        <span class="badge" aria-hidden="true">2</span>
+        <p class="num">Step 02</p>
+        <div class="txt">
+          <h3>Meet your clinician</h3>
+          <p>Sit down for a calm, one to one assessment. Your skin is reviewed properly, your concerns are discussed, and your questions are answered in full.</p>
         </div>
-        <div class="step">
-          <span class="step-ghost" aria-hidden="true">03</span>
-          <span class="step-num">03</span>
+      </div>
+      <div class="step">
+        <span class="ghost" aria-hidden="true">03</span>
+        <span class="badge" aria-hidden="true">3</span>
+        <p class="num">Step 03</p>
+        <div class="txt">
           <h3>Decide in your own time</h3>
-          <p>Leave with clarity and a written plan. If and when you are ready, treatment is carried out by the same doctor who assessed you.</p>
+          <p>Leave with clarity on what may suit you. If a treatment plan is right for your goals, we explain it clearly, with no pressure to decide on the day.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ DARK STATS BAND ============ -->
-  <section class="section" style="padding-top:0;padding-bottom:0;">
-    <div class="wrap">
-      <div class="band-dark reveal" style="border-radius:var(--r-xl);padding:clamp(40px,6vw,72px) clamp(26px,5vw,52px);">
-        <div class="glow d1 g-a" aria-hidden="true"></div>
-        <div class="glow d2 g-b" aria-hidden="true"></div>
-        <div class="inner">
+<!-- ================= DARK STATS BAND (band--stats-grid) ================= -->
+<section class="lp-band-stats-grid">
+  <style>
+    .lp-band-stats-grid{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
+    .lp-band-stats-grid .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+    .lp-band-stats-grid .glow.a{width:340px;height:340px;background:var(--glow-1);opacity:.18;top:-120px;right:-80px}
+    .lp-band-stats-grid .glow.b{width:300px;height:300px;background:var(--glow-2);opacity:.12;bottom:-130px;left:-70px}
+    .lp-band-stats-grid .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,52px);align-items:center}
+    .lp-band-stats-grid .kicker{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 .9em}
+    .lp-band-stats-grid .say{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:1.15;color:var(--band-dark-ink);margin:0;max-width:22ch}
+    .lp-band-stats-grid .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border-radius:var(--radius);overflow:hidden}
+    .lp-band-stats-grid .stat{min-width:0;background:var(--band-dark-bg);padding:clamp(22px,3vw,32px) clamp(18px,2.6vw,28px)}
+    .lp-band-stats-grid .n{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4.4vw,3rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere;letter-spacing:-.02em}
+    .lp-band-stats-grid .n .u{font-size:.5em;color:var(--accent-soft);margin-left:.08em}
+    .lp-band-stats-grid .l{display:block;font-family:var(--font-mono);font-size:.82rem;line-height:1.4;color:color-mix(in srgb, var(--band-dark-ink) 62%, transparent);margin-top:.85em;letter-spacing:.02em}
+    @media (min-width:768px){
+      .lp-band-stats-grid .in{grid-template-columns:.92fr 1.08fr}
+    }
+  </style>
+  <div class="glow a" aria-hidden="true"></div>
+  <div class="glow b" aria-hidden="true"></div>
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">The consultation, in plain terms</p>
+      <p class="say">Everything set out clearly, up front</p>
+    </div>
+    <div class="grid reveal-stagger">
+      <div class="stat">
+        <span class="n">1:1</span>
+        <span class="l">A calm assessment, one to one with your clinician</span>
+      </div>
+      <div class="stat">
+        <span class="n" data-count-to="4.9" data-count-decimals="1">4.9</span>
+        <span class="l">Average rating from clients across Chatswood</span>
+      </div>
+      <div class="stat">
+        <span class="n" data-count-to="48" data-count-suffix="h">48h</span>
+        <span class="l">Notice to reschedule your appointment</span>
+      </div>
+      <div class="stat">
+        <span class="n">None</span>
+        <span class="l">Deposit, card, or obligation to book</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY NORTHCOTT / TEAM (practitioner--split) ================= -->
+<section class="lp-practitioner-split">
+  <style>
+    .lp-practitioner-split{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-practitioner-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,5vw,64px);align-items:center}
+    .lp-practitioner-split .portrait{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(160deg,var(--surface),var(--surface-2))}
+    .lp-practitioner-split .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .lp-practitioner-split .copy{text-align:left}
+    .lp-practitioner-split .eyebrow{display:inline-block;color:var(--accent);font-family:var(--font-mono);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:500;margin:0 0 .8em}
+    .lp-practitioner-split h2{font-family:var(--font-display);font-weight:800;font-size:var(--fs-h2);color:var(--ink);line-height:1.1;margin:0 0 .15em;letter-spacing:-.02em}
+    .lp-practitioner-split .title{font-family:var(--font-mono);font-size:.86rem;font-weight:500;color:var(--accent-deep);letter-spacing:.04em;margin:0 0 1em}
+    .lp-practitioner-split .bio{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;max-width:52ch}
+    .lp-practitioner-split .creds{display:flex;flex-wrap:wrap;gap:.6em;margin:0 0 1.5em;padding:0;list-style:none}
+    .lp-practitioner-split .creds li{display:inline-flex;align-items:center;gap:.5em;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);padding:.55em 1em;font-family:var(--font-mono);font-size:.75rem;font-weight:500;color:var(--muted)}
+    .lp-practitioner-split .creds svg{flex:none;color:var(--accent)}
+    .lp-practitioner-split .btn-primary{display:inline-flex;align-items:center;gap:.6em;background:linear-gradient(90deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-body);font-weight:600;font-size:1rem;padding:.95em 1.8em;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);text-decoration:none}
+    .lp-practitioner-split .btn-primary svg{flex:none}
+    @media (max-width:768px){
+      .lp-practitioner-split .in{grid-template-columns:1fr}
+      .lp-practitioner-split .portrait{order:-1;max-width:340px;margin-inline:auto;width:100%}
+    }
+  </style>
+  <div class="in">
+    <div class="portrait" role="img" aria-label="A calm, one to one consultation room at Northcott Skin & Laser, Chatswood">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='0.45'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23e0ece6'/%3E%3Cstop%20offset='1'%20stop-color='%23cadfd6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='800'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='600'%20cy='300'%20r='210'%20fill='%236e8f83'%20opacity='0.55'/%3E%3Ccircle%20cx='600'%20cy='300'%20r='210'%20fill='none'%20stroke='%232f5b4e'%20stroke-width='2.5'%20opacity='0.5'/%3E%3Cpath%20d='M0%20620%20C%20200%20540%20360%20690%20520%20648%20C%20660%20612%20740%20690%20800%20668%20L800%201000%20L0%201000%20Z'%20fill='%233f7767'%20opacity='0.38'/%3E%3Cpath%20d='M0%20720%20C%20220%20655%20380%20785%20560%20742%20C%20690%20712%20760%20772%20800%20758%20L800%201000%20L0%201000%20Z'%20fill='%232f5b4e'%20opacity='0.42'/%3E%3Cg%20fill='none'%20stroke='%232f5b4e'%20stroke-width='3'%20stroke-linecap='round'%20opacity='0.55'%3E%3Cpath%20d='M60%20500%20C%20260%20450%20460%20545%20740%20480'/%3E%3Cpath%20d='M60%20565%20C%20260%20515%20460%20610%20740%20545'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%2316221f'%20stroke-width='2'%20opacity='0.30'%3E%3Cpath%20d='M120%20150%20C%20270%20240%20305%20345%20262%20460'/%3E%3C/g%3E%3Ccircle%20cx='205'%20cy='140'%20r='11'%20fill='%232f5b4e'%20opacity='0.85'/%3E%3C/svg%3E" alt="Calm sage-toned composition of a soft light disc over a layered evergreen horizon, evoking a considered skin and laser consultation room" loading="lazy">
+    </div>
+    <div class="copy reveal">
+      <span class="eyebrow">Why Northcott</span>
+      <h2>Care from an experienced clinical team</h2>
+      <p class="title">Skin &amp; laser &middot; Chatswood NSW</p>
+      <p class="bio">Northcott Skin &amp; Laser takes a calm, evidence-led approach to skin health, laser and skin rejuvenation. Your consultation is one to one, unhurried by design, and focused on your skin rather than a fixed script.</p>
+      <p class="bio">We are candid about what may suit you, what may not, and when the honest answer is to take more time. If a treatment plan would suit your goals, we explain it clearly, with no obligation to continue. That is the standard the clinic is built around.</p>
+      <ul class="creds">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Qualified, experienced clinicians
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Evidence-led approach
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Complimentary consultation
+        </li>
+      </ul>
+      <a class="btn-primary" href="#hero">
+        Book a consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS (reviews--cards, banner + 3 cards) ================= -->
+<section class="lp-reviews-cards">
+  <style>
+    .lp-reviews-cards,.lp-reviews-cards *{box-sizing:border-box}
+    .lp-reviews-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-reviews-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-reviews-cards .head{margin:0 0 22px}
+    .lp-reviews-cards .kicker{font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-reviews-cards h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:18ch}
+    .lp-reviews-cards .rating-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--ghost-color);box-shadow:var(--shadow-sm);border-radius:var(--r-lg);padding:18px 22px;margin:0 0 22px}
+    .lp-reviews-cards .rating-banner .big{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em}
+    .lp-reviews-cards .rating-banner .stars{color:var(--accent-soft);letter-spacing:1px;font-size:16px}
+    .lp-reviews-cards .rating-banner .fine{font-family:var(--font-mono);font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.02em}
+    .lp-reviews-cards .grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .lp-reviews-cards .grid::-webkit-scrollbar{display:none}
+    .lp-reviews-cards .rv-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+    .lp-reviews-cards .rv-dots .dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:width .35s var(--spring),background .35s var(--spring)}
+    .lp-reviews-cards .rv-dots .dot.active{width:22px;background:var(--accent)}
+    .lp-reviews-cards .card{scroll-snap-align:start;opacity:.55;transform:scale(.95);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+    .lp-reviews-cards .card.is-active{opacity:1;transform:scale(1)}
+    .lp-reviews-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-sm);text-align:left;display:flex;flex-direction:column;overflow:hidden}
+    .lp-reviews-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(220px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 10%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-reviews-cards .card:hover::before{opacity:1}
+    .lp-reviews-cards .card .stars{position:relative;z-index:1;color:var(--accent-soft);font-size:13px;letter-spacing:1px;margin:0 0 14px;display:block}
+    .lp-reviews-cards .card .quote{position:relative;z-index:1;font-family:var(--font-body);font-style:normal;font-weight:400;font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px}
+    .lp-reviews-cards .who{position:relative;z-index:1;display:flex;align-items:center;gap:11px;margin-top:auto}
+    .lp-reviews-cards .avatar{width:38px;height:38px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--accent-deep);flex:none}
+    .lp-reviews-cards .name{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink);margin:0;line-height:1.2}
+    .lp-reviews-cards .tag{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.02em;margin:0}
+    @media (min-width:640px){
+      .lp-reviews-cards .grid{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;gap:var(--gutter);overflow-x:visible}
+      .lp-reviews-cards .card{opacity:1;transform:none}
+      .lp-reviews-cards .rv-dots{display:none}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">What clients say</p>
+      <h2>A clearer idea of what your consultation involves</h2>
+    </div>
+
+    <div class="rating-banner reveal">
+      <span class="big" data-count-to="4.9" data-count-decimals="1">4.9</span>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="fine">Rated by clients across Chatswood</span>
+    </div>
+
+    <div class="grid reveal-stagger">
+      <div class="card is-active">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">The consultation never felt rushed. We talked through my concerns properly and I left knowing exactly what my options were.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">AW</span>
           <div>
-            <p class="kicker">The practice, in numbers</p>
-            <h2>Credibility you can <em>actually check</em></h2>
-            <p class="lead">Meridian is a small, doctor-led practice. We would rather be known for careful work and honest advice than for volume.</p>
+            <p class="name">A. Whitmore</p>
+            <p class="tag">Consultation</p>
           </div>
-          <div class="stat-grid">
-            <div class="stat">
-              <span class="n" data-count-to="4.9" data-decimals="1">4.9</span>
-              <span class="l">Average patient rating</span>
-            </div>
-            <div class="stat">
-              <span class="n" data-count-to="14">14<span class="u">yrs</span></span>
-              <span class="l">Dr Warner in practice</span>
-            </div>
-            <div class="stat">
-              <span class="n" data-count-to="9200" data-suffix="+">9,200+</span>
-              <span class="l">Consultations completed</span>
-            </div>
-            <div class="stat">
-              <span class="n" data-count-to="5">5</span>
-              <span class="l">Accreditations held</span>
-            </div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">Honest, evidence-led advice with no pressure to book anything on the day. That is exactly why I came back.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">PN</span>
+          <div>
+            <p class="name">P. Nguyen</p>
+            <p class="tag">Skin assessment</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">Everything was explained clearly and calmly. I never felt pushed into a treatment I was not ready for.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">LF</span>
+          <div>
+            <p class="name">L. Fraser</p>
+            <p class="tag">Laser enquiry</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <div class="rv-dots" aria-hidden="true">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
 
-  <!-- ============ PHYSICIAN ============ -->
-  <section class="section doc" id="doctor">
-    <div class="wrap">
-      <div class="doc-grid">
-        <div class="doc-media reveal">
-          <div class="doc-portrait">
-            <svg viewBox="0 0 400 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <path class="fill" d="M200 250 C 250 250, 300 290, 316 360 L 316 450 L 84 450 L 84 360 C 100 290, 150 250, 200 250 Z"/>
-              <circle class="fig" cx="200" cy="176" r="66"/>
-              <path class="fig" d="M200 250 C 250 250, 300 290, 316 360 L 316 450 L 84 450 L 84 360 C 100 290, 150 250, 200 250 Z"/>
-              <path class="fig" d="M162 172 C 170 166, 182 166, 190 172"/>
-              <path class="fig" d="M210 172 C 218 166, 230 166, 238 172"/>
-              <path class="fig" d="M182 210 C 192 218, 208 218, 218 210"/>
-              <path class="fig" d="M176 300 L 176 360 M224 300 L 224 360"/>
-            </svg>
-            <span class="doc-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-              AHPRA registered
-            </span>
-          </div>
-        </div>
-        <div class="doc-copy reveal">
-          <p class="kicker">Your physician</p>
-          <p class="doc-name">Dr Elise Warner</p>
-          <p class="doc-title">MBBS &middot; Cosmetic Physician</p>
-          <p class="bio">Elise trained in general medicine before dedicating her practice fully to facial aesthetics. Her approach is quietly conservative. She believes the best cosmetic medicine is the kind people cannot quite place, work that looks like you on a good day rather than like a treatment.</p>
-          <p class="bio">She assesses and treats every patient personally, and she is candid about what will help, what will not, and when the honest answer is to wait. That is the standard the whole practice is built around.</p>
-          <div class="cred-row">
-            <span class="cred"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> AHPRA registered</span>
-            <span class="cred"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> 14 years in practice</span>
-            <span class="cred"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Fully insured</span>
-            <span class="cred"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Professional college member</span>
-          </div>
-          <p class="sig">Dr Elise Warner</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ================= FAQ (faq--accordion) ================= -->
+<section class="lp-faq-acc">
+  <style>
+    .lp-faq-acc,.lp-faq-acc *{box-sizing:border-box}
+    .lp-faq-acc{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-faq-acc .in{max-width:min(760px,var(--maxw));margin:0 auto}
+    .lp-faq-acc .kicker{display:none}
+    .lp-faq-acc h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.15;text-align:center;margin:0 0 1.4em;letter-spacing:-.02em}
+    .lp-faq-acc .faq-item{background:var(--surface);border:1px solid var(--ghost-color);box-shadow:var(--shadow-sm);border-radius:var(--r-md);margin:0 0 .8em;overflow:hidden}
+    .lp-faq-acc summary{display:flex;align-items:center;justify-content:space-between;gap:1em;list-style:none;cursor:pointer;font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--ink);padding:1.1em 1.3em;letter-spacing:-.01em}
+    .lp-faq-acc summary::-webkit-details-marker{display:none}
+    .lp-faq-acc summary .plus{flex:none;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--ghost-color);color:var(--accent-deep);transition:transform .3s,background .3s,color .3s,border-color .3s}
+    .lp-faq-acc .faq-item[open] summary .plus{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+    .lp-faq-acc .faq-a{padding:0 1.3em 1.2em}
+    .lp-faq-acc .faq-a p{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0;max-width:62ch}
+    @media (max-width:768px){
+      .lp-faq-acc summary{font-size:1rem;padding:1em 1.1em}
+      .lp-faq-acc .faq-a{padding:0 1.1em 1.1em}
+    }
+  </style>
+  <div class="in">
+    <p class="kicker">Common questions</p>
+    <h2>Answered plainly</h2>
+    <details class="faq-item">
+      <summary>What does the complimentary consultation cover?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>Your consultation is a calm, one to one appointment with a qualified clinician. You talk through your skin concerns and goals, have your skin assessed properly, and get honest, evidence-led guidance on what would suit you next. It is complimentary and secures your time when you book.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Is it really free, or is there a deposit?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>It is genuinely complimentary. There is no deposit and no card needed to book, and there is no obligation to go ahead with anything afterwards. To move your appointment, we simply ask for 48 hours notice.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need to commit to a treatment?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>No. The consultation is an assessment, not a sales appointment. If a treatment plan is right for you, we explain the options and what to expect clearly, with no pressure to decide on the day. Many people take the guidance home and think it over first.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Where is the clinic, and what are the opening hours?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>Northcott Skin &amp; Laser is at Suite 4, 12 Victoria Avenue, Chatswood NSW 2067. We are open Tuesday to Friday 9:00am to 6:00pm, and Saturday 9:00am to 3:00pm. The clinic is closed on Sunday and Monday.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>How do I know if a treatment may suit my skin?<span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></summary>
+      <div class="faq-a"><p>The best way to know is to be assessed properly during your consultation. We will understand your concerns, review your skin, and explain what may be suitable and the recommended next steps. Suitability is decided in person, not promised beforehand.</p></div>
+    </details>
+  </div>
+</section>
 
-  <!-- ============ REVIEWS ============ -->
-  <section class="section tint" id="reviews-sec">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="kicker">What patients say</p>
-        <h2 class="h2">Trusted for the advice as much as the <em>treatment</em></h2>
-      </div>
-      <div class="rating-banner reveal">
-        <span class="big">4.9</span>
-        <div>
-          <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="fine" style="display:block;margin-top:3px;">from 300+ verified patient reviews</span>
-        </div>
-        <span class="src">Independently collected</span>
-      </div>
-      <div class="reviews-track" id="reviews">
-        <div class="review active">
-          <span class="rv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>I came in expecting a hard sell and got the opposite. Dr Warner talked me out of half of what I thought I wanted and explained exactly why. I trust her completely now.</p>
-          <div class="who"><span class="avatar">RK</span><div><div class="name">Rebecca K.</div><span class="tag">Toorak, VIC</span></div></div>
-        </div>
-        <div class="review">
-          <span class="rv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>The consultation alone was worth coming in for. Everything was explained calmly, nothing was rushed, and I never once felt pressured to book anything on the day.</p>
-          <div class="who"><span class="avatar">JM</span><div><div class="name">James M.</div><span class="tag">South Yarra, VIC</span></div></div>
-        </div>
-        <div class="review">
-          <span class="rv-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>Clean, professional and genuinely reassuring. It feels like a medical practice, not a shopfront. I have recommended Meridian to three friends already.</p>
-          <div class="who"><span class="avatar">SN</span><div><div class="name">Sophie N.</div><span class="tag">Prahran, VIC</span></div></div>
-        </div>
-      </div>
-      <div class="review-dots" id="reviewDots" aria-hidden="true">
-        <span class="d on"></span><span class="d"></span><span class="d"></span>
-      </div>
+<!-- ================= FINAL CTA (cta--band) ================= -->
+<section class="lp-cta-band">
+  <style>
+    .lp-cta-band,.lp-cta-band *{box-sizing:border-box}
+    .lp-cta-band{position:relative}
+    .lp-cta-band .band{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter);text-align:center}
+    .lp-cta-band .band-photo{display:none}
+    .lp-cta-band .glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:1}
+    .lp-cta-band .glow-a{width:300px;height:300px;top:-120px;right:-60px;background:color-mix(in srgb,var(--accent) 42%,transparent)}
+    .lp-cta-band .glow-b{width:260px;height:260px;bottom:-120px;left:-50px;background:color-mix(in srgb,var(--band-dark-ink) 16%,transparent)}
+    .lp-cta-band .in{position:relative;z-index:2;max-width:640px;margin:0 auto}
+    .lp-cta-band .eyebrow{display:inline-flex;align-items:center;gap:.5em;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--band-dark-ink) 72%,transparent);border:1px solid color-mix(in srgb,var(--band-dark-ink) 22%,transparent);border-radius:var(--r-pill);padding:.5em 1em;margin:0 0 1.2em}
+    .lp-cta-band .eyebrow .dot{display:none;width:6px;height:6px;border-radius:50%;background:var(--band-dark-ink);opacity:.85;flex:none}
+    .lp-cta-band h2{font-family:var(--font-display);font-weight:800;font-size:var(--fs-h2);line-height:1.12;color:var(--band-dark-ink);margin:0 0 .5em;max-width:17ch;margin-inline:auto;letter-spacing:-.02em}
+    .lp-cta-band .sub{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:color-mix(in srgb,var(--band-dark-ink) 78%,transparent);margin:0 auto 1.8em;max-width:46ch}
+    .lp-cta-band .cta{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:1.05rem;font-weight:600;color:var(--accent-deep);background:var(--surface);border:none;border-radius:var(--btn-radius);box-shadow:0 16px 34px -16px rgba(0,0,0,.5);padding:.95em 1.8em;cursor:pointer;text-decoration:none}
+    .lp-cta-band .reassure{display:flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--font-body);font-size:.85rem;color:color-mix(in srgb,var(--band-dark-ink) 66%,transparent);margin:1.2em 0 0}
+    .lp-cta-band .reassure svg{flex:none;opacity:.85}
+  </style>
+  <div class="band">
+    <div class="band-photo" aria-hidden="true"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'1'%20height%3D'1'%2F%3E" alt=""></div>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
+    <div class="in reveal">
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Chatswood</span>
+      <h2>Start with a consultation, decide later</h2>
+      <p class="sub">Book your complimentary consultation. Talk through your skin concerns, get honest, evidence-led guidance on what may suit you, and decide in your own time.</p>
+      <a class="cta" href="#hero" data-cta>
+        Book my free consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="reassure">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
+        No deposit and no card needed, confirmed by text
+      </p>
     </div>
-  </section>
-
-  <!-- ============ BOOKING ============ -->
-  <section class="section" id="book">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <p class="kicker dot">Book your consultation</p>
-        <h2 class="h2">Reserve an unhurried hour, at no cost</h2>
-        <p class="lead">Choose a time that suits you. We will confirm by text and send a reminder before the day. There is nothing to pay and no obligation to proceed.</p>
-      </div>
-      <div class="book-card reveal">
-        <div class="book-side">
-          <div class="glow g-c" aria-hidden="true"></div>
-          <p class="k">Your visit</p>
-          <h3>A consultation with a doctor, not a salesperson</h3>
-          <p>You will sit with Dr Warner, be properly assessed, and leave able to make a calm, informed decision in your own time.</p>
-          <ul class="assure">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Complimentary and no obligation</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Assessed and treated by the same doctor</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Confirmed by text within the hour</li>
-          </ul>
-        </div>
-        <div class="book-body">
-          <p class="step-label">Step 1 &middot; Choose a day</p>
-          <div class="day-tabs" id="dayTabs" role="tablist" aria-label="Choose a day">
-            <button class="day-tab sel" role="tab" aria-selected="true"><span class="dow">Tue</span><span class="dom">15</span></button>
-            <button class="day-tab" role="tab" aria-selected="false"><span class="dow">Wed</span><span class="dom">16</span></button>
-            <button class="day-tab" role="tab" aria-selected="false"><span class="dow">Thu</span><span class="dom">17</span></button>
-            <button class="day-tab" role="tab" aria-selected="false"><span class="dow">Fri</span><span class="dom">18</span></button>
-            <button class="day-tab" role="tab" aria-selected="false"><span class="dow">Sat</span><span class="dom">19</span></button>
-          </div>
-          <p class="step-label">Step 2 &middot; Choose a time</p>
-          <div class="time-grid" id="timeGrid">
-            <button class="time-chip">9:30</button>
-            <button class="time-chip">10:15</button>
-            <button class="time-chip muted" disabled>11:00</button>
-            <button class="time-chip">12:30</button>
-            <button class="time-chip">14:00</button>
-            <button class="time-chip">15:15</button>
-            <button class="time-chip muted" disabled>16:00</button>
-            <button class="time-chip">16:45</button>
-          </div>
-          <p class="book-summary" id="bookSummary">Select a time to hold your consultation.</p>
-          <a class="btn btn-primary" href="#book" data-cta>
-            Confirm my consultation
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <p class="cta-micro" style="justify-content:center;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
-            Your details are kept private and secure
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="section tint" id="faq">
-    <div class="wrap">
-      <div class="section-head reveal" style="text-align:center;margin-inline:auto;">
-        <p class="kicker" style="justify-content:center;">Common questions</p>
-        <h2 class="h2" style="margin-inline:auto;">Answered plainly</h2>
-      </div>
-      <div class="faq-list reveal">
-        <div class="faq-item" data-open="true">
-          <button class="faq-q" aria-expanded="true">Is the consultation really free? <span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button>
-          <div class="faq-a"><div><p>Yes. Your first consultation with Dr Warner is complimentary and carries no obligation. It is a proper medical assessment, not a sales appointment, and you are free to leave without booking anything.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Will I be pressured to have treatment on the day? <span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button>
-          <div class="faq-a"><div><p>No. We deliberately keep decision-making separate from the assessment. You are encouraged to take your written plan home and book treatment only when, and if, you feel ready.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">Who carries out the treatment? <span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button>
-          <div class="faq-a"><div><p>Dr Elise Warner assesses and treats every patient personally. The doctor who reviews your face and history is the same doctor who carries out any treatment you go ahead with.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">What should I bring to my consultation? <span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button>
-          <div class="faq-a"><div><p>Simply a list of any medications you take and any relevant medical history. It also helps to come with the specific concerns you would like to discuss, so we can use the time well.</p></div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">How do I know if a treatment is suitable for me? <span class="plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span></button>
-          <div class="faq-a"><div><p>That is exactly what the consultation is for. Dr Warner will review your suitability individually and give you an honest view. If a treatment is not appropriate for you, she will say so.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FINAL CTA ============ -->
-  <section class="section" style="padding-bottom:0;">
-    <div class="wrap">
-      <div class="final reveal">
-        <div class="glow f1 g-a" aria-hidden="true"></div>
-        <div class="glow f2 g-b" aria-hidden="true"></div>
-        <div class="inner">
-          <p class="kicker">South Yarra, Melbourne</p>
-          <h2>Start with the <em>assessment</em>, decide later</h2>
-          <p>Book your complimentary consultation with Dr Warner. Sit down, be properly assessed, and take the decision in your own time.</p>
-          <a class="btn btn-light" href="#book" data-cta>
-            Request your consultation
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <p class="cta-micro">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8"/></svg>
-            Complimentary and confirmed by text
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="wrap">
+<!-- ================= FOOTER (footer--multicol) ================= -->
+<footer class="lp-footer-mc">
+  <style>
+    .lp-footer-mc,.lp-footer-mc *{box-sizing:border-box}
+    .lp-footer-mc{background:var(--band-dark-bg);color:var(--band-dark-ink);padding:clamp(40px,6vw,64px) var(--gutter)}
+    .lp-footer-mc .in{max-width:var(--maxw);margin:0 auto}
+    .lp-footer-mc .foot-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
+    .lp-footer-mc .brand .name{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--band-dark-ink);margin:0 0 .5em}
+    .lp-footer-mc .brand .blurb{font-family:var(--font-body);font-size:.9rem;line-height:var(--lh-body);color:color-mix(in srgb,var(--band-dark-ink) 72%,transparent);margin:0;max-width:36ch}
+    .lp-footer-mc .col h4{font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 1em}
+    .lp-footer-mc .col p,.lp-footer-mc .col a{display:block;font-family:var(--font-body);font-size:.9rem;line-height:1.5;color:color-mix(in srgb,var(--band-dark-ink) 80%,transparent);margin:0 0 .5em;text-decoration:none}
+    .lp-footer-mc .col a:hover{color:var(--band-dark-ink);text-decoration:underline}
+    .lp-footer-mc .foot-fine{border-top:1px solid color-mix(in srgb,var(--band-dark-ink) 16%,transparent);margin-top:clamp(28px,4vw,40px);padding-top:1.4em;font-family:var(--font-mono);font-size:.72rem;line-height:1.7;color:color-mix(in srgb,var(--band-dark-ink) 55%,transparent);max-width:80ch}
+    .lp-footer-mc .foot-fine a{color:color-mix(in srgb,var(--band-dark-ink) 70%,transparent);text-decoration:underline}
+    @media (min-width:640px){
+      .lp-footer-mc .foot-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (min-width:900px){
+      .lp-footer-mc .foot-grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+    }
+  </style>
+  <div class="in">
     <div class="foot-grid">
-      <div class="col">
-        <span class="wordmark" style="margin-bottom:14px;">
-          <span class="txt">
-            <span class="name">Meridian</span>
-            <span class="sub">Cosmetic Medicine</span>
-          </span>
-        </span>
-        <p style="color:rgba(233,241,245,.7);font-size:14px;max-width:36ch;">A small, doctor-led cosmetic medicine practice in South Yarra, built around careful assessment and honest advice.</p>
+      <div class="brand">
+        <p class="name">Northcott Skin &amp; Laser</p>
+        <p class="blurb">Skin health, laser and skin rejuvenation in Chatswood. A calm, evidence-led, one to one approach.</p>
       </div>
       <div class="col">
         <h4>Visit</h4>
-        <p>Level 2, 44 Toorak Road<br>South Yarra, Melbourne VIC 3141</p>
-        <a href="tel:+61390000184">+61 3 9000 0184</a>
-        <a href="mailto:hello@meridianclinic.example">hello@meridianclinic.example</a>
+        <p>Suite 4, 12 Victoria Avenue<br>Chatswood NSW 2067</p>
+        <a href="#">Get directions</a>
+      </div>
+      <div class="col">
+        <h4>Contact</h4>
+        <a href="tel:0280467720">02 8046 7720</a>
+        <a href="mailto:hello@northcottskin.com.au">hello@northcottskin.com.au</a>
       </div>
       <div class="col">
         <h4>Hours</h4>
-        <p>Tuesday to Friday, 9:30 to 18:00<br>Saturday, 9:30 to 15:00<br>By appointment only</p>
+        <p>Tuesday to Friday, 9:00am to 6:00pm<br>Saturday, 9:00am to 3:00pm<br>Sunday and Monday, closed</p>
       </div>
     </div>
-    <p class="foot-fine">&copy; 2026 Meridian Cosmetic Medicine. Treatments referred to on this page are cosmetic medical procedures and carry risks that will be discussed with you individually. Nothing on this page is medical advice, and individual experiences vary. Dr Elise Warner is a registered medical practitioner. Suitability is assessed at consultation before any treatment is offered.</p>
+    <p class="foot-fine">
+      &copy; 2026 Northcott Skin &amp; Laser. Your consultation is complimentary, with no deposit or card needed to book, and no obligation to continue. <a href="#">Privacy</a>
+      <br>Treatments referred to on this page are personalised to the individual, and suitability is assessed in person at your consultation before any treatment plan is recommended. Nothing on this page is medical advice, and individual experiences vary.
+    </p>
   </div>
 </footer>
 
-<!-- ============ STICKY MOBILE CTA ============ -->
-<div class="sticky-cta" id="sticky">
-  <div class="info">
-    <span class="t">Complimentary consultation</span>
-    <span class="b">Doctor-led &middot; no obligation</span>
+<!-- ================= STICKY MOBILE CTA (#sticky hook) ================= -->
+<div id="sticky">
+  <div class="s-info">
+    <span class="s-t">Complimentary consultation</span>
+    <span class="s-b">One to one &middot; no obligation to continue</span>
   </div>
-  <a class="btn btn-primary" href="#book" data-cta>Book</a>
+  <a class="s-btn" href="#hero" data-cta>Book</a>
 </div>
 
 <script>
+/* ===== motion/motion.js (inlined) ===== */
 (function(){
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var canHover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
-
-  /* ---- hero choreographed entrance ---- */
-  requestAnimationFrame(function(){
-    requestAnimationFrame(function(){ document.getElementById('hero').classList.add('loaded'); });
-  });
-
-  /* ---- scroll reveals ---- */
-  var revealEls = document.querySelectorAll('.reveal, .stagger');
-  if('IntersectionObserver' in window && !reduced){
+  'use strict';
+  var FAILSAFE_MS = 2600;
+  var reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var canHover = !!(window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches);
+  var root = document.documentElement;
+  root.classList.add('js-motion');
+  function ready(fn){
+    if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', fn); } else { fn(); }
+  }
+  function initReveal(){
+    var els = document.querySelectorAll('.reveal, .reveal-stagger');
+    if(!els.length) return;
+    function revealAll(){ els.forEach(function(el){ el.classList.add('is-visible'); }); }
+    if(reduced || !('IntersectionObserver' in window)){ revealAll(); return; }
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
       });
-    }, { threshold:.14, rootMargin:'0px 0px -8% 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
-  } else {
-    revealEls.forEach(function(el){ el.classList.add('in'); });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function(el){ io.observe(el); });
+    window.setTimeout(revealAll, FAILSAFE_MS);
   }
-  /* failsafe: never leave anything stuck invisible */
-  setTimeout(function(){ revealEls.forEach(function(el){ el.classList.add('in'); }); }, 2600);
-
-  /* ---- scroll progress ---- */
-  var bar = document.getElementById('progress'), pTick = false;
-  function prog(){ var h=document.documentElement, t=h.scrollHeight-h.clientHeight; bar.style.width=(t>0?(h.scrollTop/t)*100:0)+'%'; pTick=false; }
-  window.addEventListener('scroll', function(){ if(!pTick){ requestAnimationFrame(prog); pTick=true; } }, { passive:true });
-  prog();
-
-  /* ---- sticky mobile CTA ---- */
-  var sticky = document.getElementById('sticky'), heroEl = document.getElementById('hero');
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ sticky.classList.toggle('in', !e.isIntersecting); });
-    }, { threshold:0 }).observe(heroEl);
+  function attr(el, longName, shortName){
+    var v = el.getAttribute(longName);
+    if(v !== null) return v;
+    return el.getAttribute(shortName);
   }
-
-  /* ---- hero parallax ---- */
-  if(!reduced){
-    var hv = document.getElementById('heroVisual'), hTick=false;
-    function para(){ var y=window.scrollY, vh=window.innerHeight; if(y<vh){ hv.style.transform='translateY('+Math.min(26,y*0.07)+'px)'; } hTick=false; }
-    window.addEventListener('scroll', function(){ if(!hTick){ requestAnimationFrame(para); hTick=true; } }, { passive:true });
-  }
-
-  /* ---- count-up ---- */
   function countUp(el){
-    var target = parseFloat(el.getAttribute('data-count-to'));
-    var dec = el.hasAttribute('data-decimals') ? parseInt(el.getAttribute('data-decimals'),10) : 0;
-    var pre = el.getAttribute('data-prefix') || '';
-    var suf = el.getAttribute('data-suffix') || '';
-    var unitEl = el.querySelector('.u');
-    var unitHtml = unitEl ? unitEl.outerHTML : '';
-    function fmt(v){ var n = dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-AU'); return pre + n + suf; }
-    function render(v){ el.innerHTML = fmt(v) + unitHtml; }
-    if(reduced){ render(target); return; }
-    var start = dec ? Math.max(0, target-1.2) : Math.max(0, target - Math.min(target, target>500?900:12));
-    var t0=null, dur=1050;
-    function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/dur); var e=1-Math.pow(1-p,3); render(start+(target-start)*e); if(p<1) requestAnimationFrame(step); }
+    var raw = el.getAttribute('data-count-to');
+    var target = parseFloat(raw);
+    if(isNaN(target)) return;
+    var decAttr = attr(el, 'data-count-decimals', 'data-decimals');
+    var decimals;
+    if(decAttr !== null && decAttr !== '') decimals = parseInt(decAttr, 10);
+    else { var dp = String(raw).split('.')[1]; decimals = dp ? dp.length : 0; }
+    if(isNaN(decimals) || decimals < 0) decimals = 0;
+    var prefix = attr(el, 'data-count-prefix', 'data-prefix') || '';
+    var suffix = attr(el, 'data-count-suffix', 'data-suffix') || '';
+    var trailing = Array.prototype.slice.call(el.children);
+    trailing.forEach(function(node){ el.removeChild(node); });
+    var textNode = document.createTextNode('');
+    el.textContent = '';
+    el.appendChild(textNode);
+    trailing.forEach(function(node){ el.appendChild(node); });
+    function fmt(v){
+      var n = v.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+      return prefix + n + suffix;
+    }
+    if(reduced){ textNode.data = fmt(target); return; }
+    var startFrom = decimals > 0 ? Math.max(0, target - 1.2) : Math.max(0, target - Math.min(target, target > 500 ? 900 : 55));
+    var t0 = null, dur = 1000;
+    function step(ts){
+      if(t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur);
+      var eased = 1 - Math.pow(1 - p, 3);
+      textNode.data = fmt(startFrom + (target - startFrom) * eased);
+      if(p < 1){ requestAnimationFrame(step); } else { textNode.data = fmt(target); }
+    }
     requestAnimationFrame(step);
   }
-  if('IntersectionObserver' in window){
-    var io3 = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); io3.unobserve(e.target); } });
-    }, { threshold:.6 });
-    document.querySelectorAll('[data-count-to]').forEach(function(el){ io3.observe(el); });
-  } else {
-    document.querySelectorAll('[data-count-to]').forEach(countUp);
+  function initCountUp(){
+    var els = document.querySelectorAll('[data-count-to]');
+    if(!els.length) return;
+    if(!('IntersectionObserver' in window)){ els.forEach(countUp); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ countUp(entry.target); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.6 });
+    els.forEach(function(el){ io.observe(el); });
   }
-
-  /* ---- FAQ ---- */
-  document.querySelectorAll('.faq-item').forEach(function(item){
-    var btn = item.querySelector('.faq-q');
-    btn.addEventListener('click', function(){
-      var open = item.getAttribute('data-open')==='true';
-      item.setAttribute('data-open', String(!open));
-      btn.setAttribute('aria-expanded', String(!open));
-    });
-  });
-
-  /* ---- reviews dots (mobile scroll-snap) ---- */
-  var rt = document.getElementById('reviews');
-  var cards = rt ? [].slice.call(rt.querySelectorAll('.review')) : [];
-  var dots = document.querySelectorAll('#reviewDots .d');
-  if(rt && cards.length){
-    var rTick=false;
-    function active(){
-      var c = rt.scrollLeft + rt.clientWidth/2, best=0, bd=Infinity;
-      cards.forEach(function(card,i){ var m=card.offsetLeft+card.offsetWidth/2, d=Math.abs(m-c); if(d<bd){bd=d;best=i;} });
-      cards.forEach(function(card,i){ card.classList.toggle('active', i===best); });
-      dots.forEach(function(d,i){ d.classList.toggle('on', i===best); });
-      rTick=false;
-    }
-    rt.addEventListener('scroll', function(){ if(!rTick){ requestAnimationFrame(active); rTick=true; } }, { passive:true });
-  }
-
-  /* ---- booking selector (visual) ---- */
-  var days = document.getElementById('dayTabs');
-  var grid = document.getElementById('timeGrid');
-  var summary = document.getElementById('bookSummary');
-  var selectedDay = 'Tue 15', selectedTime = null;
-  if(days){
-    days.addEventListener('click', function(e){
-      var t = e.target.closest('.day-tab'); if(!t) return;
-      days.querySelectorAll('.day-tab').forEach(function(b){ b.classList.remove('sel'); b.setAttribute('aria-selected','false'); });
-      t.classList.add('sel'); t.setAttribute('aria-selected','true');
-      selectedDay = t.querySelector('.dow').textContent + ' ' + t.querySelector('.dom').textContent;
-      updateSummary();
-    });
-  }
-  if(grid){
-    grid.addEventListener('click', function(e){
-      var t = e.target.closest('.time-chip'); if(!t || t.classList.contains('muted')) return;
-      grid.querySelectorAll('.time-chip').forEach(function(b){ b.classList.remove('sel'); });
-      t.classList.add('sel');
-      selectedTime = t.textContent.trim();
-      updateSummary();
-    });
-  }
-  function updateSummary(){
-    if(selectedTime){ summary.innerHTML = 'Holding <strong>'+selectedDay+', '+selectedTime+'</strong> for your complimentary consultation.'; }
-    else { summary.textContent = 'Select a time to hold your consultation.'; }
-  }
-
-  /* ---- smooth-scroll for CTAs to #book ---- */
-  document.querySelectorAll('[data-cta]').forEach(function(a){
-    a.addEventListener('click', function(ev){
-      var href = a.getAttribute('href') || '';
-      if(href.charAt(0) === '#'){
-        var el = document.querySelector(href);
-        if(el){ ev.preventDefault(); el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block:'start' }); }
+  function initMarquee(){
+    var marquees = document.querySelectorAll('.marquee');
+    marquees.forEach(function(marquee){
+      var tracks = marquee.querySelectorAll(':scope > .marquee-track');
+      if(tracks.length === 1){
+        var clone = tracks[0].cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        marquee.appendChild(clone);
       }
     });
-  });
-
-  /* ---- magnetic CTAs (fine pointer only) ---- */
-  if(canHover && !reduced){
-    document.querySelectorAll('.btn').forEach(function(el){
+  }
+  function initParallax(){
+    if(reduced) return;
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+    if(!els.length) return;
+    var ticking = false;
+    function update(){
+      var vh = window.innerHeight;
+      els.forEach(function(el){
+        var raw = parseFloat(el.getAttribute('data-parallax'));
+        var factor = isNaN(raw) ? 0.12 : raw;
+        var rect = el.getBoundingClientRect();
+        if(rect.bottom > 0 && rect.top < vh){
+          var center = (rect.top + rect.height / 2) - vh / 2;
+          el.style.transform = 'translateY(' + (-(center * factor)).toFixed(2) + 'px)';
+        }
+      });
+      ticking = false;
+    }
+    function onScroll(){ if(!ticking){ requestAnimationFrame(update); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+  function initMagnetic(){
+    if(!canHover || reduced) return;
+    var els = document.querySelectorAll('[data-cta]');
+    els.forEach(function(el){
       el.addEventListener('pointermove', function(e){
         var r = el.getBoundingClientRect();
-        var mx = e.clientX - (r.left + r.width/2), my = e.clientY - (r.top + r.height/2);
-        el.style.transform = 'translate('+(mx*0.08)+'px,'+(my*0.2-1)+'px)';
+        var mx = e.clientX - (r.left + r.width / 2);
+        var my = e.clientY - (r.top + r.height / 2);
+        el.style.transform = 'translate(' + (mx * 0.09).toFixed(2) + 'px,' + (my * 0.22 - 1).toFixed(2) + 'px)';
       });
-      el.addEventListener('pointerleave', function(){ el.style.transform=''; });
+      el.addEventListener('pointerleave', function(){ el.style.transform = ''; });
     });
   }
-
-  /* ---- card spotlight follow ---- */
-  if(canHover){
-    document.querySelectorAll('.review').forEach(function(card){
-      card.addEventListener('pointermove', function(e){
-        var r = card.getBoundingClientRect();
-        card.style.setProperty('--sx', ((e.clientX-r.left)/r.width*100)+'%');
-        card.style.setProperty('--sy', ((e.clientY-r.top)/r.height*100)+'%');
+  function initAccordion(){
+    var supportsAnimate = typeof Element !== 'undefined' && typeof Element.prototype.animate === 'function';
+    if(reduced || !supportsAnimate || typeof HTMLDetailsElement === 'undefined') return;
+    var items = document.querySelectorAll('details.faq-item, .faq-item');
+    items.forEach(function(details){
+      if(!(details instanceof HTMLDetailsElement)) return;
+      var summary = details.querySelector(':scope > summary');
+      var panel = details.querySelector(':scope > summary ~ *');
+      if(!summary || !panel) return;
+      var anim = null, closing = false, expanding = false;
+      summary.addEventListener('click', function(e){
+        e.preventDefault();
+        details.style.overflow = 'hidden';
+        if(closing || !details.open){ openPanel(); } else if(expanding || details.open){ closePanel(); }
       });
+      function closePanel(){
+        closing = true;
+        var startH = details.offsetHeight + 'px';
+        var endH = summary.offsetHeight + 'px';
+        runAnim(startH, endH, false);
+      }
+      function openPanel(){
+        details.style.height = details.offsetHeight + 'px';
+        details.open = true;
+        requestAnimationFrame(function(){
+          expanding = true;
+          var startH = details.offsetHeight + 'px';
+          var endH = (summary.offsetHeight + panel.offsetHeight) + 'px';
+          runAnim(startH, endH, true);
+        });
+      }
+      function runAnim(startH, endH, willOpen){
+        if(anim) anim.cancel();
+        anim = details.animate({ height: [startH, endH] }, { duration: 260, easing: 'cubic-bezier(.22,.68,0,1)' });
+        anim.onfinish = function(){ onFinish(willOpen); };
+        anim.oncancel = function(){ closing = false; expanding = false; };
+      }
+      function onFinish(willOpen){
+        details.open = willOpen;
+        anim = null; closing = false; expanding = false;
+        details.style.height = ''; details.style.overflow = '';
+      }
     });
   }
+  function initStickyCta(){
+    var sticky = document.getElementById('sticky');
+    if(!sticky) return;
+    var hero = document.getElementById('hero');
+    if(hero && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){ sticky.classList.toggle('is-visible', !entry.isIntersecting); });
+      }, { threshold: 0 }).observe(hero);
+      return;
+    }
+    var shown = false;
+    function check(){
+      var should = window.scrollY > window.innerHeight * 0.6;
+      if(should !== shown){ shown = should; sticky.classList.toggle('is-visible', shown); }
+    }
+    window.addEventListener('scroll', function(){ requestAnimationFrame(check); }, { passive: true });
+    check();
+  }
+  function initScrollProgress(){
+    if(document.body.hasAttribute('data-no-progress')) return;
+    var bar = document.getElementById('lp-progress');
+    if(!bar){
+      bar = document.createElement('div');
+      bar.id = 'lp-progress';
+      bar.className = 'lp-progress-bar';
+      bar.setAttribute('aria-hidden', 'true');
+      document.body.insertBefore(bar, document.body.firstChild);
+    }
+    var ticking = false;
+    function update(){
+      var h = document.documentElement;
+      var scrollable = h.scrollHeight - h.clientHeight;
+      var pct = scrollable > 0 ? (h.scrollTop / scrollable) * 100 : 0;
+      bar.style.width = pct + '%';
+      ticking = false;
+    }
+    function onScroll(){ if(!ticking){ requestAnimationFrame(update); ticking = true; } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+  function initBooking(){
+    var mount = document.getElementById('lp-booking-widget');
+    if(!mount) return;
+    mount.addEventListener('click', function(e){
+      var chip = e.target.closest('.time-chip');
+      if(!chip || chip.classList.contains('muted') || !mount.contains(chip)) return;
+      var group = chip.parentElement || mount;
+      group.querySelectorAll('.time-chip.sel').forEach(function(c){ if(c !== chip) c.classList.remove('sel'); });
+      chip.classList.toggle('sel');
+    });
+  }
+  function initReviewCarousel(){
+    var sections = document.querySelectorAll('.lp-reviews-cards');
+    sections.forEach(function(section){
+      var scroll = section.querySelector('.grid');
+      var dotsWrap = section.querySelector('.rv-dots');
+      if(!scroll || !dotsWrap) return;
+      var cards = Array.prototype.slice.call(scroll.querySelectorAll('.card'));
+      var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll('.dot'));
+      if(!cards.length) return;
+      var ticking = false;
+      function update(){
+        var centre = scroll.scrollLeft + scroll.clientWidth / 2;
+        var best = 0, bestDist = Infinity;
+        cards.forEach(function(card, i){
+          var mid = card.offsetLeft + card.offsetWidth / 2;
+          var d = Math.abs(mid - centre);
+          if(d < bestDist){ bestDist = d; best = i; }
+        });
+        cards.forEach(function(card, i){ card.classList.toggle('is-active', i === best); });
+        dots.forEach(function(dot, i){ dot.classList.toggle('active', i === best); });
+        ticking = false;
+      }
+      scroll.addEventListener('scroll', function(){ if(!ticking){ requestAnimationFrame(update); ticking = true; } }, { passive: true });
+    });
+  }
+  ready(function(){
+    initReveal();
+    initCountUp();
+    initMarquee();
+    initParallax();
+    initMagnetic();
+    initAccordion();
+    initStickyCta();
+    initScrollProgress();
+    initBooking();
+    initReviewCarousel();
+  });
 })();
 </script>
 

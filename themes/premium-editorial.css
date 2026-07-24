@@ -1,36 +1,54 @@
-/* premium-editorial: clay/charcoal, higher-ticket, editorial (serif display, generous rhythm, prominent dark band) */
+/* premium-editorial: clay/charcoal, higher-ticket, editorial. High-contrast serif display (Playfair), readable serif body (Newsreader), letterspaced sans labels, sharp radii, restrained shadows. Expanded contract tokens tuned to the clay palette. */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap');
 :root {
   /* palette */
   --bg: #faf6f2;
   --surface: #f1e7dc;
+  --surface-2: #e9dccd;        /* deeper clay tint */
   --ink: #241f1a;
   --muted: #6b6055;
   --border: #e2d5c5;
   --accent: #b3603f;
-  --accent-ink: #fbf1e9;
-  --band-dark-bg: #241f1a;
+  --accent-ink: #fbf1e9;       /* text/icon on --accent */
+  --accent-soft: #c47a54;      /* lighter clay (gradient start, soft fills) */
+  --accent-deep: #8c4327;      /* darker clay (deep bands, pressed states) */
+  --warm: #9c6f52;             /* muted brass second accent (media panels, underlines) */
+  --warm-2: #7d543b;           /* deeper brass (strokes, hovers) */
+  --gold: #a98253;             /* antique brass eyebrow accent */
+  --gold-soft: #c6a878;        /* lighter brass */
+  --band-dark-bg: #241f1a;     /* dark closing band */
   --band-dark-ink: #f4e9dc;
   /* type */
-  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
-  --font-body: Georgia, "Times New Roman", serif;
+  --font-display: "Playfair Display", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;  /* letterspaced sans labels, not typewriter */
   --fs-h1: clamp(2.4rem, 5.6vw, 4rem);
   --fs-h2: clamp(1.7rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.2rem, 1.6vw, 1.5rem);
+  --fs-lead: clamp(1.1rem, 1rem + .5vw, 1.35rem);  /* larger lead paragraph */
   --fs-body: 1.125rem;
   --lh-body: 1.7;
   /* layout */
   --maxw: 1160px;
   --space-section: clamp(64px, 10vw, 128px);
   --gutter: clamp(24px, 6vw, 48px);
-  --radius: 2px;
+  --radius: 2px;               /* sharp editorial card radius */
+  --r-lg: 3px;
+  --r-md: 2px;
+  --r-sm: 2px;
   --btn-radius: 2px;
-  --shadow: none;
-  /* decorative (clay / editorial restraint: subtle gradient, no CTA shadow) */
+  --shadow: 0 12px 34px -20px rgba(36,31,26,.28), 0 3px 10px -6px rgba(36,31,26,.10);
+  --shadow-sm: 0 1px 2px rgba(36,31,26,.05);
+  --shadow-lg: 0 40px 90px -40px rgba(36,31,26,.34), 0 12px 30px -16px rgba(36,31,26,.16);
+  /* decorative (clay / editorial restraint: subtle gradient, soft depth) */
   --cta-grad-a: #c27049;
   --cta-grad-b: #9c4e30;
-  --shadow-cta: none;
+  --shadow-cta: 0 14px 30px -16px rgba(140,67,39,.42), 0 4px 10px -4px rgba(140,67,39,.24);
   --glow-1: #ece0d3;
   --glow-2: #e0cdbb;
   --ghost-color: rgba(36,31,26,.06);
   --deposit-accent: #8c4327;
   --r-pill: 999px;
+  --ease: cubic-bezier(.22,.6,.16,1);
+  --spring: cubic-bezier(.3,1.3,.5,1);
 }

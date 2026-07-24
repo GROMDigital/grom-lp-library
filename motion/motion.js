@@ -394,6 +394,41 @@
     });
   }
 
+  /* ------------------------------------------------------------------
+     10. Reviews mobile carousel dots - `.lp-reviews-cards .grid` + `.rv-dots`
+     On the horizontal snap-scroller (mobile), the card nearest the
+     viewport centre gets `.is-active` and its matching dot lights up.
+     No-op when the markup is absent or when the grid is a static desktop
+     grid (no horizontal scroll). Opt-in by markup presence only.
+     ------------------------------------------------------------------ */
+  function initReviewCarousel(){
+    var sections = document.querySelectorAll('.lp-reviews-cards');
+    sections.forEach(function(section){
+      var scroll = section.querySelector('.grid');
+      var dotsWrap = section.querySelector('.rv-dots');
+      if(!scroll || !dotsWrap) return;
+      var cards = Array.prototype.slice.call(scroll.querySelectorAll('.card'));
+      var dots = Array.prototype.slice.call(dotsWrap.querySelectorAll('.dot'));
+      if(!cards.length) return;
+      var ticking = false;
+      function update(){
+        var centre = scroll.scrollLeft + scroll.clientWidth / 2;
+        var best = 0, bestDist = Infinity;
+        cards.forEach(function(card, i){
+          var mid = card.offsetLeft + card.offsetWidth / 2;
+          var d = Math.abs(mid - centre);
+          if(d < bestDist){ bestDist = d; best = i; }
+        });
+        cards.forEach(function(card, i){ card.classList.toggle('is-active', i === best); });
+        dots.forEach(function(dot, i){ dot.classList.toggle('active', i === best); });
+        ticking = false;
+      }
+      scroll.addEventListener('scroll', function(){
+        if(!ticking){ requestAnimationFrame(update); ticking = true; }
+      }, { passive: true });
+    });
+  }
+
   ready(function(){
     initReveal();
     initCountUp();
@@ -404,5 +439,6 @@
     initStickyCta();
     initScrollProgress();
     initBooking();
+    initReviewCarousel();
   });
 })();
