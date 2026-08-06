@@ -527,300 +527,7 @@ html.js-motion #sticky.is-visible{
   <script src="https://your-booking-worker.invalid/embed.js" async></script>
 </section>
 
-<!-- ================= MARQUEE TRUST (marquee--trust) ================= -->
-<section class="lp-marquee-trust" aria-label="Clinic facts">
-  <style>
-    .lp-marquee-trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(14px,2.4vw,20px) 0}
-    .lp-marquee-trust .marquee{justify-content:center}
-    .lp-marquee-trust .marquee-track{gap:clamp(22px,4vw,44px);padding:0 clamp(11px,2vw,22px)}
-    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
-    .lp-marquee-trust .tick{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.25em;height:1.25em;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.7em;font-weight:700}
-    .lp-marquee-trust .sep{flex:none;color:var(--accent);opacity:.45}
-  </style>
-  <div class="marquee">
-    <div class="marquee-track">
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Signature skin treatments</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Consultation-led, always</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>From $390 per treatment</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>One to one, unhurried</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>South Yarra studio</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Suitability assessed in person</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-    </div>
-  </div>
-</section>
-
 <main>
-
-<!-- ================= MEDIA PANEL (media--panel, SWAP) ================= -->
-<section class="lp-media-panel">
-  <style>
-    /* MEDIA ARCHETYPE: a single full-width photo panel with a floating glass
-       caption chip. A visual breather beat between content sections (clinic
-       shot, treatment room, result). Image zooms gently on hover. Tokens only.
-       The caption chip's translucent-white glass has no token equivalent, so
-       it stays rgba white by design. */
-    .lp-media-panel,.lp-media-panel *{box-sizing:border-box}
-    .lp-media-panel{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-media-panel .in{max-width:var(--maxw);margin:0 auto}
-    .lp-media-panel .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:16/10}
-    .lp-media-panel .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
-    .lp-media-panel .photo-panel:hover img{transform:scale(1.06)}
-    .lp-media-panel .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
-    .lp-media-panel .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
-    @media (prefers-reduced-motion: reduce){
-      .lp-media-panel .photo-panel img,.lp-media-panel .photo-panel:hover img{transition:none;transform:scale(1.02)}
-    }
-  </style>
-  <div class="in">
-    <div class="photo-panel reveal">
-      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201600%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='0.4'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23f4ece2'/%3E%3Cstop%20offset='1'%20stop-color='%23e6d6c4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='1600'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='1180'%20cy='330'%20r='150'%20fill='%23c6a878'%20opacity='0.35'/%3E%3Ccircle%20cx='1180'%20cy='330'%20r='150'%20fill='none'%20stroke='%23b3603f'%20stroke-width='2'%20opacity='0.5'/%3E%3Cg%20fill='none'%20stroke='%23b3603f'%20stroke-width='2.5'%20opacity='0.55'%20stroke-linecap='round'%3E%3Cpath%20d='M-40%20700%20C%20300%20560%20620%20640%20900%20560%20C%201160%20486%201360%20540%201660%20470'/%3E%3Cpath%20d='M-40%20780%20C%20320%20660%20640%20730%20920%20650%20C%201180%20576%201380%20630%201660%20560'/%3E%3Cpath%20d='M-40%20620%20C%20280%20500%20600%20560%20880%20480%20C%201140%20406%201340%20452%201660%20384'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%239c6f52'%20stroke-width='1.6'%20opacity='0.4'%3E%3Cpath%20d='M-40%20860%20C%20340%20760%20660%20820%20940%20740%20C%201200%20666%201400%20716%201660%20650'/%3E%3C/g%3E%3Cline%20x1='120'%20y1='150'%20x2='120'%20y2='430'%20stroke='%238c4327'%20stroke-width='2'%20opacity='0.35'/%3E%3Ccircle%20cx='120'%20cy='150'%20r='7'%20fill='%238c4327'%20opacity='0.6'/%3E%3C/svg%3E" alt="Editorial artwork in warm clay tones, layered contour lines and a soft light disc, evoking skin and considered treatment at Marchetti Aesthetics" loading="lazy">
-      <span class="photo-caption"><span class="dot" aria-hidden="true"></span> The studio, South Yarra</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= WHAT YOUR APPOINTMENT HOLDS (benefits--cards, base 3) ================= -->
-<section class="lp-benefits-cards">
-  <style>
-    /* BENEFITS ARCHETYPE: a kicker/title/sub head above a 3-up grid of icon
-       cards (icon tile, title, one-line body). The "what to expect" beat that
-       names the outcomes a treatment supports. Cards carry a pointer-follow
-       spotlight (via motion). 3 columns >=640px, 1 column below. Tokens only. */
-    .lp-benefits-cards,.lp-benefits-cards *{box-sizing:border-box}
-    .lp-benefits-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-benefits-cards .in{max-width:var(--maxw);margin:0 auto}
-    .lp-benefits-cards .head{margin:0 0 8px}
-    .lp-benefits-cards .kicker{font-family:var(--font-body);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
-    .lp-benefits-cards h2{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);letter-spacing:-.01em;line-height:1.08;margin:0 0 14px;max-width:16ch;color:var(--ink)}
-    .lp-benefits-cards .sub{font-family:var(--font-body);font-size:16px;color:var(--muted);max-width:46ch;margin:0 0 36px;line-height:1.5}
-    .lp-benefits-cards .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
-    .lp-benefits-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--shadow-sm);transition:box-shadow .4s var(--ease);overflow:hidden}
-    .lp-benefits-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(240px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
-    .lp-benefits-cards .card:hover{box-shadow:var(--shadow)}
-    .lp-benefits-cards .card:hover::before{opacity:1}
-    .lp-benefits-cards .icon{position:relative;z-index:1;width:46px;height:46px;border-radius:14px;background:var(--glow-1);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);margin-bottom:16px;transition:transform .4s var(--spring)}
-    .lp-benefits-cards .card:hover .icon{transform:scale(1.08) rotate(-4deg)}
-    .lp-benefits-cards h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:600;font-size:20px;margin:0 0 8px;color:var(--ink)}
-    .lp-benefits-cards p{position:relative;z-index:1;margin:0;font-family:var(--font-body);font-size:14.5px;color:var(--muted);line-height:1.5}
-
-    /* --numbered VARIANT (opt-in): a mono index in each card's top-right
-       corner. Hidden by default so the plain 3-up grid is untouched. */
-    .lp-benefits-cards .card .idx{position:absolute;top:16px;right:18px;font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--border);letter-spacing:.06em;z-index:1;display:none}
-    .lp-benefits-cards--numbered .card .idx{display:block}
-
-    /* --six VARIANT (opt-in): a two-row, six-card "what's included" grid.
-       Cards 4-6 (.card--extra) are hidden by default, so any page using the
-       plain block still renders exactly three cards. */
-    .lp-benefits-cards .card.card--extra{display:none}
-    .lp-benefits-cards--six .card.card--extra{display:flex;flex-direction:column}
-
-    /* offer card (opt-in, typically the trailing card of a --six grid): a
-       tinted panel with a price line and an inline CTA in place of an icon. */
-    .lp-benefits-cards .card--offer{background:linear-gradient(160deg,var(--surface-2),var(--bg));justify-content:center}
-    .lp-benefits-cards .card--offer .icon{display:none}
-    .lp-benefits-cards .card--offer .card-cta{display:inline-flex;align-items:center;gap:.5em;align-self:flex-start;margin-top:18px;font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--accent-deep);border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;text-decoration:none;transition:border-color .3s,transform .3s}
-    .lp-benefits-cards .card--offer .card-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
-    .lp-benefits-cards .card--offer .card-cta svg{flex:none}
-
-    @media (min-width:640px){
-      .lp-benefits-cards .grid{grid-template-columns:repeat(3,1fr);gap:22px}
-    }
-    @media (prefers-reduced-motion: reduce){
-      .lp-benefits-cards .card,.lp-benefits-cards .icon{transition:none}
-    }
-  </style>
-  <div class="in">
-    <div class="head reveal">
-      <p class="kicker">What your appointment holds</p>
-      <h2>Considered from the first minute</h2>
-      <p class="sub">Your time with us is not a rushed treatment squeezed between two others. It is a proper appointment, shaped around your skin and your goals, from the moment you sit down.</p>
-    </div>
-    <div class="grid reveal-stagger">
-      <div class="card">
-        <span class="idx" aria-hidden="true">01</span>
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2.5 12h3M18.5 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-        </div>
-        <h3>Your skin, assessed properly</h3>
-        <p>We look closely at your skin in person and talk through what you would like to change, so any recommendation is grounded in what is actually in front of us.</p>
-      </div>
-      <div class="card">
-        <span class="idx" aria-hidden="true">02</span>
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 15c3-6 6-9 9-9s6 3 9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3 19c3-4 6-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".5"/></svg>
-        </div>
-        <h3>A treatment with intention</h3>
-        <p>Your signature treatment is carried out with care and a light touch, tailored to your skin on the day rather than run to a fixed script.</p>
-      </div>
-      <div class="card">
-        <span class="idx" aria-hidden="true">03</span>
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.5 5 6.8 5 9.8A5 5 0 0 1 7 12.8C7 9.8 9 6.5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>An honest path forward</h3>
-        <p>You leave with a candid view of what would suit you next and what would not. If it is better to wait, we will say so plainly.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THE FOUNDER (practitioner--split) ================= -->
-<section class="lp-practitioner-split">
-  <style>
-    .lp-practitioner-split{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-practitioner-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,5vw,64px);align-items:center}
-    .lp-practitioner-split .portrait{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(160deg,var(--surface),var(--surface-2))}
-    .lp-practitioner-split .portrait svg{position:absolute;inset:0;width:100%;height:100%}
-    .lp-practitioner-split .copy{text-align:left}
-    .lp-practitioner-split .eyebrow{display:inline-block;color:var(--accent);font-family:var(--font-mono);letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:500;margin:0 0 1em}
-    .lp-practitioner-split h2{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0 0 .15em;letter-spacing:-.01em}
-    .lp-practitioner-split .title{font-family:var(--font-mono);font-size:.78rem;font-weight:500;color:var(--accent-deep);letter-spacing:.06em;text-transform:uppercase;margin:0 0 1.2em}
-    .lp-practitioner-split .bio{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;max-width:52ch}
-    .lp-practitioner-split .creds{display:flex;flex-wrap:wrap;gap:.6em;margin:0 0 1.6em;padding:0;list-style:none}
-    .lp-practitioner-split .creds li{display:inline-flex;align-items:center;gap:.5em;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);padding:.55em 1em;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.03em;color:var(--muted)}
-    .lp-practitioner-split .creds svg{flex:none;color:var(--accent)}
-    .lp-practitioner-split .btn-primary{display:inline-flex;align-items:center;gap:.6em;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-mono);font-weight:600;font-size:.9rem;letter-spacing:.03em;padding:1em 1.9em;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);text-decoration:none}
-    .lp-practitioner-split .btn-primary svg{flex:none}
-    @media (max-width:768px){
-      .lp-practitioner-split .in{grid-template-columns:1fr}
-      .lp-practitioner-split .portrait{order:-1;max-width:340px;margin-inline:auto;width:100%}
-    }
-  </style>
-  <div class="in">
-    <div class="portrait" role="img" aria-label="An unhurried, one to one consultation at Marchetti Aesthetics, South Yarra">
-      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <g fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
-          <path d="M140 470 C140 380 168 348 200 348 C232 348 260 380 260 470"/>
-          <circle cx="200" cy="250" r="78"/>
-          <path d="M164 240 C172 232 184 232 192 240"/>
-          <path d="M208 240 C216 232 228 232 236 240"/>
-          <path d="M186 290 C194 298 206 298 214 290"/>
-          <path d="M200 250 L200 274"/>
-        </g>
-        <g fill="var(--warm)" opacity="0.16">
-          <circle cx="320" cy="120" r="46"/>
-          <circle cx="86" cy="410" r="34"/>
-        </g>
-      </svg>
-    </div>
-    <div class="copy reveal">
-      <span class="eyebrow">The founder</span>
-      <h2>Care shaped by Elena Marchetti</h2>
-      <p class="title">Signature skin treatments &middot; South Yarra</p>
-      <p class="bio">Marchetti Aesthetics was built around a simple idea: that good skin work begins with looking properly, listening properly, and being honest about what will and will not help. Elena founded the studio to practise that way, without the volume and the pressure that make it hard.</p>
-      <p class="bio">Every appointment is one to one and unhurried by design. If a treatment would suit your skin, we explain it clearly and price it plainly. If patience is the better answer, we say that too. That is the standard the studio is built around.</p>
-      <ul class="creds">
-        <li>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          One to one, unhurried
-        </li>
-        <li>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Consultation-led approach
-        </li>
-        <li>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Clear pricing from $390
-        </li>
-      </ul>
-      <a class="btn-primary" href="#hero">
-        Book from $390
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DARK STATS BAND (band--stats-grid) ================= -->
-<section class="lp-band-stats-grid">
-  <style>
-    .lp-band-stats-grid{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
-    .lp-band-stats-grid .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
-    .lp-band-stats-grid .glow.a{width:340px;height:340px;background:var(--accent);opacity:.16;top:-120px;right:-80px}
-    .lp-band-stats-grid .glow.b{width:300px;height:300px;background:var(--warm);opacity:.12;bottom:-130px;left:-70px}
-    .lp-band-stats-grid .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,52px);align-items:center}
-    .lp-band-stats-grid .kicker{font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 1em}
-    .lp-band-stats-grid .say{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);line-height:1.15;color:var(--band-dark-ink);margin:0;max-width:22ch}
-    .lp-band-stats-grid .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border-radius:var(--radius);overflow:hidden}
-    .lp-band-stats-grid .stat{min-width:0;background:var(--band-dark-bg);padding:clamp(22px,3vw,32px) clamp(18px,2.6vw,28px)}
-    .lp-band-stats-grid .n{display:block;font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4.4vw,3rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere;letter-spacing:-.01em}
-    .lp-band-stats-grid .n .u{font-size:.5em;color:var(--gold-soft);margin-left:.08em}
-    .lp-band-stats-grid .l{display:block;font-family:var(--font-mono);font-size:.78rem;line-height:1.5;color:color-mix(in srgb, var(--band-dark-ink) 62%, transparent);margin-top:.9em;letter-spacing:.03em}
-    @media (min-width:768px){
-      .lp-band-stats-grid .in{grid-template-columns:.92fr 1.08fr}
-    }
-  </style>
-  <div class="glow a" aria-hidden="true"></div>
-  <div class="glow b" aria-hidden="true"></div>
-  <div class="in">
-    <div class="reveal">
-      <p class="kicker">The treatment, in plain terms</p>
-      <p class="say">Everything set out clearly, up front</p>
-    </div>
-    <div class="grid reveal-stagger">
-      <div class="stat">
-        <span class="n" data-count-to="390" data-count-prefix="$">$390</span>
-        <span class="l">From, per signature treatment</span>
-      </div>
-      <div class="stat">
-        <span class="n" data-count-to="90" data-count-prefix="$">$90</span>
-        <span class="l">Deposit, comes off the price</span>
-      </div>
-      <div class="stat">
-        <span class="n">48h</span>
-        <span class="l">Notice to reschedule</span>
-      </div>
-      <div class="stat">
-        <span class="n">1:1</span>
-        <span class="l">One to one with your practitioner</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= MEDIA DUO (media--duo, SWAP) ================= -->
-<section class="lp-media-duo">
-  <style>
-    /* MEDIA ARCHETYPE: a two-up photo gallery, each panel with a floating glass
-       caption chip. The paired sibling of media--panel for when two images tell
-       the beat together (process + result, tools + texture). Portrait 4/5
-       panels, side-by-side >=640px, stacked below. Tokens only. */
-    .lp-media-duo,.lp-media-duo *{box-sizing:border-box}
-    .lp-media-duo{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-media-duo .in{max-width:var(--maxw);margin:0 auto}
-    .lp-media-duo .duo{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
-    .lp-media-duo .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:4/5}
-    .lp-media-duo .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
-    .lp-media-duo .photo-panel:hover img{transform:scale(1.06)}
-    .lp-media-duo .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
-    .lp-media-duo .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
-    @media (min-width:640px){
-      .lp-media-duo .duo{grid-template-columns:1fr 1fr;gap:20px}
-    }
-    @media (prefers-reduced-motion: reduce){
-      .lp-media-duo .photo-panel img,.lp-media-duo .photo-panel:hover img{transition:none;transform:scale(1.02)}
-    }
-  </style>
-  <div class="in">
-    <div class="duo reveal-stagger">
-      <div class="photo-panel">
-        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='0.4'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23f4ece2'/%3E%3Cstop%20offset='1'%20stop-color='%23e7d7c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='800'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='620'%20cy='300'%20r='210'%20fill='%23c6a878'%20opacity='0.30'/%3E%3Ccircle%20cx='620'%20cy='300'%20r='210'%20fill='none'%20stroke='%238c4327'%20stroke-width='2'%20opacity='0.30'/%3E%3Cpath%20d='M0%20640%20C%20200%20560%20360%20700%20520%20660%20C%20660%20626%20740%20700%20800%20680%20L800%201000%20L0%201000%20Z'%20fill='%23b3603f'%20opacity='0.16'/%3E%3Cpath%20d='M0%20720%20C%20220%20660%20380%20780%20560%20740%20C%20690%20712%20760%20770%20800%20756%20L800%201000%20L0%201000%20Z'%20fill='%239c6f52'%20opacity='0.20'/%3E%3Cg%20fill='none'%20stroke='%23b3603f'%20stroke-width='2.4'%20stroke-linecap='round'%20opacity='0.5'%3E%3Cpath%20d='M60%20520%20C%20260%20470%20460%20560%20740%20500'/%3E%3Cpath%20d='M60%20580%20C%20260%20532%20460%20620%20740%20560'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%238c4327'%20stroke-width='1.6'%20opacity='0.35'%3E%3Cpath%20d='M120%20180%20C%20260%20260%20300%20360%20260%20470'/%3E%3C/g%3E%3Ccircle%20cx='210'%20cy='150'%20r='9'%20fill='%23b3603f'%20opacity='0.8'/%3E%3C/svg%3E" alt="Abstract clay-toned composition of a soft light disc and flowing contours, evoking an unhurried treatment room" loading="lazy">
-        <span class="photo-caption"><span class="dot" aria-hidden="true"></span> In the treatment room</span>
-      </div>
-      <div class="photo-panel">
-        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0.2'%20y1='0'%20x2='0.9'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23e7d7c5'/%3E%3Cstop%20offset='1'%20stop-color='%23f4ece2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='800'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='140'%20cy='760'%20r='150'%20fill='%23c6a878'%20opacity='0.22'/%3E%3Ccircle%20cx='690'%20cy='840'%20r='110'%20fill='%239c6f52'%20opacity='0.18'/%3E%3Cg%20fill='none'%20stroke='%23b3603f'%20stroke-width='2.6'%20stroke-linecap='round'%20opacity='0.55'%3E%3Cpath%20d='M400%20940%20C%20400%20720%20400%20500%20400%20220'/%3E%3Cpath%20d='M400%20560%20C%20300%20520%20250%20430%20262%20330%20C%20352%20360%20400%20452%20400%20560%20Z'/%3E%3Cpath%20d='M400%20470%20C%20500%20430%20560%20350%20552%20250%20C%20458%20282%20404%20360%20400%20470%20Z'/%3E%3Cpath%20d='M400%20720%20C%20322%20690%20282%20620%20290%20540%20C%20360%20566%20400%20636%20400%20720%20Z'/%3E%3Cpath%20d='M400%20640%20C%20486%20612%20540%20548%20534%20470%20C%20452%20496%20404%20566%20400%20640%20Z'/%3E%3C/g%3E%3Ccircle%20cx='400'%20cy='170'%20r='40'%20fill='%23c6a878'%20opacity='0.5'/%3E%3Ccircle%20cx='400'%20cy='170'%20r='40'%20fill='none'%20stroke='%238c4327'%20stroke-width='2'%20opacity='0.5'/%3E%3C/svg%3E" alt="Minimal clay-toned botanical line-art with soft discs on a warm ground, evoking a calm, considered studio" loading="lazy">
-        <span class="photo-caption"><span class="dot" aria-hidden="true"></span> Considered, unhurried</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= REVIEWS (reviews--cards, banner + 3 cards) ================= -->
 <section class="lp-reviews-cards">
   <style>
@@ -910,7 +617,293 @@ html.js-motion #sticky.is-visible{
     </div>
   </div>
 </section>
+<!-- ================= MEDIA PANEL (media--panel, SWAP) ================= -->
+<section class="lp-media-panel">
+  <style>
+    /* MEDIA ARCHETYPE: a single full-width photo panel with a floating glass
+       caption chip. A visual breather beat between content sections (clinic
+       shot, treatment room, result). Image zooms gently on hover. Tokens only.
+       The caption chip's translucent-white glass has no token equivalent, so
+       it stays rgba white by design. */
+    .lp-media-panel,.lp-media-panel *{box-sizing:border-box}
+    .lp-media-panel{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-media-panel .in{max-width:var(--maxw);margin:0 auto}
+    .lp-media-panel .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:16/10}
+    .lp-media-panel .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+    .lp-media-panel .photo-panel:hover img{transform:scale(1.06)}
+    .lp-media-panel .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
+    .lp-media-panel .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+    @media (prefers-reduced-motion: reduce){
+      .lp-media-panel .photo-panel img,.lp-media-panel .photo-panel:hover img{transition:none;transform:scale(1.02)}
+    }
+  </style>
+  <div class="in">
+    <div class="photo-panel reveal">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201600%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='0.4'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23f4ece2'/%3E%3Cstop%20offset='1'%20stop-color='%23e6d6c4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='1600'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='1180'%20cy='330'%20r='150'%20fill='%23c6a878'%20opacity='0.35'/%3E%3Ccircle%20cx='1180'%20cy='330'%20r='150'%20fill='none'%20stroke='%23b3603f'%20stroke-width='2'%20opacity='0.5'/%3E%3Cg%20fill='none'%20stroke='%23b3603f'%20stroke-width='2.5'%20opacity='0.55'%20stroke-linecap='round'%3E%3Cpath%20d='M-40%20700%20C%20300%20560%20620%20640%20900%20560%20C%201160%20486%201360%20540%201660%20470'/%3E%3Cpath%20d='M-40%20780%20C%20320%20660%20640%20730%20920%20650%20C%201180%20576%201380%20630%201660%20560'/%3E%3Cpath%20d='M-40%20620%20C%20280%20500%20600%20560%20880%20480%20C%201140%20406%201340%20452%201660%20384'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%239c6f52'%20stroke-width='1.6'%20opacity='0.4'%3E%3Cpath%20d='M-40%20860%20C%20340%20760%20660%20820%20940%20740%20C%201200%20666%201400%20716%201660%20650'/%3E%3C/g%3E%3Cline%20x1='120'%20y1='150'%20x2='120'%20y2='430'%20stroke='%238c4327'%20stroke-width='2'%20opacity='0.35'/%3E%3Ccircle%20cx='120'%20cy='150'%20r='7'%20fill='%238c4327'%20opacity='0.6'/%3E%3C/svg%3E" alt="Editorial artwork in warm clay tones, layered contour lines and a soft light disc, evoking skin and considered treatment at Marchetti Aesthetics" loading="lazy">
+      <span class="photo-caption"><span class="dot" aria-hidden="true"></span> The studio, South Yarra</span>
+    </div>
+  </div>
+</section>
+<!-- ================= MEDIA DUO (media--duo, SWAP) ================= -->
+<section class="lp-media-duo">
+  <style>
+    /* MEDIA ARCHETYPE: a two-up photo gallery, each panel with a floating glass
+       caption chip. The paired sibling of media--panel for when two images tell
+       the beat together (process + result, tools + texture). Portrait 4/5
+       panels, side-by-side >=640px, stacked below. Tokens only. */
+    .lp-media-duo,.lp-media-duo *{box-sizing:border-box}
+    .lp-media-duo{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-media-duo .in{max-width:var(--maxw);margin:0 auto}
+    .lp-media-duo .duo{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+    .lp-media-duo .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:4/5}
+    .lp-media-duo .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+    .lp-media-duo .photo-panel:hover img{transform:scale(1.06)}
+    .lp-media-duo .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
+    .lp-media-duo .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+    @media (min-width:640px){
+      .lp-media-duo .duo{grid-template-columns:1fr 1fr;gap:20px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-media-duo .photo-panel img,.lp-media-duo .photo-panel:hover img{transition:none;transform:scale(1.02)}
+    }
+  </style>
+  <div class="in">
+    <div class="duo reveal-stagger">
+      <div class="photo-panel">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='0.4'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23f4ece2'/%3E%3Cstop%20offset='1'%20stop-color='%23e7d7c5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='800'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='620'%20cy='300'%20r='210'%20fill='%23c6a878'%20opacity='0.30'/%3E%3Ccircle%20cx='620'%20cy='300'%20r='210'%20fill='none'%20stroke='%238c4327'%20stroke-width='2'%20opacity='0.30'/%3E%3Cpath%20d='M0%20640%20C%20200%20560%20360%20700%20520%20660%20C%20660%20626%20740%20700%20800%20680%20L800%201000%20L0%201000%20Z'%20fill='%23b3603f'%20opacity='0.16'/%3E%3Cpath%20d='M0%20720%20C%20220%20660%20380%20780%20560%20740%20C%20690%20712%20760%20770%20800%20756%20L800%201000%20L0%201000%20Z'%20fill='%239c6f52'%20opacity='0.20'/%3E%3Cg%20fill='none'%20stroke='%23b3603f'%20stroke-width='2.4'%20stroke-linecap='round'%20opacity='0.5'%3E%3Cpath%20d='M60%20520%20C%20260%20470%20460%20560%20740%20500'/%3E%3Cpath%20d='M60%20580%20C%20260%20532%20460%20620%20740%20560'/%3E%3C/g%3E%3Cg%20fill='none'%20stroke='%238c4327'%20stroke-width='1.6'%20opacity='0.35'%3E%3Cpath%20d='M120%20180%20C%20260%20260%20300%20360%20260%20470'/%3E%3C/g%3E%3Ccircle%20cx='210'%20cy='150'%20r='9'%20fill='%23b3603f'%20opacity='0.8'/%3E%3C/svg%3E" alt="Abstract clay-toned composition of a soft light disc and flowing contours, evoking an unhurried treatment room" loading="lazy">
+        <span class="photo-caption"><span class="dot" aria-hidden="true"></span> In the treatment room</span>
+      </div>
+      <div class="photo-panel">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%201000'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0.2'%20y1='0'%20x2='0.9'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23e7d7c5'/%3E%3Cstop%20offset='1'%20stop-color='%23f4ece2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='800'%20height='1000'%20fill='url(%23g)'/%3E%3Ccircle%20cx='140'%20cy='760'%20r='150'%20fill='%23c6a878'%20opacity='0.22'/%3E%3Ccircle%20cx='690'%20cy='840'%20r='110'%20fill='%239c6f52'%20opacity='0.18'/%3E%3Cg%20fill='none'%20stroke='%23b3603f'%20stroke-width='2.6'%20stroke-linecap='round'%20opacity='0.55'%3E%3Cpath%20d='M400%20940%20C%20400%20720%20400%20500%20400%20220'/%3E%3Cpath%20d='M400%20560%20C%20300%20520%20250%20430%20262%20330%20C%20352%20360%20400%20452%20400%20560%20Z'/%3E%3Cpath%20d='M400%20470%20C%20500%20430%20560%20350%20552%20250%20C%20458%20282%20404%20360%20400%20470%20Z'/%3E%3Cpath%20d='M400%20720%20C%20322%20690%20282%20620%20290%20540%20C%20360%20566%20400%20636%20400%20720%20Z'/%3E%3Cpath%20d='M400%20640%20C%20486%20612%20540%20548%20534%20470%20C%20452%20496%20404%20566%20400%20640%20Z'/%3E%3C/g%3E%3Ccircle%20cx='400'%20cy='170'%20r='40'%20fill='%23c6a878'%20opacity='0.5'/%3E%3Ccircle%20cx='400'%20cy='170'%20r='40'%20fill='none'%20stroke='%238c4327'%20stroke-width='2'%20opacity='0.5'/%3E%3C/svg%3E" alt="Minimal clay-toned botanical line-art with soft discs on a warm ground, evoking a calm, considered studio" loading="lazy">
+        <span class="photo-caption"><span class="dot" aria-hidden="true"></span> Considered, unhurried</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= WHAT YOUR APPOINTMENT HOLDS (benefits--cards, base 3) ================= -->
+<section class="lp-benefits-cards">
+  <style>
+    /* BENEFITS ARCHETYPE: a kicker/title/sub head above a 3-up grid of icon
+       cards (icon tile, title, one-line body). The "what to expect" beat that
+       names the outcomes a treatment supports. Cards carry a pointer-follow
+       spotlight (via motion). 3 columns >=640px, 1 column below. Tokens only. */
+    .lp-benefits-cards,.lp-benefits-cards *{box-sizing:border-box}
+    .lp-benefits-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-benefits-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-benefits-cards .head{margin:0 0 8px}
+    .lp-benefits-cards .kicker{font-family:var(--font-body);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-benefits-cards h2{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);letter-spacing:-.01em;line-height:1.08;margin:0 0 14px;max-width:16ch;color:var(--ink)}
+    .lp-benefits-cards .sub{font-family:var(--font-body);font-size:16px;color:var(--muted);max-width:46ch;margin:0 0 36px;line-height:1.5}
+    .lp-benefits-cards .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}
+    .lp-benefits-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:26px 24px;box-shadow:var(--shadow-sm);transition:box-shadow .4s var(--ease);overflow:hidden}
+    .lp-benefits-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(240px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 12%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-benefits-cards .card:hover{box-shadow:var(--shadow)}
+    .lp-benefits-cards .card:hover::before{opacity:1}
+    .lp-benefits-cards .icon{position:relative;z-index:1;width:46px;height:46px;border-radius:14px;background:var(--glow-1);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);margin-bottom:16px;transition:transform .4s var(--spring)}
+    .lp-benefits-cards .card:hover .icon{transform:scale(1.08) rotate(-4deg)}
+    .lp-benefits-cards h3{position:relative;z-index:1;font-family:var(--font-display);font-weight:600;font-size:20px;margin:0 0 8px;color:var(--ink)}
+    .lp-benefits-cards p{position:relative;z-index:1;margin:0;font-family:var(--font-body);font-size:14.5px;color:var(--muted);line-height:1.5}
 
+    /* --numbered VARIANT (opt-in): a mono index in each card's top-right
+       corner. Hidden by default so the plain 3-up grid is untouched. */
+    .lp-benefits-cards .card .idx{position:absolute;top:16px;right:18px;font-family:var(--font-mono);font-size:11px;font-weight:500;color:var(--border);letter-spacing:.06em;z-index:1;display:none}
+    .lp-benefits-cards--numbered .card .idx{display:block}
+
+    /* --six VARIANT (opt-in): a two-row, six-card "what's included" grid.
+       Cards 4-6 (.card--extra) are hidden by default, so any page using the
+       plain block still renders exactly three cards. */
+    .lp-benefits-cards .card.card--extra{display:none}
+    .lp-benefits-cards--six .card.card--extra{display:flex;flex-direction:column}
+
+    /* offer card (opt-in, typically the trailing card of a --six grid): a
+       tinted panel with a price line and an inline CTA in place of an icon. */
+    .lp-benefits-cards .card--offer{background:linear-gradient(160deg,var(--surface-2),var(--bg));justify-content:center}
+    .lp-benefits-cards .card--offer .icon{display:none}
+    .lp-benefits-cards .card--offer .card-cta{display:inline-flex;align-items:center;gap:.5em;align-self:flex-start;margin-top:18px;font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--accent-deep);border:1px solid var(--border);border-radius:var(--r-pill);padding:10px 18px;text-decoration:none;transition:border-color .3s,transform .3s}
+    .lp-benefits-cards .card--offer .card-cta:hover{border-color:var(--accent);transform:translateY(-1px)}
+    .lp-benefits-cards .card--offer .card-cta svg{flex:none}
+
+    @media (min-width:640px){
+      .lp-benefits-cards .grid{grid-template-columns:repeat(3,1fr);gap:22px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .lp-benefits-cards .card,.lp-benefits-cards .icon{transition:none}
+    }
+  </style>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">What your appointment holds</p>
+      <h2>Considered from the first minute</h2>
+      <p class="sub">Your time with us is not a rushed treatment squeezed between two others. It is a proper appointment, shaped around your skin and your goals, from the moment you sit down.</p>
+    </div>
+    <div class="grid reveal-stagger">
+      <div class="card">
+        <span class="idx" aria-hidden="true">01</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2.5 12h3M18.5 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Your skin, assessed properly</h3>
+        <p>We look closely at your skin in person and talk through what you would like to change, so any recommendation is grounded in what is actually in front of us.</p>
+      </div>
+      <div class="card">
+        <span class="idx" aria-hidden="true">02</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 15c3-6 6-9 9-9s6 3 9 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M3 19c3-4 6-6 9-6s6 2 9 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" opacity=".5"/></svg>
+        </div>
+        <h3>A treatment with intention</h3>
+        <p>Your signature treatment is carried out with care and a light touch, tailored to your skin on the day rather than run to a fixed script.</p>
+      </div>
+      <div class="card">
+        <span class="idx" aria-hidden="true">03</span>
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3.5 5 6.8 5 9.8A5 5 0 0 1 7 12.8C7 9.8 9 6.5 12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>An honest path forward</h3>
+        <p>You leave with a candid view of what would suit you next and what would not. If it is better to wait, we will say so plainly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= THE FOUNDER (practitioner--split) ================= -->
+<section class="lp-practitioner-split">
+  <style>
+    .lp-practitioner-split{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-practitioner-split .in{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,5vw,64px);align-items:center}
+    .lp-practitioner-split .portrait{position:relative;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:linear-gradient(160deg,var(--surface),var(--surface-2))}
+    .lp-practitioner-split .portrait svg{position:absolute;inset:0;width:100%;height:100%}
+    .lp-practitioner-split .copy{text-align:left}
+    .lp-practitioner-split .eyebrow{display:inline-block;color:var(--accent);font-family:var(--font-mono);letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;font-weight:500;margin:0 0 1em}
+    .lp-practitioner-split h2{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);color:var(--ink);line-height:1.12;margin:0 0 .15em;letter-spacing:-.01em}
+    .lp-practitioner-split .title{font-family:var(--font-mono);font-size:.78rem;font-weight:500;color:var(--accent-deep);letter-spacing:.06em;text-transform:uppercase;margin:0 0 1.2em}
+    .lp-practitioner-split .bio{font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--muted);margin:0 0 1.3em;max-width:52ch}
+    .lp-practitioner-split .creds{display:flex;flex-wrap:wrap;gap:.6em;margin:0 0 1.6em;padding:0;list-style:none}
+    .lp-practitioner-split .creds li{display:inline-flex;align-items:center;gap:.5em;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);padding:.55em 1em;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.03em;color:var(--muted)}
+    .lp-practitioner-split .creds svg{flex:none;color:var(--accent)}
+    .lp-practitioner-split .btn-primary{display:inline-flex;align-items:center;gap:.6em;background:linear-gradient(180deg,var(--cta-grad-a),var(--cta-grad-b));color:var(--accent-ink);font-family:var(--font-mono);font-weight:600;font-size:.9rem;letter-spacing:.03em;padding:1em 1.9em;border-radius:var(--btn-radius);box-shadow:var(--shadow-cta);text-decoration:none}
+    .lp-practitioner-split .btn-primary svg{flex:none}
+    @media (max-width:768px){
+      .lp-practitioner-split .in{grid-template-columns:1fr}
+      .lp-practitioner-split .portrait{order:-1;max-width:340px;margin-inline:auto;width:100%}
+    }
+  </style>
+  <div class="in">
+    <div class="portrait" role="img" aria-label="An unhurried, one to one consultation at Marchetti Aesthetics, South Yarra">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+          <path d="M140 470 C140 380 168 348 200 348 C232 348 260 380 260 470"/>
+          <circle cx="200" cy="250" r="78"/>
+          <path d="M164 240 C172 232 184 232 192 240"/>
+          <path d="M208 240 C216 232 228 232 236 240"/>
+          <path d="M186 290 C194 298 206 298 214 290"/>
+          <path d="M200 250 L200 274"/>
+        </g>
+        <g fill="var(--warm)" opacity="0.16">
+          <circle cx="320" cy="120" r="46"/>
+          <circle cx="86" cy="410" r="34"/>
+        </g>
+      </svg>
+    </div>
+    <div class="copy reveal">
+      <span class="eyebrow">The founder</span>
+      <h2>Care shaped by Elena Marchetti</h2>
+      <p class="title">Signature skin treatments &middot; South Yarra</p>
+      <p class="bio">Marchetti Aesthetics was built around a simple idea: that good skin work begins with looking properly, listening properly, and being honest about what will and will not help. Elena founded the studio to practise that way, without the volume and the pressure that make it hard.</p>
+      <p class="bio">Every appointment is one to one and unhurried by design. If a treatment would suit your skin, we explain it clearly and price it plainly. If patience is the better answer, we say that too. That is the standard the studio is built around.</p>
+      <ul class="creds">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          One to one, unhurried
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Consultation-led approach
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 13 4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Clear pricing from $390
+        </li>
+      </ul>
+      <a class="btn-primary" href="#hero">
+        Book from $390
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE TRUST (marquee--trust) ================= -->
+<section class="lp-marquee-trust" aria-label="Clinic facts">
+  <style>
+    .lp-marquee-trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(14px,2.4vw,20px) 0}
+    .lp-marquee-trust .marquee{justify-content:center}
+    .lp-marquee-trust .marquee-track{gap:clamp(22px,4vw,44px);padding:0 clamp(11px,2vw,22px)}
+    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+    .lp-marquee-trust .tick{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.25em;height:1.25em;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.7em;font-weight:700}
+    .lp-marquee-trust .sep{flex:none;color:var(--accent);opacity:.45}
+  </style>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Signature skin treatments</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Consultation-led, always</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>From $390 per treatment</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>One to one, unhurried</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>South Yarra studio</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Suitability assessed in person</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+    </div>
+  </div>
+</section>
+<!-- ================= DARK STATS BAND (band--stats-grid) ================= -->
+<section class="lp-band-stats-grid">
+  <style>
+    .lp-band-stats-grid{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
+    .lp-band-stats-grid .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+    .lp-band-stats-grid .glow.a{width:340px;height:340px;background:var(--accent);opacity:.16;top:-120px;right:-80px}
+    .lp-band-stats-grid .glow.b{width:300px;height:300px;background:var(--warm);opacity:.12;bottom:-130px;left:-70px}
+    .lp-band-stats-grid .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,52px);align-items:center}
+    .lp-band-stats-grid .kicker{font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 1em}
+    .lp-band-stats-grid .say{font-family:var(--font-display);font-weight:600;font-size:var(--fs-h2);line-height:1.15;color:var(--band-dark-ink);margin:0;max-width:22ch}
+    .lp-band-stats-grid .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border-radius:var(--radius);overflow:hidden}
+    .lp-band-stats-grid .stat{min-width:0;background:var(--band-dark-bg);padding:clamp(22px,3vw,32px) clamp(18px,2.6vw,28px)}
+    .lp-band-stats-grid .n{display:block;font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4.4vw,3rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere;letter-spacing:-.01em}
+    .lp-band-stats-grid .n .u{font-size:.5em;color:var(--gold-soft);margin-left:.08em}
+    .lp-band-stats-grid .l{display:block;font-family:var(--font-mono);font-size:.78rem;line-height:1.5;color:color-mix(in srgb, var(--band-dark-ink) 62%, transparent);margin-top:.9em;letter-spacing:.03em}
+    @media (min-width:768px){
+      .lp-band-stats-grid .in{grid-template-columns:.92fr 1.08fr}
+    }
+  </style>
+  <div class="glow a" aria-hidden="true"></div>
+  <div class="glow b" aria-hidden="true"></div>
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">The treatment, in plain terms</p>
+      <p class="say">Everything set out clearly, up front</p>
+    </div>
+    <div class="grid reveal-stagger">
+      <div class="stat">
+        <span class="n" data-count-to="390" data-count-prefix="$">$390</span>
+        <span class="l">From, per signature treatment</span>
+      </div>
+      <div class="stat">
+        <span class="n" data-count-to="90" data-count-prefix="$">$90</span>
+        <span class="l">Deposit, comes off the price</span>
+      </div>
+      <div class="stat">
+        <span class="n">48h</span>
+        <span class="l">Notice to reschedule</span>
+      </div>
+      <div class="stat">
+        <span class="n">1:1</span>
+        <span class="l">One to one with your practitioner</span>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ================= FAQ (faq--accordion) ================= -->
 <section class="lp-faq-acc">
   <style>
@@ -956,7 +949,6 @@ html.js-motion #sticky.is-visible{
     </details>
   </div>
 </section>
-
 <!-- ================= FINAL CTA (cta--band, framed variant) ================= -->
 <section class="lp-cta-band lp-cta-band--framed">
   <style>
@@ -1012,7 +1004,6 @@ html.js-motion #sticky.is-visible{
 </section>
 
 </main>
-
 <!-- ================= FOOTER (footer--multicol) ================= -->
 <footer class="lp-footer-mc">
   <style>
@@ -1061,7 +1052,6 @@ html.js-motion #sticky.is-visible{
     </p>
   </div>
 </footer>
-
 <!-- ================= STICKY MOBILE CTA (#sticky hook) ================= -->
 <div id="sticky">
   <div class="s-info">
@@ -1070,7 +1060,6 @@ html.js-motion #sticky.is-visible{
   </div>
   <a class="s-btn" href="#hero" data-cta>Book</a>
 </div>
-
 <script>
 /* ===== motion/motion.js (inlined) ===== */
 (function(){
