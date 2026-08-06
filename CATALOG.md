@@ -14,7 +14,7 @@ There is deliberately no fixed fill manifest. Copy guidance below is a formula (
 
 A typical page order (see `BUILD-GUIDE.md` §1 for the full composition flow):
 
-`hero -> marquee-trust (optional) -> stats band (optional) -> offer -> practitioner (optional) -> process -> reviews -> cta (optional) -> booking -> faq -> footer`
+`hero -> reviews -> media (optional) -> benefits (optional) -> process (optional) -> offer -> practitioner (optional) -> marquee-trust (optional) -> stats band (optional) -> booking (content-hero pages only) -> faq -> cta (optional) -> footer`
 
 `booking--selector` should always sit before the FAQ archetype, and the footer archetype always comes last. The exception is a calendar-at-top page built on `hero--booking`: that hero already carries the one booking mount in the fold, so such a page does not place `booking--selector` at all (see the one-booking-mount rule under Booking below).
 

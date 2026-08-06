@@ -539,35 +539,120 @@ html.js-motion #sticky.is-visible{
   <script src="https://your-booking-worker.invalid/embed.js" async></script>
 </section>
 
-<!-- ================= MARQUEE TRUST (marquee--trust) ================= -->
-<section class="lp-marquee-trust" aria-label="Trust and clinic facts">
+<main>
+
+<!-- ================= REVIEWS (reviews--cards, banner + 3 cards) ================= -->
+<section class="lp-reviews-cards">
   <style>
-    .lp-marquee-trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(14px,2.4vw,20px) 0}
-    .lp-marquee-trust .marquee{justify-content:center}
-    .lp-marquee-trust .marquee-track{gap:clamp(22px,4vw,44px);padding:0 clamp(11px,2vw,22px)}
-    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
-    .lp-marquee-trust .tick{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.25em;height:1.25em;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.7em;font-weight:700}
-    .lp-marquee-trust .sep{flex:none;color:var(--accent);opacity:.45}
+    .lp-reviews-cards,.lp-reviews-cards *{box-sizing:border-box}
+    .lp-reviews-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
+    .lp-reviews-cards .in{max-width:var(--maxw);margin:0 auto}
+    .lp-reviews-cards .head{margin:0 0 22px}
+    .lp-reviews-cards .kicker{font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
+    .lp-reviews-cards h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:18ch}
+    .lp-reviews-cards .rating-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--ghost-color);box-shadow:var(--shadow-sm);border-radius:var(--r-lg);padding:18px 22px;margin:0 0 22px}
+    .lp-reviews-cards .rating-banner .big{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em}
+    .lp-reviews-cards .rating-banner .stars{color:var(--accent-soft);letter-spacing:1px;font-size:16px}
+    .lp-reviews-cards .rating-banner .fine{font-family:var(--font-mono);font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.02em}
+    .lp-reviews-cards .grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .lp-reviews-cards .grid::-webkit-scrollbar{display:none}
+    .lp-reviews-cards .rv-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+    .lp-reviews-cards .rv-dots .dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:width .35s var(--spring),background .35s var(--spring)}
+    .lp-reviews-cards .rv-dots .dot.active{width:22px;background:var(--accent)}
+    .lp-reviews-cards .card{scroll-snap-align:start;opacity:.55;transform:scale(.95);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+    .lp-reviews-cards .card.is-active{opacity:1;transform:scale(1)}
+    .lp-reviews-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-sm);text-align:left;display:flex;flex-direction:column;overflow:hidden}
+    .lp-reviews-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(220px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 10%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+    .lp-reviews-cards .card:hover::before{opacity:1}
+    .lp-reviews-cards .card .stars{position:relative;z-index:1;color:var(--accent-soft);font-size:13px;letter-spacing:1px;margin:0 0 14px;display:block}
+    .lp-reviews-cards .card .quote{position:relative;z-index:1;font-family:var(--font-body);font-style:normal;font-weight:400;font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px}
+    .lp-reviews-cards .who{position:relative;z-index:1;display:flex;align-items:center;gap:11px;margin-top:auto}
+    .lp-reviews-cards .avatar{width:38px;height:38px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--accent-deep);flex:none}
+    .lp-reviews-cards .name{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink);margin:0;line-height:1.2}
+    .lp-reviews-cards .tag{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.02em;margin:0}
+    @media (min-width:640px){
+      .lp-reviews-cards .grid{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;gap:var(--gutter);overflow-x:visible}
+      .lp-reviews-cards .card{opacity:1;transform:none}
+      .lp-reviews-cards .rv-dots{display:none}
+    }
   </style>
-  <div class="marquee">
-    <div class="marquee-track">
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Non-surgical body contouring</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Personalised one to one session</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>&pound;75 body contouring session</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Skin tightening and fat reduction</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Harrogate clinic</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
-      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>No obligation to continue</span>
-      <span class="sep" aria-hidden="true">&bull;</span>
+  <div class="in">
+    <div class="head reveal">
+      <p class="kicker">What clients say</p>
+      <h2>A clearer idea of what your session involves</h2>
+    </div>
+
+    <div class="rating-banner reveal">
+      <span class="big" data-count-to="4.9" data-count-decimals="1">4.9</span>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="fine">Rated by clients across Harrogate</span>
+    </div>
+
+    <div class="grid reveal-stagger">
+      <div class="card is-active">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">The session never felt rushed. We talked through my goals properly and I left knowing exactly what my options were.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">RE</span>
+          <div>
+            <p class="name">R. Ellison</p>
+            <p class="tag">&pound;75 session</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">Honest advice with no pressure to book anything on the day. That is exactly why I came back for the full course.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">SH</span>
+          <div>
+            <p class="name">S. Hartley</p>
+            <p class="tag">Body contouring</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="quote">Everything was explained clearly, the price included. I never felt pushed into a course I was not ready for.</p>
+        <div class="who">
+          <span class="avatar" aria-hidden="true">JM</span>
+          <div>
+            <p class="name">J. Marsh</p>
+            <p class="tag">Consultation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rv-dots" aria-hidden="true">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
   </div>
 </section>
 
-<main>
+<!-- ================= CLINIC PHOTO (media--panel) ================= -->
+<section class="lp-media-panel">
+  <style>
+    .lp-media-panel,.lp-media-panel *{box-sizing:border-box}
+    .lp-media-panel{background:var(--surface-2);padding:var(--space-section) var(--gutter)}
+    .lp-media-panel .in{max-width:var(--maxw);margin:0 auto}
+    .lp-media-panel .photo-panel{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--ghost-color);box-shadow:var(--shadow);aspect-ratio:16/10}
+    .lp-media-panel .photo-panel img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+    .lp-media-panel .photo-panel:hover img{transform:scale(1.06)}
+    .lp-media-panel .photo-caption{position:absolute;left:16px;bottom:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.7);border-radius:var(--r-pill);padding:8px 14px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm)}
+    .lp-media-panel .photo-caption .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+    @media (prefers-reduced-motion: reduce){
+      .lp-media-panel .photo-panel img,.lp-media-panel .photo-panel:hover img{transition:none;transform:scale(1.02)}
+    }
+  </style>
+  <div class="in">
+    <div class="photo-panel reveal">
+      <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='xMidYMid slice'><defs><radialGradient id='g1' cx='72%25' cy='14%25' r='90%25'><stop offset='0' stop-color='%23D6E8F2'/><stop offset='60%25' stop-color='%23EAF0F4' stop-opacity='0'/></radialGradient><radialGradient id='g2' cx='8%25' cy='92%25' r='85%25'><stop offset='0' stop-color='%23E1E8E4'/><stop offset='58%25' stop-color='%23EAF0F4' stop-opacity='0'/></radialGradient></defs><rect width='800' height='500' fill='%23EAF0F4'/><rect width='800' height='500' fill='url(%23g1)'/><rect width='800' height='500' fill='url(%23g2)'/><g fill='none' stroke='%231C6FA6' stroke-opacity='.5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M120 420 L260 300 L420 360 L560 220 L700 260'/><path d='M260 300 L280 130'/><path d='M420 360 L470 470'/><path d='M560 220 L620 90'/></g><g fill='%235E7E74' fill-opacity='.5'><circle cx='688' cy='118' r='58'/></g><g fill='none' stroke='%230E4B72' stroke-opacity='.42' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><path d='M110 380 L150 330 L200 340 L190 400 L140 420 Z'/><path d='M150 330 L200 340'/></g><g fill='%231C6FA6' fill-opacity='.16'><circle cx='560' cy='400' r='7'/><circle cx='320' cy='150' r='6'/></g></svg>" alt="The treatment room at Verano Body Clinic, Harrogate" loading="lazy">
+      <span class="photo-caption"><span class="dot" aria-hidden="true"></span> Our treatment room, Harrogate</span>
+    </div>
+  </div>
+</section>
 
 <!-- ================= CONSULTATION INCLUDES (benefits--cards, six + numbered) ================= -->
 <section class="lp-benefits-cards lp-benefits-cards--six lp-benefits-cards--numbered">
@@ -735,53 +820,6 @@ html.js-motion #sticky.is-visible{
   </div>
 </section>
 
-<!-- ================= DARK STATS BAND (band--stats-grid) ================= -->
-<section class="lp-band-stats-grid">
-  <style>
-    .lp-band-stats-grid{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
-    .lp-band-stats-grid .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
-    .lp-band-stats-grid .glow.a{width:340px;height:340px;background:var(--glow-1);opacity:.18;top:-120px;right:-80px}
-    .lp-band-stats-grid .glow.b{width:300px;height:300px;background:var(--glow-2);opacity:.12;bottom:-130px;left:-70px}
-    .lp-band-stats-grid .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,52px);align-items:center}
-    .lp-band-stats-grid .kicker{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 .9em}
-    .lp-band-stats-grid .say{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:1.15;color:var(--band-dark-ink);margin:0;max-width:22ch}
-    .lp-band-stats-grid .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border-radius:var(--radius);overflow:hidden}
-    .lp-band-stats-grid .stat{min-width:0;background:var(--band-dark-bg);padding:clamp(22px,3vw,32px) clamp(18px,2.6vw,28px)}
-    .lp-band-stats-grid .n{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4.4vw,3rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere;letter-spacing:-.02em}
-    .lp-band-stats-grid .n .u{font-size:.5em;color:var(--accent-soft);margin-left:.08em}
-    .lp-band-stats-grid .l{display:block;font-family:var(--font-mono);font-size:.82rem;line-height:1.4;color:color-mix(in srgb, var(--band-dark-ink) 62%, transparent);margin-top:.85em;letter-spacing:.02em}
-    @media (min-width:768px){
-      .lp-band-stats-grid .in{grid-template-columns:.92fr 1.08fr}
-    }
-  </style>
-  <div class="glow a" aria-hidden="true"></div>
-  <div class="glow b" aria-hidden="true"></div>
-  <div class="in">
-    <div class="reveal">
-      <p class="kicker">The session, in plain terms</p>
-      <p class="say">Everything set out clearly, up front</p>
-    </div>
-    <div class="grid reveal-stagger">
-      <div class="stat">
-        <span class="n" data-count-to="75" data-count-prefix="&pound;">&pound;75</span>
-        <span class="l">&pound;25 deposit, comes off the price</span>
-      </div>
-      <div class="stat">
-        <span class="n">1:1</span>
-        <span class="l">A personalised session with your practitioner</span>
-      </div>
-      <div class="stat">
-        <span class="n">48h</span>
-        <span class="l">Notice to reschedule</span>
-      </div>
-      <div class="stat">
-        <span class="n">None</span>
-        <span class="l">Obligation to continue</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================= WHY VERANO / TEAM (practitioner--split) ================= -->
 <section class="lp-practitioner-split">
   <style>
@@ -849,92 +887,77 @@ html.js-motion #sticky.is-visible{
   </div>
 </section>
 
-<!-- ================= REVIEWS (reviews--cards, banner + 3 cards) ================= -->
-<section class="lp-reviews-cards">
+<!-- ================= MARQUEE TRUST (marquee--trust) ================= -->
+<section class="lp-marquee-trust" aria-label="Trust and clinic facts">
   <style>
-    .lp-reviews-cards,.lp-reviews-cards *{box-sizing:border-box}
-    .lp-reviews-cards{background:var(--bg);padding:var(--space-section) var(--gutter)}
-    .lp-reviews-cards .in{max-width:var(--maxw);margin:0 auto}
-    .lp-reviews-cards .head{margin:0 0 22px}
-    .lp-reviews-cards .kicker{font-family:var(--font-mono);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);margin:0 0 12px}
-    .lp-reviews-cards h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);color:var(--ink);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:18ch}
-    .lp-reviews-cards .rating-banner{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--ghost-color);box-shadow:var(--shadow-sm);border-radius:var(--r-lg);padding:18px 22px;margin:0 0 22px}
-    .lp-reviews-cards .rating-banner .big{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em}
-    .lp-reviews-cards .rating-banner .stars{color:var(--accent-soft);letter-spacing:1px;font-size:16px}
-    .lp-reviews-cards .rating-banner .fine{font-family:var(--font-mono);font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.02em}
-    .lp-reviews-cards .grid{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-    .lp-reviews-cards .grid::-webkit-scrollbar{display:none}
-    .lp-reviews-cards .rv-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
-    .lp-reviews-cards .rv-dots .dot{width:6px;height:6px;border-radius:50%;background:var(--border);transition:width .35s var(--spring),background .35s var(--spring)}
-    .lp-reviews-cards .rv-dots .dot.active{width:22px;background:var(--accent)}
-    .lp-reviews-cards .card{scroll-snap-align:start;opacity:.55;transform:scale(.95);transition:opacity .35s var(--ease),transform .35s var(--ease)}
-    .lp-reviews-cards .card.is-active{opacity:1;transform:scale(1)}
-    .lp-reviews-cards .card{position:relative;background:var(--surface);border:1px solid var(--ghost-color);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-sm);text-align:left;display:flex;flex-direction:column;overflow:hidden}
-    .lp-reviews-cards .card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(220px circle at var(--spot-x,50%) var(--spot-y,50%),color-mix(in srgb,var(--accent) 10%,transparent),transparent 68%);opacity:0;transition:opacity .35s ease;pointer-events:none}
-    .lp-reviews-cards .card:hover::before{opacity:1}
-    .lp-reviews-cards .card .stars{position:relative;z-index:1;color:var(--accent-soft);font-size:13px;letter-spacing:1px;margin:0 0 14px;display:block}
-    .lp-reviews-cards .card .quote{position:relative;z-index:1;font-family:var(--font-body);font-style:normal;font-weight:400;font-size:16px;line-height:1.55;color:var(--ink);margin:0 0 18px}
-    .lp-reviews-cards .who{position:relative;z-index:1;display:flex;align-items:center;gap:11px;margin-top:auto}
-    .lp-reviews-cards .avatar{width:38px;height:38px;border-radius:var(--r-sm);background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--accent-deep);flex:none}
-    .lp-reviews-cards .name{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--ink);margin:0;line-height:1.2}
-    .lp-reviews-cards .tag{font-family:var(--font-mono);font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.02em;margin:0}
-    @media (min-width:640px){
-      .lp-reviews-cards .grid{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;gap:var(--gutter);overflow-x:visible}
-      .lp-reviews-cards .card{opacity:1;transform:none}
-      .lp-reviews-cards .rv-dots{display:none}
+    .lp-marquee-trust{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(14px,2.4vw,20px) 0}
+    .lp-marquee-trust .marquee{justify-content:center}
+    .lp-marquee-trust .marquee-track{gap:clamp(22px,4vw,44px);padding:0 clamp(11px,2vw,22px)}
+    .lp-marquee-trust .item{display:inline-flex;align-items:center;gap:.5em;white-space:nowrap;font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink)}
+    .lp-marquee-trust .tick{display:inline-flex;align-items:center;justify-content:center;flex:none;width:1.25em;height:1.25em;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:.7em;font-weight:700}
+    .lp-marquee-trust .sep{flex:none;color:var(--accent);opacity:.45}
+  </style>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Non-surgical body contouring</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Personalised one to one session</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>&pound;75 body contouring session</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Skin tightening and fat reduction</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>Harrogate clinic</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+      <span class="item"><span class="tick" aria-hidden="true">&#10003;</span>No obligation to continue</span>
+      <span class="sep" aria-hidden="true">&bull;</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DARK STATS BAND (band--stats-grid) ================= -->
+<section class="lp-band-stats-grid">
+  <style>
+    .lp-band-stats-grid{position:relative;overflow:hidden;background:var(--band-dark-bg);color:var(--band-dark-ink);padding:var(--space-section) var(--gutter)}
+    .lp-band-stats-grid .glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+    .lp-band-stats-grid .glow.a{width:340px;height:340px;background:var(--glow-1);opacity:.18;top:-120px;right:-80px}
+    .lp-band-stats-grid .glow.b{width:300px;height:300px;background:var(--glow-2);opacity:.12;bottom:-130px;left:-70px}
+    .lp-band-stats-grid .in{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,52px);align-items:center}
+    .lp-band-stats-grid .kicker{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-soft);margin:0 0 .9em}
+    .lp-band-stats-grid .say{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h2);line-height:1.15;color:var(--band-dark-ink);margin:0;max-width:22ch}
+    .lp-band-stats-grid .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border:1px solid color-mix(in srgb, var(--band-dark-ink) 16%, transparent);border-radius:var(--radius);overflow:hidden}
+    .lp-band-stats-grid .stat{min-width:0;background:var(--band-dark-bg);padding:clamp(22px,3vw,32px) clamp(18px,2.6vw,28px)}
+    .lp-band-stats-grid .n{display:block;font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4.4vw,3rem);line-height:1;color:var(--band-dark-ink);overflow-wrap:anywhere;letter-spacing:-.02em}
+    .lp-band-stats-grid .n .u{font-size:.5em;color:var(--accent-soft);margin-left:.08em}
+    .lp-band-stats-grid .l{display:block;font-family:var(--font-mono);font-size:.82rem;line-height:1.4;color:color-mix(in srgb, var(--band-dark-ink) 62%, transparent);margin-top:.85em;letter-spacing:.02em}
+    @media (min-width:768px){
+      .lp-band-stats-grid .in{grid-template-columns:.92fr 1.08fr}
     }
   </style>
+  <div class="glow a" aria-hidden="true"></div>
+  <div class="glow b" aria-hidden="true"></div>
   <div class="in">
-    <div class="head reveal">
-      <p class="kicker">What clients say</p>
-      <h2>A clearer idea of what your session involves</h2>
+    <div class="reveal">
+      <p class="kicker">The session, in plain terms</p>
+      <p class="say">Everything set out clearly, up front</p>
     </div>
-
-    <div class="rating-banner reveal">
-      <span class="big" data-count-to="4.9" data-count-decimals="1">4.9</span>
-      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span class="fine">Rated by clients across Harrogate</span>
-    </div>
-
     <div class="grid reveal-stagger">
-      <div class="card is-active">
-        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="quote">The session never felt rushed. We talked through my goals properly and I left knowing exactly what my options were.</p>
-        <div class="who">
-          <span class="avatar" aria-hidden="true">RE</span>
-          <div>
-            <p class="name">R. Ellison</p>
-            <p class="tag">&pound;75 session</p>
-          </div>
-        </div>
+      <div class="stat">
+        <span class="n" data-count-to="75" data-count-prefix="&pound;">&pound;75</span>
+        <span class="l">&pound;25 deposit, comes off the price</span>
       </div>
-      <div class="card">
-        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="quote">Honest advice with no pressure to book anything on the day. That is exactly why I came back for the full course.</p>
-        <div class="who">
-          <span class="avatar" aria-hidden="true">SH</span>
-          <div>
-            <p class="name">S. Hartley</p>
-            <p class="tag">Body contouring</p>
-          </div>
-        </div>
+      <div class="stat">
+        <span class="n">1:1</span>
+        <span class="l">A personalised session with your practitioner</span>
       </div>
-      <div class="card">
-        <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="quote">Everything was explained clearly, the price included. I never felt pushed into a course I was not ready for.</p>
-        <div class="who">
-          <span class="avatar" aria-hidden="true">JM</span>
-          <div>
-            <p class="name">J. Marsh</p>
-            <p class="tag">Consultation</p>
-          </div>
-        </div>
+      <div class="stat">
+        <span class="n">48h</span>
+        <span class="l">Notice to reschedule</span>
       </div>
-    </div>
-    <div class="rv-dots" aria-hidden="true">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <div class="stat">
+        <span class="n">None</span>
+        <span class="l">Obligation to continue</span>
+      </div>
     </div>
   </div>
 </section>
