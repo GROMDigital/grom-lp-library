@@ -1,7 +1,0 @@
-# Starter: direct-response
-
-Single-file, fully filled landing page assembled from the `reference/lp-library` block library on the **direct-response** theme (`themes/direct-response.css`, bold/warm/price-led, SK lineage). Block order: `hero-offer -> offer-card -> how-it-works -> why-us -> founder -> reviews -> booking-widget -> faq-accordion -> sticky-cta -> footer`. The `_contract.css` + `direct-response.css` tokens are inlined into one `<style>` in the document head (contract first, theme second so it overrides). The hosted-loader head-tracking snippet sits at the very top of the file inside a single HTML comment, ready to paste into the page's tracking code settings.
-
-**Sample identity (fictional, AHPRA-safe):** The Glow Room, mobile facials in Bondi Beach NSW, therapist-led, from $99, 5.0 from 180 reviews, `CLIENT_KEY = "the-glow-room"`. The Meta Pixel ID is the literal placeholder `REPLACE_WITH_PIXEL_ID` (marked inline), the booking-worker URL is the placeholder `https://your-booking-worker.invalid` (marked inline), and both hero/founder photos are placeholder SVG data URIs (marked inline) standing in for real clinic photography.
-
-**To reuse for a real client:** clone this folder, run the FILL-GUIDE against the new client's identity, then swap the three placeholders: `CLIENT_KEY` in the head-tracking comment, `REPLACE_WITH_PIXEL_ID` with the client's real Meta Pixel ID, and the booking-worker URL with the client's real `grom-booking-worker` deployment, then replace the placeholder images with real photography.
