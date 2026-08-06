@@ -17,7 +17,7 @@ The fastest way to use it: open this repo in an AI coding tool (or with Claude) 
   - `clinical-trust` — cool sage, credibility-led, complimentary consult (no deposit)
   - `clinical-botanical` — porcelain + deep-green, deposit-led
   Each is a single self-contained file (theme, motion, and every section inlined) so it renders the moment you copy it.
-- **`blocks/`** — 22 section archetypes named `<section>--<archetype>.html` (multiple distinct LAYOUTS per section: heroes, offers, process, stat bands, marquee, reviews, practitioner, booking, FAQ, CTA, footer). Each is a self-contained `<section>` styled only with theme tokens, with `{{slot}}` placeholders and motion hooks. Use them to swap a section for a different layout, or to build a fresh page when no template fits.
+- **`blocks/`** — 28 section archetypes named `<section>--<archetype>.html` (multiple distinct LAYOUTS per section: heroes, offers, process, stat bands, marquee, reviews, practitioner, booking, FAQ, CTA, footer). Each is a self-contained `<section>` styled only with theme tokens, with `{{slot}}` placeholders and motion hooks. Use them to swap a section for a different layout, or to build a fresh page when no template fits.
 - **`themes/`** — five themes (`clinical-steel`, `direct-response`, `premium-editorial`, `clinical-trust`, `clinical-botanical`) plus `_contract.css`, the token contract every archetype reads. One theme re-skins the whole page.
 - **`motion/`** — the one shared motion layer (`motion.js` + `motion.css` + `README.md` hook contract): scroll reveals, count-ups, marquees, parallax, sticky CTA, booking selector. Progressive enhancement (fully visible with no JS). Already inlined in every template.
 - **`partials/`** — the tracking head-block loader.
