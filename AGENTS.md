@@ -61,6 +61,8 @@ Run `guides-lint.mjs` whenever you touch `blocks/`, `CATALOG.md`, or `BUILD-GUID
 
 ## Not in this repo
 
-The monorepo working copy carries leftovers that were deliberately never pushed here: `index.bespoke-*.html` / `index.rebuild-wip-*.html` drafts, a `.build/` folder, and four stale per-starter `README.md` files removed in `d3fe3f7` for describing clinics and block names that no longer exist. Do not copy any of it up. If you find a per-starter `README.md`, it is stale by definition; the maintained per-template reference is the table in `BUILD-GUIDE.md`.
+As of 2026-08-07 the monorepo working copy is byte-identical to this repo. It previously carried leftovers that were deliberately never pushed here: `index.bespoke-*.html` / `index.rebuild-wip-*.html` drafts on four superseded fictional clinics, a dead `.build/` folder whose script pointed at the long-gone `reference/lp-library` path, and four stale per-starter `README.md` files (removed here in `d3fe3f7`) describing clinics and block names that no longer exist. All of it now sits in `Grom Digital Sub-Account/TD/lp-library-leftovers-2026-08-07/`.
+
+Keep it that way. If a `starters/*/README.md` or an `index.bespoke-*.html` reappears, it is stale by definition and does not belong here; the maintained per-template reference is the table in `BUILD-GUIDE.md`. Screenshots and other scratch output go to `Grom Digital Sub-Account/.tmp-screenshots/`, never inside `qa/`.
 
 Tracking is not a design concern and is not configured here. Wiring it onto a finished page is the `grom-client-factory:reconcile-lp-tracking` skill's job.
