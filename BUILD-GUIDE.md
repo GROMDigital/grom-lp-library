@@ -100,7 +100,7 @@ Hand off exactly two things: the filled head block (from step 5) and the filled 
 
 ## 9. Verify before handoff
 
-From `reference/lp-library/qa/`, run against your finished file(s):
+From `projects/lp-library/qa/`, run against your finished file(s):
 
 ```bash
 node render-check.mjs <path-to-your-file>
@@ -108,7 +108,15 @@ node guardrails.mjs <path-to-your-file>
 node token-lint.mjs "$PWD/<path-to-your-file>"
 ```
 
-`guardrails.mjs` fails on any em dash, any named CRM/automation platform, and (for anything under `starters/`) any remaining `{{` placeholder; the same bar applies to a finished client LP even though it will not live under `starters/`. `render-check.mjs` checks for layout overflow and console errors across four viewport widths (a single `/embed.js` 404 is expected and allow-listed when the real booking-worker URL is not yet reachable from your test environment; see `qa/booking-widget.spec.md`). `token-lint.mjs` confirms only contract tokens are used, never hardcoded colors or fonts. **Pass token-lint an absolute path** (e.g. `"$PWD/themes/x.css"`): a bare `themes/x.css` with no leading slash is silently skipped by its path guard and prints PASS without checking anything. To sanity-check a single archetype against a theme before it goes into a full page, use the harness directly: `qa/host.html?theme=themes/<theme>.css&block=blocks/<archetype>.html&motion=1` (see `motion/README.md`).
+`guardrails.mjs` fails on any em dash, any named CRM/automation platform, and (for anything under `starters/`) any remaining `{{` placeholder; the same bar applies to a finished client LP even though it will not live under `starters/`. `render-check.mjs` checks for layout overflow and console errors across four viewport widths (a single `/embed.js` 404 is expected and allow-listed when the real booking-worker URL is not yet reachable from your test environment; see `qa/booking-widget.spec.md`). `token-lint.mjs` confirms only contract tokens are used, never hardcoded colors or fonts. **Pass token-lint an absolute path** (e.g. `"$PWD/themes/x.css"`): a bare `themes/x.css` with no leading slash is silently skipped by its path guard and prints PASS without checking anything.
+
+Those three check one page. A fourth, `guides-lint.mjs`, checks the guides themselves rather than any page, so it takes no argument and only needs running when you have changed `blocks/`, `CATALOG.md`, or `BUILD-GUIDE.md`:
+
+```bash
+node guides-lint.mjs
+```
+
+It fails if any `blocks/*.html` file is undocumented in `CATALOG.md`, or if `BUILD-GUIDE.md` has lost one of the tracking/booking contract strings it must always carry. **Run it whenever you add or rename an archetype** — nothing else in the harness notices a block that never made it into the catalog, which is exactly how `nav--bar.html` sat undocumented. To sanity-check a single archetype against a theme before it goes into a full page, use the harness directly: `qa/host.html?theme=themes/<theme>.css&block=blocks/<archetype>.html&motion=1` (see `motion/README.md`).
 
 ---
 

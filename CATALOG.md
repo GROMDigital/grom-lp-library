@@ -1,15 +1,15 @@
 # LP Library Catalog
 
-Reference catalog of every block archetype and theme in `reference/lp-library/`. Use this to decide which archetypes to compose (or which starter to clone) for a new client landing page, and to know exactly which `{{slot}}` values you must fill.
+Reference catalog of every block archetype and theme in `projects/lp-library/`. Use this to decide which archetypes to compose (or which starter to clone) for a new client landing page, and to know exactly which `{{slot}}` values you must fill.
 
 This is a **design-first** library. It ships structure, not copy. Each `blocks/*.html` file is a self-contained `<section>` (or `<footer>`) archetype with its own scoped `<style>`, styling exclusively with the CSS custom properties defined in `themes/_contract.css` (`--bg`, `--ink`, `--accent`, `--font-display`, etc). Paste archetypes in order, wrap them in one HTML document, add one theme's tokens to the `<head>`, inline the shared motion layer, and write your own copy into the slots. See `BUILD-GUIDE.md` for the full assembly procedure.
 
-There is deliberately no fixed fill manifest. Copy guidance below is a formula (the framing each section's copy should follow, e.g. "outcome + specific offer" for a hero headline), not finished prose or fixed values. You write strong, specific, client-true copy against that formula. Route high-stakes lines (hero headline, primary offer) through the marketing/copywriter agent panel to pressure-test or polish, but the copy is yours to craft, not a form to fill. The four shipped starters (`starters/*/index.html`) are finished design demos to look at for tone and density, not copy templates to lift text from.
+There is deliberately no fixed fill manifest. Copy guidance below is a formula (the framing each section's copy should follow, e.g. "outcome + specific offer" for a hero headline), not finished prose or fixed values. You write strong, specific, client-true copy against that formula. Route high-stakes lines (hero headline, primary offer) through the marketing/copywriter agent panel to pressure-test or polish, but the copy is yours to craft, not a form to fill. The five shipped starters (`starters/*/index.html`) are finished design demos to look at for tone and density, not copy templates to lift text from.
 
 ## How archetypes, themes, and motion combine
 
-- **26 block archetypes** across 13 section types live in `blocks/`, named `<section>--<archetype>.html` (e.g. `hero--split.html`, `offer--deposit.html`). Multiple archetypes per section exist so a page can be built from genuinely different structural choices, not one layout recolored four ways. Deliberately vary which archetype you pick per section across different client pages; do not default to the same set every time, or every page ends up structurally identical with different words on it.
-- **4 themes** in `themes/` (plus the `_contract.css` token contract every theme satisfies) re-skin whatever archetypes you chose: palette, type, radii, spacing, and 8 decorative tokens. A block never hardcodes a color or font; it only reads contract variables, so any archetype works under any theme.
+- **28 block archetypes** across 14 section types live in `blocks/`, named `<section>--<archetype>.html` (e.g. `hero--split.html`, `offer--deposit.html`). Multiple archetypes per section exist so a page can be built from genuinely different structural choices, not one layout recolored four ways. Deliberately vary which archetype you pick per section across different client pages; do not default to the same set every time, or every page ends up structurally identical with different words on it.
+- **5 themes** in `themes/` (plus the `_contract.css` token contract every theme satisfies) re-skin whatever archetypes you chose: palette, type, radii, spacing, and 8 decorative tokens. A block never hardcodes a color or font; it only reads contract variables, so any archetype works under any theme.
 - **One shared motion layer** (`motion/motion.js` + `motion/motion.css`, contract in `motion/README.md`) drives every reveal, stagger, count-up, marquee, parallax, sticky-CTA, and booking-chip interaction across every archetype. Archetypes ship the markup hooks (`.reveal`, `.reveal-stagger`, `[data-count-to]`, `.marquee-track`, `[data-parallax]`, `[data-cta]`, `#sticky`, `#lp-booking-widget`/`.time-chip`); they never write their own animation code. Content is fully visible with motion.js absent, blocked, or erroring; see `motion/README.md` for the progressive-enhancement contract in full.
 
 A typical page order (see `BUILD-GUIDE.md` §1 for the full composition flow):
@@ -21,6 +21,20 @@ A typical page order (see `BUILD-GUIDE.md` §1 for the full composition flow):
 ---
 
 ## Block archetypes
+
+### Nav bar (1 archetype)
+
+#### `blocks/nav--bar.html`
+
+**Layout personality:** A slim page-opener strip carrying a two-line wordmark (name over a spaced-out sub-label) on the left and an optional pill CTA on the right that scrolls to the hero booking. Renders as a `<header>`, not a `<section>`, and is the only archetype that sits above the hero.
+
+**When to use:** Any page that wants a branded top strip before the hero. Place it immediately before the hero archetype. It is page chrome rather than a numbered section type, so it does not count toward the page's section rhythm and is never optional-in-the-middle: it either opens the page or is absent. The nav CTA is hidden below 768px on purpose, since on mobile the hero's booking sits one scroll away.
+
+**Slots:** `{{wordmark_name}}`, `{{wordmark_sub}}`, `{{nav_cta}}`
+
+**Copy formula:** `wordmark_name` = the clinic name exactly as it should read as a logotype, no tagline. `wordmark_sub` = a short locator or descriptor in 2-4 words (service category, suburb, or both), rendered uppercase and letter-spaced, e.g. "Skin Atelier &middot; Marylebone". `nav_cta` = a two or three word action label ("Book a consult"), not a sentence.
+
+---
 
 ### Hero (4 archetypes)
 
@@ -376,7 +390,7 @@ Both CTA archetypes are secondary, mid-page or pre-footer conversion beats, rest
 
 There is no `blocks/sticky-cta--*.html` file. The fixed, mobile-only bottom bar with a single CTA button is small enough that it is hand-authored directly into each page's own markup and `<style>` block, following the motion layer's `#sticky` hook contract (`motion/README.md`): a fixed-position element with `id="sticky"`, styled entirely with theme tokens, hidden at the desktop breakpoint you choose (every shipped starter hides it above `1024px`; `768px` is also reasonable), showing a short label plus one CTA link to `#book`. Look at any starter's `.sticky-cta`/`#sticky` markup (e.g. `starters/direct-response/index.html`) as a working reference. Every LP needs one; it is the mobile conversion safety net while the visitor scrolls past the hero's CTA.
 
-### Footer (1 archetype)
+### Footer (2 archetypes)
 
 #### `blocks/footer--multicol.html`
 
